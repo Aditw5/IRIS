@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect width="1400" height="760" fill="#47505c"/><rect class="panel" x="145" y="55" width="1110" height="650" rx="24"/><text class="h" x="190" y="110">Tambah Temuan Ketidaksesuaian</text>
+<text class="s" x="190" y="155">Jenis Audit</text><text class="b" x="190" y="182">Audit Internal Teknik Kelistrikan Jakarta</text>
+<rect class="btn" x="190" y="220" width="390" height="70" rx="8"/><text class="s" x="215" y="247">Bagian (otomatis dari lingkup)</text><text class="b" x="215" y="277">Kelistrikan Jakarta</text>
+<rect class="btn" x="605" y="220" width="230" height="70" rx="8"/><text class="s" x="630" y="247">Klausul *</text><text class="m" x="630" y="277">Contoh: 6.4.2</text>
+<rect class="btn" x="860" y="220" width="210" height="70" rx="8"/><text class="s" x="885" y="247">Kategori Temuan *</text><text class="b" x="885" y="277">2 - Minor</text>
+<rect class="mark" x="590" y="205" width="495" height="100" rx="12"/><circle class="num" cx="1080" cy="205" r="22"/><text class="numText" x="1080" y="206">1</text>
+<rect class="btn" x="190" y="345" width="880" height="150" rx="8"/><text class="s" x="215" y="375">Uraian Ketidaksesuaian *</text><text class="m" x="215" y="415">Tuliskan kondisi, bukti objektif, dan dokumen/rekaman terkait secara lengkap.</text>
+<rect class="mark" x="180" y="335" width="900" height="170" rx="12"/><circle class="num" cx="1090" cy="345" r="22"/><text class="numText" x="1090" y="346">2</text>
+<rect class="btn" x="190" y="545" width="880" height="62" rx="8"/><text class="s" x="215" y="570">Auditor / Pengisi (otomatis)</text><text class="b" x="215" y="596">Nama pengguna yang sedang login</text>
+<rect class="mark" x="180" y="535" width="900" height="82" rx="12"/><circle class="num" cx="1090" cy="545" r="22"/><text class="numText" x="1090" y="546">3</text>
+<rect x="925" y="635" width="300" height="50" rx="9" fill="#18b779"/><text x="1075" y="666" text-anchor="middle" style="font:700 18px Calibri,Arial;fill:#fff">Simpan Temuan</text><circle class="num" cx="895" cy="660" r="22"/><text class="numText" x="895" y="661">4</text>
+</svg>

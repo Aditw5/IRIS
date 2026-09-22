@@ -1,0 +1,45 @@
+# Nama workflow yang akan muncul di tab Actions GitHub
+name: Deploy Frontend to VPS
+
+# Pemicu: Workflow ini akan berjalan setiap kali ada push ke branch 'main'
+on:
+  push:
+    branches:
+      - main
+
+# Pekerjaan yang akan dilakukan
+jobs:
+  build-and-deploy:
+    # Menggunakan server Ubuntu terbaru yang disediakan GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+      # Langkah 1: Mengambil kode dari repositori
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Langkah 2: Setup Node.js versi 18
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm' # Mengaktifkan cache untuk mempercepat instalasi
+
+      # Langkah 3: Install dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Langkah 4: Build project Vue.js
+      - name: Build Project
+        run: npm run build
+
+      # Langkah 5: Deploy hasil build ke VPS menggunakan rsync
+      - name: Deploy to VPS
+        uses: easingthemes/ssh-deploy@v4.1.10
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          ARGS: "-rltgoDzvO --delete" # Opsi rsync: hapus file di tujuan jika tidak ada di sumber
+          SOURCE: "dist/" # Folder sumber yang akan dikirim (hasil build)
+          REMOTE_HOST: ${{ secrets.VPS_HOST }}
+          REMOTE_USER: ${{ secrets.VPS_USERNAME }}
+          TARGET: ${{ secrets.VPS_TARGET_PATH }}

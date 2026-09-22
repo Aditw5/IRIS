@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect class="bg" width="1400" height="760"/><text class="h" x="65" y="65">Mapping Auditor Internal | periode tahunan</text>
+<rect class="panel" x="65" y="95" width="1270" height="105" rx="16"/><text class="s" x="95" y="130">LEAD AUDITOR</text><text class="sh" x="95" y="168">Ditampilkan satu kali dan berlaku untuk seluruh lingkup audit pada tahun tersebut</text><rect class="mark" x="55" y="85" width="1290" height="125" rx="18"/><circle class="num" cx="1315" cy="95" r="22"/><text class="numText" x="1315" y="96">1</text>
+<rect class="panel" x="65" y="240" width="600" height="405" rx="18"/><text class="sh" x="95" y="285">Audit Internal Mutu</text><text class="s" x="95" y="315">Mutu | Jakarta &amp; Gresik</text>
+<line class="line" x1="95" y1="345" x2="635" y2="345"/><text class="b" x="115" y="385">Auditor Observer</text><rect x="430" y="360" width="150" height="40" rx="20" fill="#168bd2"/><text x="505" y="386" text-anchor="middle" style="font:15px Calibri,Arial;fill:#fff">Auditor</text><text class="s" x="115" y="415">OK - Pakta sudah diisi</text><text class="b" x="115" y="465">Auditee Mutu</text><rect x="430" y="440" width="150" height="40" rx="20" fill="#f5a623"/><text x="505" y="466" text-anchor="middle" style="font:15px Calibri,Arial;fill:#fff">Auditee</text><text class="s" x="115" y="495">Tidak wajib mengisi Pakta Auditor</text><rect class="mark" x="85" y="335" width="560" height="175" rx="14"/><circle class="num" cx="625" cy="345" r="22"/><text class="numText" x="625" y="346">2</text>
+<rect class="panel" x="700" y="240" width="635" height="405" rx="18"/><text class="sh" x="730" y="285">Audit Internal Teknik Kelistrikan Jakarta</text><text class="s" x="730" y="315">Kelistrikan | Jakarta</text>
+<line class="line" x1="730" y1="345" x2="1305" y2="345"/><text class="b" x="750" y="390">Anggota Auditor</text><text class="s" x="750" y="420">OK - Pakta sudah diisi</text><rect x="1170" y="360" width="70" height="55" rx="8" fill="#fff" stroke="#18b779" stroke-width="3"/><text x="1205" y="395" text-anchor="middle" style="font:700 16px Calibri,Arial;fill:#18b779">PRINT</text><rect class="mark" x="1155" y="345" width="100" height="85" rx="12"/><circle class="num" cx="1275" cy="386" r="22"/><text class="numText" x="1275" y="387">3</text><text class="m" x="750" y="505">Ikon printer muncul bagi Auditor yang sudah mengisi Pakta.</text><text class="m" x="750" y="538">Mapping tahun berikutnya dapat disiapkan kembali oleh pengelola.</text>
+</svg>

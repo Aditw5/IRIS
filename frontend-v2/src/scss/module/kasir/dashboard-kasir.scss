@@ -1,0 +1,1028 @@
+
+@import '/@src/scss/abstracts/all';
+
+.p-button {
+  background-color: hsl(0deg, 0%, 96%);
+  border-color: var(--border);
+  color: hsl(0deg, 0%, 48%);
+}
+
+.soccer-dashboard {
+  .soccer-dashboard-inner {
+    .live-match {
+      @include vuero-l-card;
+
+      padding: 1.3rem;
+      margin-bottom: 1.5rem;
+
+      .head {
+        margin-bottom: 1.5rem;
+
+        .league {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .left {
+            span {
+              display: block;
+              font-family: var(--font);
+
+              &:first-child {
+                color: var(--dark-text);
+              }
+
+              &:nth-child(2) {
+                color: var(--light-text);
+                font-size: 0.9rem;
+              }
+            }
+          }
+
+          .right {
+            .live-block {
+              display: inline-flex;
+              align-items: center;
+              padding: 0.25rem 0.75rem;
+              border-radius: 50rem;
+              background: var(--danger);
+              color: var(--white);
+              box-shadow: var(--danger-box-shadow);
+
+              span {
+                display: inline-block;
+                font-family: var(--font);
+                font-size: 0.85rem;
+                margin-left: 0.25rem;
+              }
+            }
+          }
+        }
+      }
+
+      .match {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        .left,
+        .right {
+          text-align: center;
+
+          .team-logo {
+            display: block;
+            min-width: 50px;
+            max-width: 50px;
+            text-align: center;
+            margin-bottom: 0.25rem;
+          }
+
+          .team-name {
+            display: block;
+            font-family: var(--font);
+            font-weight: 500;
+          }
+        }
+
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .score {
+            display: block;
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 2.25rem;
+          }
+
+          .separator {
+            position: relative;
+            top: -2px;
+            display: block;
+            padding: 0 0.5rem;
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 1.75rem;
+          }
+        }
+      }
+
+      .action {
+        .v-button {
+          border-radius: 0.65rem;
+          height: 44px;
+        }
+      }
+    }
+
+    .leagues {
+      @include vuero-l-card;
+
+      padding: 2rem;
+
+      .head {
+        margin-bottom: 1.5rem;
+      }
+
+      .leagues-list {
+        .league-item {
+          display: flex;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+
+          .league-logo {
+            display: block;
+            min-width: 38px;
+            max-width: 38px;
+          }
+
+          .meta {
+            margin-left: 0.5rem;
+            line-height: 1.2;
+
+            .league-name {
+              display: block;
+              font-family: var(--font-alt);
+              font-size: 1rem;
+              font-weight: 600;
+              color: var(--dark-text);
+            }
+
+            .league-country {
+              display: block;
+              font-family: var(--font);
+              font-size: 0.9rem;
+              color: var(--light-text);
+            }
+          }
+
+          .end {
+            margin-left: auto;
+            font-family: var(--font);
+            font-size: 0.9rem;
+            color: var(--light-text);
+          }
+        }
+      }
+    }
+
+    .dashboard-cta {
+      background-color: var(--primary);
+      padding: 2rem;
+      border-radius: 1rem;
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      .dashboard-cta-title {
+        font-family: var(--font-alt);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--white);
+        margin: 0 0 0.25rem;
+      }
+
+      .dashboard-cta-text {
+        color: var(--white);
+        opacity: 0.9;
+        font-family: var(--font);
+        line-height: 1.7;
+        margin-top: 0;
+        max-width: 58%;
+        margin-bottom: 1rem;
+      }
+
+      .dashboard-cta-img {
+        width: 40%;
+        max-width: 350px;
+        position: absolute;
+        overflow: hidden;
+        height: calc(110%);
+        top: -10%;
+        right: 2rem;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .matches-card {
+      @include vuero-l-card;
+
+      padding: 0;
+      overflow: hidden;
+
+      .matches-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        padding: 2rem 2rem 0;
+
+        .header-nav {
+          display: flex;
+
+          .nav-item {
+            .nav-link {
+              font-family: var(--font);
+              margin-right: 1rem;
+              border-bottom: 3px solid transparent;
+              padding-bottom: 1rem;
+              color: var(--light-text);
+
+              &.is-active {
+                color: var(--dark-text);
+                border-bottom-color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+
+      .matches-card-body {
+        overflow-x: auto;
+
+        .table {
+          width: 100%;
+
+          thead th {
+            border: none;
+            font-family: var(--font);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+          }
+
+          tr {
+
+            th:first-child,
+            td:first-child {
+              padding-left: 2rem;
+            }
+
+            th:last-child,
+            td:last-child {
+              padding-right: 2rem;
+            }
+
+            td {
+              padding-top: 1.5rem;
+              padding-bottom: 1.5rem;
+
+              &.score-cell {
+                min-width: 300px;
+              }
+
+              .match-time-row {
+                display: flex;
+                align-items: center;
+
+                .match-time {
+                  font-family: var(--font);
+                  color: var(--light-text);
+                  margin-right: 0.75rem;
+                }
+
+                .tag {
+                  font-family: var(--font);
+
+                  svg {
+                    color: var(--warning);
+                  }
+
+                  &.is-live {
+                    svg {
+                      color: var(--danger);
+                    }
+                  }
+                }
+              }
+
+              .table-action {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                color: var(--light-text);
+                transition: background-color 0.3s;
+
+                &:hover,
+                &:focus {
+                  background: var(--widget-grey);
+                }
+              }
+            }
+          }
+
+          .score {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .score-vertical {
+              justify-content: flex-start;
+            }
+
+            .score-team {
+              text-align: center;
+
+              span {
+                display: block;
+                font-weight: 500;
+                padding-top: 0.25rem;
+              }
+
+              img {
+                width: 40px;
+              }
+
+              &.score-team-vertical {
+                display: flex;
+                align-items: center;
+                flex: 1;
+
+                &:first-child {
+                  justify-content: flex-end;
+                }
+
+                span {
+                  white-space: nowrap;
+                  font-size: inherit;
+                }
+
+                img {
+                  width: 32px;
+                  margin: 0 0.5rem;
+                }
+              }
+            }
+
+            .score-result {
+              text-align: center;
+              width: 100%;
+              font-weight: 900;
+              font-size: 1.75rem;
+              margin: 0;
+              letter-spacing: 0.4em;
+
+              &.score-result-not-started {
+                color: gray;
+              }
+
+              &.score-result-vertical {
+                letter-spacing: 0.2em;
+                font-size: inherit;
+                flex: 0 0 auto;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .matches {
+      .nav-item {
+        &:first-child {
+          .nav-link {
+            padding-left: 0;
+          }
+        }
+
+        .nav-link {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.illustration-header-2 {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 16px;
+  background: var(--primary-dark-24);
+  font-family: var(--font);
+  box-shadow: var(--primary-box-shadow);
+
+  .header-image {
+    position: relative;
+    height: 105px;
+    width: 320px;
+
+    img {
+      position: absolute;
+      top: -45px;
+      left: -40px;
+      width: 70%;
+      display: block;
+      pointer-events: none;
+    }
+  }
+
+  .header-meta {
+    margin-left: 0;
+    padding-right: 30px;
+
+    h3 {
+      color: var(--smoke-white);
+      font-family: var(--font-alt);
+      font-weight: 700;
+      font-size: 1.3rem;
+      max-width: 280px;
+    }
+
+    p {
+      font-weight: 400;
+      color: var(--smoke-white-dark-2);
+      max-width: 320px;
+    }
+
+    .action-link {
+      span {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        margin-right: 6px;
+      }
+
+      i {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.search-widget {
+  flex: 1;
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--fade-grey-dark-3);
+  transition: all 0.3s;
+}
+
+.is-dark {
+  .soccer-dashboard {
+    .soccer-dashboard-inner {
+
+      .live-match,
+      .leagues {
+        @include vuero-card--dark;
+
+        .head {
+          .title {
+            color: var(--white) !important;
+          }
+        }
+
+        .match {
+
+          .left,
+          .right {
+            .team-name {
+              color: var(--white) !important;
+            }
+          }
+        }
+
+        .leagues-list {
+          .league-item {
+            .meta {
+              span:first-child {
+                color: var(--white) !important;
+              }
+            }
+          }
+        }
+      }
+
+      .matches-card {
+        @include vuero-card--dark;
+
+        .matches-card-header {
+          .header-nav {
+            .nav-item {
+              .nav-link {
+                &.is-active {
+                  color: var(--white) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .matches-card-body {
+        .table {
+          .score {
+            .score-team {
+              &.score-team-vertical {
+                >span {
+                  color: var(--white) !important;
+                }
+              }
+            }
+          }
+
+          tr td {
+            .table-action {
+              &:hover {
+                background: var(--dark-sidebar-light-2) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tile-grid {
+  .columns {
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+    margin-top: -0.5rem !important;
+  }
+
+  .column {
+    padding: 0.5rem !important;
+  }
+}
+
+.tile-grid-v2 {
+  .tile-grid-item {
+    @include vuero-s-card;
+
+    border-radius: 14px;
+    padding: 16px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: var(--primary);
+      box-shadow: var(--light-box-shadow);
+    }
+
+    .tile-grid-item-inner {
+      display: flex;
+      align-items: center;
+
+      >img {
+        display: block;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+      }
+
+      .meta {
+        margin-left: 10px;
+        line-height: 1.2;
+
+        span {
+          display: block;
+          font-family: var(--font);
+
+          &:first-child {
+            color: var(--dark-text);
+            font-family: var(--font-alt);
+            font-weight: 600;
+            font-size: 0.9rem;
+          }
+
+          &:nth-child(2) {
+            display: flex;
+            align-items: center;
+            font-size: 0.7rem;
+
+            span {
+              display: inline-block;
+              color: var(--light-text);
+              font-size: 0.5rem;
+              font-weight: 400;
+            }
+
+            .icon-separator {
+              position: relative;
+              font-size: 4px;
+              color: var(--light-text);
+              padding: 0 6px;
+            }
+          }
+        }
+      }
+
+      .dropdown {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.is-dark {
+  .tile-grid {
+    .tile-grid-item {
+      @include vuero-card--dark;
+    }
+  }
+
+  .tile-grid-v2 {
+    .tile-grid-item {
+      @include vuero-card--dark;
+
+      &:hover,
+      &:focus {
+        border-color: var(--primary) !important;
+      }
+    }
+  }
+}
+
+.user-grid-v4 {
+  .columns {
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+    margin-top: -0.5rem !important;
+  }
+
+  .column {
+    padding: 0.9 rem !important;
+  }
+
+  .grid-item {
+    position: relative;
+    @include vuero-s-card;
+
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      .button-wrap {
+        >div {
+          a {
+            opacity: 1;
+            pointer-events: all;
+          }
+        }
+      }
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: left;
+    }
+
+    >.v-avatar {
+      display: block;
+      margin: 0 auto 4px;
+    }
+
+    h3 {
+      font-family: var(--font-alt);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark-text);
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    .button-wrap {
+      margin: 20px 0 0;
+
+      .v-button {
+        width: 100%;
+        max-width: 140px;
+        margin: 0 auto;
+      }
+
+      >div {
+        margin: 6px 0 0;
+
+        a {
+          opacity: 0;
+          pointer-events: none;
+          color: var(--light-text);
+          font-weight: 500;
+          font-size: 0.9rem;
+          transition: opacity 0.3s, color 0.3s;
+
+          &:hover,
+          &:focus {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-dark {
+  .user-grid-v4 {
+    .grid-item {
+      @include vuero-card--dark;
+    }
+  }
+}
+
+.list-view-v1 {
+  .list-view-item {
+    @include vuero-r-card;
+
+    margin-bottom: 16px;
+    padding: 16px;
+
+    .list-view-item-inner {
+      display: flex;
+      align-items: center;
+
+      .meta-left {
+        margin-left: 16px;
+
+        h3 {
+          font-family: var(--font-alt);
+          color: var(--dark-text);
+          font-weight: 600;
+          font-size: 0.9rem;
+          line-height: 1;
+        }
+
+        >span:not(.tag) {
+          font-size: 0.9rem;
+          color: var(--light-text);
+
+          svg {
+            height: 12px;
+            width: 12px;
+          }
+        }
+      }
+
+      .meta-right {
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .tags {
+          margin-right: 30px;
+          margin-bottom: 0;
+
+          .tag {
+            margin-bottom: 0;
+          }
+        }
+
+        .stats {
+          display: flex;
+          align-items: center;
+          margin-right: 30px;
+
+          .stat {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: var(--light-text);
+
+            >span {
+              font-family: var(--font);
+
+              &:first-child {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                line-height: 1.4;
+              }
+
+              &:nth-child(2) {
+                text-transform: uppercase;
+                font-family: var(--font-alt);
+                font-size: 0.7rem;
+              }
+            }
+
+            svg {
+              height: 16px;
+              width: 16px;
+            }
+
+            i {
+              font-size: 1.4rem;
+            }
+          }
+
+          .separator {
+            height: 25px;
+            width: 2px;
+            border-right: 1px solid var(--fade-grey-dark-3);
+            margin: 0 16px;
+          }
+        }
+
+        .network {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          min-width: 145px;
+
+          >span {
+            font-family: var(--font);
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-left: 6px;
+          }
+        }
+
+        .dropdown {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.is-dark {
+  .list-view-v1 {
+    .list-view-item {
+      @include vuero-card--dark;
+
+      .list-view-item-inner {
+        .meta-left {
+          h3 {
+            color: var(--dark-dark-text) !important;
+          }
+        }
+
+        .meta-right {
+          .stats {
+            .stat {
+              span {
+                &:first-child {
+                  color: var(--dark-dark-text);
+                }
+              }
+            }
+
+            .separator {
+              border-color: var(--dark-sidebar-light-16) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-menu {
+  height: 56px;
+  white-space: nowrap;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  width: 100%;
+  padding-left: 0.75rem;
+
+  >div:not(:last-of-type) {
+    border-right: 1px solid var(--search-border-color);
+  }
+
+  .search-bar {
+    height: 55px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+
+    .field {
+      width: 100%;
+    }
+
+    .multiselect-tags {
+      padding-left: 2.5rem;
+    }
+  }
+
+  .search-location,
+  .search-job,
+  .search-salary {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 25px;
+    height: 100%;
+    font-family: var(--font);
+
+    input {
+      width: 100%;
+      height: 90%;
+      display: block;
+      font-family: var(--font);
+      color: var(--input-color);
+      background-color: whitesmoke;
+      border: none;
+    }
+
+    svg {
+      margin-right: 0.5rem;
+      width: 18px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+  }
+
+  .search-button {
+    background-color: var(--primary);
+    min-width: 100px;
+    height: 56px;
+    border: none;
+    font-weight: 500;
+    font-family: var(--font);
+    padding: 0 1rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    color: var(--button-color);
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .soccer-dashboard {
+    .soccer-dashboard-inner {
+      .dashboard-cta {
+        .dashboard-cta-title {
+          max-width: 170px;
+        }
+
+        .dashboard-cta-img {
+          right: -0.25rem;
+          width: 36%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .soccer-dashboard {
+    .soccer-dashboard-inner {
+      .dashboard-cta {
+        .dashboard-cta-title {
+          max-width: 170px;
+        }
+
+        .dashboard-cta-img {
+          right: 1rem;
+          width: 36%;
+        }
+      }
+    }
+  }
+}
+
+.search-widget .field .control .input.input-calendar {
+  background-color: var(--white);
+  border-color: var(--border);
+  border-radius: var(--radius);
+  color: hsl(0deg, 0%, 21%);
+  height: 38px;
+}
+
+.tile-grid-v2 .tile-grid-item .tile-grid-item-inner .meta span:nth-child(3) {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--light-text);
+}
+
+.tile-grid-v2 .tile-grid-item .tile-grid-item-inner .meta span:nth-child(4) {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--light-text);
+}
+
+.v-avatar.is-small .avatar {
+  width: 32px !important;
+  min-width: 32px;
+  height: 32px !important;
+}

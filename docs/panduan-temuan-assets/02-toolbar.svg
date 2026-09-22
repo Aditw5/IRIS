@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect class="bg" width="1400" height="760"/><rect class="panel" x="55" y="55" width="1290" height="650" rx="20"/>
+<text class="h" x="95" y="115">TEMUAN KETIDAKSESUAIAN</text><text class="b" x="95" y="150">FMMO-163-14.4.3.b-88.5 | Laporan Ringkas dan Lembar Temuan</text>
+<rect class="btn" x="605" y="190" width="180" height="62" rx="10"/><text class="b" x="695" y="228" text-anchor="middle">Mapping Auditor</text>
+<rect class="btn" x="800" y="190" width="180" height="62" rx="10"/><text class="b" x="890" y="228" text-anchor="middle">Pakta Integritas</text>
+<rect class="btn" x="995" y="190" width="155" height="62" rx="10" stroke="#f5a623"/><text class="b" x="1072" y="228" text-anchor="middle">Cetak Pakta</text>
+<rect x="1165" y="190" width="150" height="62" rx="10" fill="#f5a623"/><text x="1240" y="228" text-anchor="middle" style="font:700 18px Calibri,Arial;fill:#172b4d">Cetak Laporan</text>
+<rect class="mark" x="790" y="178" width="200" height="86" rx="12"/><circle class="num" cx="890" cy="292" r="22"/><text class="numText" x="890" y="293">1</text>
+<rect class="mark" x="985" y="178" width="175" height="86" rx="12"/><circle class="num" cx="1072" cy="292" r="22"/><text class="numText" x="1072" y="293">2</text>
+<rect class="mark" x="1155" y="178" width="170" height="86" rx="12"/><circle class="num" cx="1240" cy="292" r="22"/><text class="numText" x="1240" y="293">3</text>
+<rect x="95" y="350" width="1220" height="235" rx="18" fill="#fbfcfd" stroke="#d8dee6" stroke-width="2"/>
+<text class="b" x="130" y="400">PERAN ANDA PADA TAHUN 2026</text>
+<rect x="130" y="430" width="340" height="45" rx="22" fill="#16c784"/><text x="300" y="458" text-anchor="middle" style="font:16px Calibri,Arial;fill:#fff">Anggota Auditor Kelistrikan Jakarta</text>
+<rect x="485" y="430" width="300" height="45" rx="22" fill="#f5a623"/><text x="635" y="458" text-anchor="middle" style="font:16px Calibri,Arial;fill:#fff">Auditee Kelistrikan Gresik</text>
+<text class="m" x="130" y="525">Label peran berasal dari mapping tahunan. Pengguna tidak memilih jenis audit sendiri.</text>
+<text class="m" x="130" y="557">1 Pakta pribadi  |  2 Dokumen Pakta  |  3 Laporan gabungan seluruh lingkup pada tahun terpilih</text>
+</svg>

@@ -1,0 +1,18 @@
+[Unit]
+Description=U-LAB internal image optimizer
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/ulab-kalibrasi/services/image-optimizer-python
+EnvironmentFile=-/var/www/ulab-kalibrasi/services/image-optimizer-python/.env
+ExecStart=/var/www/ulab-kalibrasi/services/image-optimizer-python/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8011 --workers 2
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

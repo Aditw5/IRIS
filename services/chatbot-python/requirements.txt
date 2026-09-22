@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pypdf
+python-dotenv
+pydantic
+python-docx
+sentence-transformers
+scikit-learn
+requests
+rapidfuzz
+Sastrawi

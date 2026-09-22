@@ -1,0 +1,2646 @@
+.panjang-250 {
+    height: 270px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+i.is-primary {
+    color: var(--primary);
+}
+
+i.is-success {
+    color: var(--success);
+}
+
+i.is-secondary {
+    color: var(--secondary);
+}
+
+i.is-purple {
+    color: var(--purple);
+}
+
+i.is-warning {
+    color: var(--warning);
+}
+
+i.is-danger {
+    color: var(--danger);
+}
+
+i.is-orange {
+    color: var(--orange);
+}
+
+i.is-yellow {
+    color: var(--yellow);
+}
+
+i.is-info {
+    color: var(--info);
+}
+
+i.is-blue {
+    color: var(--blue);
+}
+
+.span-text-diagnos {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30px;
+}
+
+.project-files .updates .updates-list .update-item p {
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-files .updates .updates-list .update-item span {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 90px;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+
+}
+
+.project-files .file-box .dropdown {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 120px;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+}
+
+.project-files .file-box .meta span:first-child {
+    font-family: var(--font-alt);
+    font-size: 0.85rem !important;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.project-files .file-box .meta span:nth-child(2) {
+    font-size: 0.8rem !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 125px;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+}
+
+@import '/@src/scss/abstracts/all';
+
+.widget {
+    @include vuero-l-card;
+
+    margin-bottom: 20px;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+}
+
+// Picker widget
+// Picker widget
+.widget-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    .left {
+        display: flex;
+        align-items: center;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .tag {
+            font-family: var(--font);
+        }
+
+        .right-icon {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 32px;
+            width: 32px;
+            min-width: 32px;
+            border-radius: var(--radius-rounded);
+            color: var(--light-text-light-12);
+            transition: all 0.3s; // transition-all test
+
+            &.has-indicator {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    right: 4px;
+                    height: 10px;
+                    width: 10px;
+                    border-radius: var(--radius-rounded);
+                    background: var(--secondary);
+                    border: 1.8px solid var(--white);
+                }
+            }
+
+            svg {
+                height: 18px;
+                width: 18px;
+                transition: stroke 0.3s;
+            }
+        }
+    }
+
+    h3 {
+        font-family: var(--font-alt);
+        font-size: 0.9rem;
+        color: var(--dark-text);
+        font-weight: 600;
+
+        &.is-bigger {
+            font-size: 1rem;
+        }
+    }
+
+    .action-icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+        width: 32px;
+        min-width: 32px;
+        border-radius: var(--radius-rounded);
+        color: var(--light-text-light-12);
+        transition: all 0.3s; // transition-all test
+
+        svg {
+            height: 18px;
+            width: 18px;
+            transition: stroke 0.3s;
+        }
+    }
+}
+
+.picker-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    .calendar {
+        color: var(--dark-text);
+        font-size: 12px;
+        font-family: var(--font);
+        width: 100%;
+        margin-bottom: 5px;
+
+        thead,
+        tbody {
+            width: 100%;
+        }
+    }
+
+    .calendar thead,
+    .calendar th {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .calendar td {
+        padding: 0.5em 0;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .calendar tbody td:hover {
+        background: var(--fade-grey-light-3);
+        color: var(--primary);
+    }
+
+    .current-day {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .prev-month,
+    .next-month {
+        color: #cacaca;
+    }
+}
+
+// Search Widget
+.search-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    .field {
+        .control {
+            position: relative;
+
+            .input {
+                height: 42px;
+                border-radius: 8px;
+                background: var(--widget-grey);
+                border-color: var(--widget-grey);
+
+                &:focus {
+                    border-color: var(--fade-grey-dark-3);
+                    background: var(--white);
+                }
+            }
+
+            .searcv-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 42px;
+                width: 42px;
+                border-radius: 8px;
+                background: var(--primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                color: var(--white);
+                cursor: pointer;
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+
+        .topics {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding-top: 12px;
+
+            a {
+                font-family: var(--font);
+                color: var(--light-text);
+                font-size: 0.95rem;
+
+                &:hover,
+                &:focus {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}
+
+// Gauge widget
+.gauge-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    text-align: center;
+
+    .gauge-wrap {
+        padding: 30px 0;
+    }
+}
+
+// Icon Toolbar widget
+.icon-toolbar-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    padding: 16px;
+
+    .icon-toolbar {
+        display: flex;
+
+        .toolbar-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 0;
+
+            .inner-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 32px;
+                width: 32px;
+                min-width: 32px;
+                border-radius: var(--radius-rounded);
+                color: var(--light-text-light-12);
+                transition: all 0.3s; // transition-all test
+
+                &:hover:not(.is-active) {
+                    background: var(--fade-grey-light-3);
+                    color: var(--light-text);
+                }
+
+                &.is-active {
+                    color: var(--primary);
+                }
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                    transition: stroke 0.3s;
+                }
+            }
+        }
+    }
+}
+
+// Text widget
+.text-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    .widget-content {
+        p {
+            font-size: 0.9rem;
+
+            span {
+                color: var(--dark-text);
+                font-weight: 500;
+            }
+        }
+
+        .hashtags {
+            padding-top: 8px;
+            font-family: var(--font);
+
+            a {
+                color: var(--primary);
+                margin: 0 2px;
+            }
+        }
+    }
+}
+
+// Tags widget
+.tags-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+}
+
+// Calendar Widget
+.calendar-widget {
+    .calendar-widget-inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -6px;
+        margin-left: -6px;
+        margin-right: -6px;
+
+        .calendar-square {
+            @include vuero-l-card;
+
+            flex: 1;
+            margin: 6px;
+            width: calc(50% - 6px);
+
+            .date {
+                text-align: center;
+
+                span {
+                    display: block;
+                    font-family: var(--font);
+
+                    &:first-child {
+                        font-weight: 700;
+                        color: var(--dark-text);
+                        font-size: 1.6rem;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 0.75rem;
+                        text-transform: uppercase;
+                        color: var(--light-text);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Calendar widget
+.image-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    position: relative;
+    padding: 10px;
+    height: 310px;
+
+    >img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 14px;
+    }
+
+    .progress-wrap {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        padding: 0 30px;
+
+        .progress {
+            background-color: #000;
+            background-image: linear-gradient(to right, var(--primary) 30%, #000 30%);
+            height: 0.15rem !important;
+        }
+    }
+}
+
+// Stats widget
+.stats-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    padding: 20px 0 0;
+
+    .widget-toolbar {
+        padding: 0 20px;
+    }
+
+    .stat-number {
+        span {
+            display: block;
+            font-family: var(--font);
+
+            &:first-child {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--dark-text);
+
+                svg {
+                    color: var(--success);
+                }
+            }
+
+            &:nth-child(2) {
+                font-size: 0.75rem;
+                font-family: var(--font-alt);
+                text-transform: uppercase;
+                color: var(--light-text);
+            }
+        }
+    }
+
+    .stat-chart {
+        position: relative;
+        bottom: -30px;
+    }
+}
+
+// Icon list widget
+.icon-list-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    .icon-list {
+        .icon-list-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &:hover {
+                .icon-wrap {
+                    background: var(--primary);
+                    color: var(--white);
+                    box-shadow: var(--primary-box-shadow);
+                }
+
+                .item-meta {
+                    span {
+                        color: var(--dark-text);
+                    }
+                }
+            }
+
+            .icon-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 42px;
+                width: 42px;
+                border: none;
+                border-radius: 10px;
+                background: var(--widget-grey-dark-2);
+                color: var(--light-text-dark-6);
+                transition: all 0.3s; // transition-all test
+
+                svg {
+                    transition: stroke 0.3s;
+                }
+
+                img,
+                svg {
+                    height: 18px;
+                    width: 18px;
+                }
+
+                &.is-placeholder {
+                    background: var(--fade-grey-light-2);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    color: var(--light-text);
+
+                    i {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            .item-meta {
+                margin-left: 12px;
+
+                span {
+                    font-family: var(--font);
+                    color: var(--light-text);
+                }
+            }
+        }
+    }
+}
+
+// Video widget
+.video-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    padding: 10px;
+
+    .widget-content {
+        display: flex;
+
+        >img {
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .widget-meta {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font);
+
+            >svg {
+                height: 20px;
+                width: 20px;
+                stroke-width: 1.6px;
+                color: var(--primary);
+                margin-bottom: 6px;
+            }
+
+            h4 {
+                font-weight: 600;
+                font-family: var(--font-alt);
+                font-size: 0.9rem;
+                line-height: 1.3;
+                color: var(--dark-text);
+            }
+
+            .views {
+                display: flex;
+                align-items: center;
+                margin-top: auto;
+                color: var(--light-text);
+
+                svg {
+                    height: 14px;
+                    width: 14px;
+                    stroke-width: 1.4px;
+                    margin-right: 6px;
+                }
+
+                span {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}
+
+// Inbox widget
+.inbox-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    .sender-block {
+        h4 {
+            font-family: var(--font);
+            font-weight: 500;
+            color-interpolation-filters: var(--dark-text);
+            font-size: 0.95rem;
+        }
+
+        .sender-block-inner {
+            display: flex;
+            align-items: center;
+            padding: 16px 0;
+
+            .meta {
+                margin-left: 10px;
+                line-height: 1.2;
+
+                span {
+                    font-family: var(--font-alt);
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .exerpt {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid var(--fade-grey-dark-3);
+            font-family: var(--font);
+
+            h5 {
+                display: flex;
+                align-items: center;
+                font-size: 0.8rem;
+                font-family: var(--font-alt);
+                font-weight: 600;
+                color: var(--primary);
+                margin-bottom: 6px;
+
+                i {
+                    font-size: 6px;
+                    margin-right: 6px;
+                }
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: var(--dark-text);
+                margin-bottom: 6px;
+            }
+
+            small {
+                color: var(--light-text);
+            }
+        }
+    }
+}
+
+// Illustration widgets
+.illustration-widget {
+    &.illustration-widget-v1 {
+        @include vuero-l-card;
+
+        &.is-straight {
+            @include vuero-s-card;
+        }
+
+        padding: 40px 30px;
+        text-align: center;
+        font-family: var(--font);
+
+        .img-container {
+            position: relative;
+            margin: 0 auto 12px;
+            max-width: 180px;
+
+            .main {
+                display: block;
+            }
+
+            .badge {
+                position: absolute;
+
+                &.badge-1 {
+                    height: 70px;
+                    width: 70px;
+                    top: 0;
+                    right: 0;
+                }
+
+                &.badge-2 {
+                    height: 50px;
+                    width: 50px;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: var(--font-alt);
+            color: var(--dark-text);
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    &.illustration-widget-v2 {
+        @include vuero-l-card;
+
+        &.is-straight {
+            @include vuero-s-card;
+        }
+
+        padding: 16px;
+
+        img {
+            border-radius: 14px;
+            margin-bottom: 4px;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: var(--font-alt);
+            color: var(--dark-text);
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    &.illustration-widget-v3 {
+        @include vuero-l-card;
+
+        &.is-straight {
+            @include vuero-s-card;
+        }
+
+        padding: 24px;
+
+        img {
+            border-radius: 18px;
+            margin-bottom: 4px;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: var(--font-alt);
+            color: var(--dark-text);
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+
+// Social buttons widget
+.social-buttons-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    padding: 16px;
+
+    .social-buttons {
+        display: flex;
+
+        .social-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 0;
+
+            .inner-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 32px;
+                width: 32px;
+                min-width: 32px;
+                border-radius: 8px;
+                color: var(--light-text-light-12);
+                transition: all 0.3s; // transition-all test
+
+                &:hover:not(.is-active) {
+                    background: var(--fade-grey-light-3);
+                    color: var(--light-text);
+                }
+
+                &.is-rounded {
+                    border-radius: var(--radius-rounded);
+                }
+
+                &.is-active {
+                    &.is-facebook {
+                        background: var(--facebook);
+                        color: var(--smoke-white);
+                        box-shadow: var(--facebook-box-shadow);
+                    }
+
+                    &.is-linkedin {
+                        background: var(--linkedin);
+                        color: var(--smoke-white);
+                        box-shadow: var(--facebook-box-shadow);
+                    }
+
+                    &.is-twitter {
+                        background: var(--twitter);
+                        color: var(--smoke-white);
+                        box-shadow: var(--twitter-box-shadow);
+                    }
+
+                    &.is-instagram {
+                        background: var(--instagram);
+                        color: var(--smoke-white);
+                        box-shadow: var(--angular-box-shadow);
+                    }
+
+                    &.is-github {
+                        background: var(--github);
+                        color: var(--smoke-white);
+                        box-shadow: var(--github-box-shadow);
+                    }
+
+                    &.is-invision {
+                        background: var(--invision);
+                        color: var(--smoke-white);
+                        box-shadow: var(--invision-box-shadow);
+                    }
+
+                    &.is-atlassian {
+                        background: var(--linkedin);
+                        color: var(--smoke-white);
+                        box-shadow: var(--linkedin-box-shadow);
+                    }
+
+                    &.is-bootstrap {
+                        background: var(--purple);
+                        color: var(--smoke-white);
+                        box-shadow: var(--purple-box-shadow);
+                    }
+                }
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                    transition: stroke 0.3s;
+                }
+            }
+        }
+    }
+}
+
+// Call widget
+.call-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    padding: 40px 30px;
+    text-align: center;
+    font-family: var(--font);
+
+    .img-container {
+        position: relative;
+        margin: 0 auto 12px;
+        max-width: 180px;
+        max-height: 180px;
+
+        .main {
+            display: block;
+        }
+
+        .badge {
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            bottom: 0;
+            right: 2px;
+            border-radius: var(--radius-rounded);
+            border: 6px solid var(--white);
+        }
+    }
+
+    h3 {
+        font-weight: 600;
+        font-family: var(--font-alt);
+        font-size: 1rem;
+        color: var(--dark-text);
+        margin-bottom: 4px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        padding-top: 12px;
+
+        .action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 36px;
+            width: 36px;
+            min-width: 36px;
+            border-radius: var(--radius-rounded);
+            color: var(--light-text-light-12);
+            margin: 0 6px;
+            border: 1px solid var(--fade-grey-dark-3);
+            box-shadow: var(--light-box-shadow);
+            transition: all 0.3s; // transition-all test
+
+            &:hover {
+                background: var(--primary);
+                border-color: var(--primary);
+                color: var(--smoke-white);
+                box-shadow: var(--primary-box-shadow);
+            }
+
+            svg {
+                height: 16px;
+                width: 16px;
+                transition: stroke 0.3s;
+            }
+        }
+    }
+}
+
+// Avatar list widget
+.avatar-list-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    padding: 14px;
+
+    .field {
+        .control {
+            position: relative;
+
+            .input {
+                height: 42px;
+                border-radius: 8px;
+                background: var(--widget-grey);
+                border-color: var(--widget-grey);
+
+                &:focus {
+                    border-color: var(--fade-grey-dark-3);
+                    background: var(--white);
+                }
+            }
+
+            .searcv-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 42px;
+                width: 42px;
+                border-radius: 8px;
+                background: var(--primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                color: var(--white);
+                cursor: pointer;
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+    }
+
+    .avatar-list {
+        .avatar-list-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            transition: all 0.3s; // transition-all test
+
+            &:hover {
+                background: var(--fade-grey-light-3);
+            }
+
+            .meta {
+                font-family: var(--font-alt);
+                font-size: 0.95rem;
+                color: var(--dark-text);
+                font-weight: 600;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+// Followers widget
+.followers-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    .channels {
+        display: flex;
+        margin-left: -8px;
+        margin-right: -8px;
+        width: 100%;
+
+        .channel {
+            width: calc(33.3% - 16px);
+            text-align: center;
+            margin: 0 8px;
+
+            .channel-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 36px;
+                width: 36px;
+                border-radius: 10px;
+                background: var(--widget-grey);
+                margin: 0 auto 4px;
+
+                i {
+                    font-size: 14px;
+                    color: var(--light-text);
+                }
+            }
+
+            .channel-stats {
+                span {
+                    font-family: var(--font);
+                    display: block;
+
+                    &:first-child {
+                        font-weight: 500;
+                        color: var(--light-text);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Cart widget
+
+.cart-widget {
+    @include vuero-l-card;
+
+    &.is-straight {
+        @include vuero-s-card;
+    }
+
+    .cart-items {
+        .cart-item {
+            display: flex;
+            margin: 8px 0;
+
+            .meta {
+                margin-left: 12px;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    display: block;
+                    font-family: var(--font);
+
+                    &:first-child {
+                        font-size: 0.9rem;
+                        color: var(--light-text);
+                    }
+
+                    &:nth-child(2) {
+                        color: var(--dark-text);
+                        margin-top: auto;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-button {
+        padding-top: 16px;
+
+        .button {
+            min-height: 50px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.is-dark {
+    .widget {
+        @include vuero-card--dark;
+    }
+
+    .illustration-widget {
+
+        &.illustration-widget-v1,
+        &.illustration-widget-v2,
+        &.illustration-widget-v3 {
+            h3 {
+                color: var(--dark-dark-text);
+            }
+        }
+    }
+
+    .creative-list-widget {
+        .creative-list {
+            .creative-list-item {
+                background: var(--dark-sidebar-light-2);
+                border: 1px solid var(--dark-sidebar-light-12);
+
+                .meta {
+                    color: var(--smoke-white);
+                }
+            }
+        }
+    }
+
+    .avatar-list-widget {
+        .field {
+            .control {
+                .input {
+                    background: var(--dark-sidebar-light-3);
+                    border-color: var(--dark-sidebar-light-12);
+                }
+
+                .searcv-button {
+                    background: var(--primary);
+                }
+            }
+
+            .topics {
+                a:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .avatar-list {
+            .avatar-list-item {
+                &:hover {
+                    background: var(--dark-sidebar-light-8);
+                }
+
+                .meta {
+                    color: var(--dark-dark-text);
+                }
+            }
+        }
+    }
+
+    .video-widget {
+        .widget-meta {
+            >svg {
+                color: var(--primary);
+            }
+
+            h4 {
+                color: var(--dark-dark-text);
+            }
+        }
+    }
+
+    .inbox-widget {
+        .sender-block {
+            .sender-block-inner {
+                .meta {
+                    span {
+                        color: var(--dark-dark-text);
+                    }
+                }
+            }
+        }
+
+        .exerpt {
+            background: var(--dark-sidebar-light-4);
+            border-color: var(--dark-sidebar-light-12);
+
+            h5 {
+                color: var(--primary);
+            }
+
+            p {
+                color: var(--dark-dark-text);
+            }
+        }
+    }
+
+    .icon-list-widget {
+        .icon-list {
+            .icon-list-item {
+                &:hover {
+                    .icon-wrap {
+                        background: var(--primary) !important;
+                        box-shadow: var(--primary-box-shadow);
+                        color: var(--smoke-white);
+                    }
+
+                    .item-meta {
+                        span {
+
+                            color: var(--primary) !important;
+                        }
+                    }
+                }
+
+                .icon-wrap {
+                    background: var(--dark-sidebar-light-3);
+                    color: var(--light-text-light-2);
+                }
+            }
+        }
+    }
+
+    .stats-widget {
+        .stat-number {
+            span {
+                &:first-child {
+                    color: var(--dark-dark-text);
+                }
+            }
+        }
+    }
+
+    .icon-toolbar-widget {
+        .icon-toolbar {
+            .toolbar-icon {
+                .inner-icon {
+                    color: var(--light-text-dark-12);
+
+                    &:hover,
+                    &:focus:not(.is-active) {
+                        background: var(--dark-sidebar-light-3);
+                    }
+
+                    &.is-active {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+
+    .image-widget {
+        .progress-wrap {
+            .progress {
+                background-image: linear-gradient(to right,
+                        var(--primary) 30%,
+                        #000 30%) !important;
+            }
+        }
+    }
+
+    .search-widget {
+        .field {
+            .control {
+                .input {
+                    background: var(--dark-sidebar-light-3);
+                    border-color: var(--dark-sidebar-light-12);
+                }
+
+                .searcv-button {
+                    background: var(--primary);
+                }
+            }
+
+            .topics {
+                a:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+
+    .widget-toolbar {
+        h3 {
+            color: var(--dark-dark-text);
+        }
+
+        .right {
+            .right-icon {
+                &.has-indicator {
+                    &::after {
+                        border-color: var(--dark-sidebar-light-6);
+                    }
+                }
+            }
+        }
+    }
+
+    .call-widget {
+        h3 {
+            color: var(--dark-dark-text);
+        }
+
+        .img-container {
+            .badge {
+                border-color: var(--dark-sidebar-light-6);
+            }
+        }
+
+        .actions {
+            .action {
+                background: var(--dark-sidebar-light-2);
+                border: 1px solid var(--dark-sidebar-light-12);
+                color: var(--dark-dark-text);
+
+                &:hover,
+                &:focus {
+                    border-color: var(--primary);
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+
+    .social-buttons-widget {
+        .social-buttons {
+            .social-button {
+                .inner-button {
+                    &:hover:not(.is-active) {
+                        background: var(--dark-sidebar-light-2);
+                        color: var(--light-text);
+                    }
+                }
+            }
+        }
+    }
+
+    .picker-widget {
+        .calendar {
+            color: var(--dark-dark-text);
+
+            thead,
+            th {
+                color: var(--primary);
+            }
+
+            td:hover {
+                background: var(--dark-sidebar-light-3);
+                color: var(--primary);
+            }
+        }
+
+        .current-day {
+            color: var(--primary);
+        }
+    }
+
+    .followers-widget {
+        .channels {
+            .channel {
+                .channel-icon {
+                    background: var(--dark-sidebar-light-2);
+                    border: 1px solid var(--dark-sidebar-light-12);
+                }
+            }
+        }
+    }
+
+    .cart-widget {
+        .cart-items {
+            .cart-item {
+                .meta {
+                    span {
+                        &:nth-child(2) {
+                            color: var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .text-widget {
+        .widget-content {
+            p {
+                span {
+                    color: var(--dark-dark-text);
+                }
+            }
+        }
+
+        .hashtags {
+            a {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .calendar-widget {
+        .calendar-widget-inner {
+            .calendar-square {
+                @include vuero-card--dark;
+
+                .date {
+                    span {
+                        &:first-child {
+                            color: var(--dark-dark-text);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.is-divider, .is-divider-vertical {
+    display: block;
+    position: relative;
+    border-top: 0.1rem solid hsl(0deg, 0%, 86%);
+    height: 0.1rem;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+}
+/*
+  1. Timeline
+  2. Timeline Dark mode
+  3. Media Queries
+*/
+
+/* ==========================================================================
+1. Timeline
+========================================================================== */
+.timeline2-wrapper {
+    // max-width: 940px;
+    margin: 0 auto;
+
+    .timeline2-wrapper-inner {
+        padding-top: 30px;
+
+        .timeline2-container {
+            .timeline2-item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 46px;
+                    left: 111px;
+                    height: 100%;
+                    width: 2px;
+                    background: var(--placeholder);
+                    z-index: 0;
+                }
+
+                &:last-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &.is-unread {
+                    .content-wrap {
+                        .content-box {
+                            .status {
+                                background: var(--red) !important;
+                            }
+                        }
+                    }
+                }
+
+                .date {
+                    width: 60px;
+                    font-family: var(--font);
+                    text-align: right;
+
+                    span {
+                        font-size: 0.8rem;
+                        color: var(--light-text);
+                    }
+                }
+
+                .dot {
+                    position: relative;
+                    height: 14px;
+                    width: 14px;
+                    border-radius: var(--radius-rounded);
+                    border: 2.6px solid var(--primary);
+                    margin: 0 10px;
+                    z-index: 1;
+
+                    &.is-info {
+                        border-color: var(--info);
+                    }
+
+                    &.is-success {
+                        border-color: var(--success);
+                    }
+
+                    &.is-warning {
+                        border-color: var(--warning);
+                    }
+
+                    &.is-danger {
+                        border-color: var(--danger);
+                    }
+
+                    &.is-purple {
+                        border-color: var(--purple);
+                    }
+                }
+
+                .content-wrap {
+                    @include vuero-s-card;
+
+                    flex-grow: 2;
+
+                    .content-box {
+                        display: flex;
+                        align-items: center;
+
+                        .status {
+                            height: 8px;
+                            width: 8px;
+                            min-width: 8px;
+                            border-radius: var(--radius-rounded);
+                            background: var(--light-text-light-15);
+                            margin: 0 16px 0 0;
+                        }
+
+                        .box-text {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-left: 12px;
+                            flex-grow: 2;
+
+                            .meta-text {
+                                line-height: 1.2;
+
+                                p {
+                                    color: var(--light-text-dark-10);
+
+                                    span {
+                                        font-family: var(--font-alt);
+                                        color: var(--dark-text);
+                                        font-weight: 600;
+                                        font-size: 0.8rem;
+                                    }
+
+                                    a {
+                                        color: var(--primary);
+                                    }
+
+                                    .tag {
+                                        position: relative;
+                                        top: -1px;
+                                        font-weight: 500;
+                                        line-height: 1.8;
+                                        height: 1.8em;
+                                        margin: 0 2px;
+                                    }
+                                }
+
+                                >span {
+                                    color: var(--light-text);
+                                    font-size: 0.8rem;
+                                }
+                            }
+                        }
+
+                        .box-end {
+                            margin-left: auto;
+
+                            .v-avatar {
+                                margin: 0 2px;
+                            }
+                        }
+                    }
+
+                    .meta-content {
+                        padding-left: 78px;
+                    }
+                }
+            }
+        }
+
+        .load-more-wrap {
+            padding: 40px 0;
+
+            .button {
+                min-width: 240px;
+                min-height: 50px;
+                text-transform: uppercase;
+                font-size: 0.85rem;
+                font-weight: 500;
+                color: var(--light-text);
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Timeline Dark mode
+========================================================================== */
+
+.is-dark {
+    .timeline2-wrapper {
+        .timeline2-wrapper-inner {
+            .timeline2-container {
+                .timeline2-item {
+                    &::before {
+                        background: var(--dark-sidebar-light-20);
+                    }
+
+                    .content-wrap {
+                        @include vuero-card--dark;
+
+                        .content-box {
+                            .status {
+                                background: var(--dark-sidebar-light-20);
+                            }
+
+                            .box-text {
+                                .meta-text {
+                                    p {
+                                        span {
+                                            color: var(--dark-dark-text);
+                                        }
+
+                                        a {
+                                            color: var(--primary);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .load-more-wrap {
+                .button {
+                    background: var(--dark-sidebar-light-2) !important;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+3. Media Queries
+========================================================================== */
+
+@media only screen and (max-width: 767px) {
+    .timeline2-wrapper {
+        .timeline2-wrapper-inner {
+            padding-top: 0;
+
+            .timeline2-container {
+                .timeline2-item {
+                    flex-direction: column;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    .dot {
+                        display: none;
+                    }
+
+                    .date {
+                        align-self: end;
+                        margin-bottom: 4px;
+                    }
+
+                    .content-wrap {
+                        .content-box {
+                            .box-end {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .timeline2-wrapper {
+        .timeline2-wrapper-inner {
+            padding-top: 0;
+
+            .timeline2-container {
+                .timeline2-item {
+                    flex-direction: column;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    .dot {
+                        display: none;
+                    }
+
+                    .date {
+                        align-self: end;
+                        margin-bottom: 4px;
+                    }
+
+                    .content-wrap {
+                        .content-box {
+                            .box-end {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.is-dark .timeline2-wrapper .timeline2-wrapper-inner .timeline2-container .timeline2-item .content-wrap.is-grey {
+
+    background: var(--dark-sidebar-light-4);
+}
+
+.iconify.iconify--feather.is-danger {
+    color: var(--danger);
+    font-size: 1.3rem;
+}
+
+.iconify.iconify--feather.is-success {
+    color: var(--success);
+    font-size: 1.3rem;
+}
+
+.collapse {
+    @include vuero-s-card;
+
+    padding: 0;
+    margin-bottom: 1.5rem;
+
+    &.has-plus {
+        &[open] {
+            .collapse-header {
+                .collapse-icon {
+                    transform: rotate(45deg);
+                }
+            }
+
+            .collapse-content {
+                display: block;
+            }
+        }
+    }
+
+    &.has-chevron {
+        &[open] {
+            .collapse-header {
+                .collapse-icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .collapse-content {
+                display: block;
+            }
+        }
+    }
+
+    &[open] {
+        .collapse-icon {
+            border-color: var(--fade-grey-dark-3) !important;
+            box-shadow: var(--light-box-shadow);
+        }
+    }
+
+    .collapse-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 20px;
+        cursor: pointer;
+
+        h3 {
+            font-family: var(--font-alt);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        .collapse-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            background: var(--white);
+            border-radius: var(--radius-rounded);
+            border: 1px solid transparent;
+            transition: all 0.3s; // transition-all test
+
+            >span {
+                display: block;
+                height: 16px;
+                width: 16px;
+            }
+
+            svg {
+                height: 16px;
+                width: 16px;
+                color: var(--light-text);
+            }
+        }
+    }
+
+    .collapse-content {
+        display: none;
+        padding: 0 20px 20px;
+        color: var(--light-text);
+        font-family: var(--font);
+
+        p:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.is-dark {
+    .collapse {
+        @include vuero-card--dark;
+
+        &[open] {
+            .collapse-header {
+                .collapse-icon {
+                    background: var(--dark-sidebar-light-2);
+                    border-color: var(--dark-sidebar-light-4) !important;
+                }
+            }
+        }
+
+        .collapse-header {
+            h3 {
+                color: var(--dark-dark-text);
+            }
+
+            .collapse-icon {
+                background: var(--dark-sidebar-light-6);
+                border-color: var(--dark-sidebar-light-6);
+            }
+        }
+    }
+}
+
+.is-dark .collapse-icon {
+    background: var(--dark-sidebar-light-6);
+    border-color: var(--dark-sidebar-light-6);
+}
+
+.collapse-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    background: var(--white);
+    border-radius: var(--radius-rounded);
+    border: 1px solid transparent;
+    transition: all .3s;
+}
+
+.is-dark .collapse-icon[open] {
+    background: var(--dark-sidebar-light-2);
+    border-color: var(--dark-sidebar-light-4) !important;
+}
+
+.collapse-icon[open] {
+    border-color: var(--fade-grey-dark-3) !important;
+    box-shadow: var(--light-box-shadow);
+}
+
+.timeline2-wrapper .timeline2-wrapper-inner .timeline2-container .timeline2-item::before {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 76px;
+    height: 100%;
+    width: 2px;
+    background: var(--placeholder);
+    z-index: 0;
+}
+.timeline2-wrapper .timeline2-wrapper-inner .timeline2-container .timeline2-item .content-wrap {
+    padding: 10px;
+}
+.timeline2-wrapper .timeline2-wrapper-inner .timeline2-container .timeline2-item .content-wrap .content-box .status {
+    margin: 0 0 0 0;
+}
+.space-b{
+    align-content: space-between;
+    display: flex;
+}
+.bg-grey{
+    background: #EFEFEF;
+}
+
+.button.v-button.is-small {
+    height: 27px;
+}
+.w-100 {
+    width: 100%;
+}
+.panjangaaaaaaa {
+    height: 130px
+}
+
+.panjangna-100{
+    height: 100px
+}
+.laboratsss{
+
+    position: relative;
+    top: -3px;
+    font-size: 0.3rem;
+    color: var(--light-text);
+    margin: 0 4px;
+}
+.f-table{
+    font-size: 0.8rem;
+}
+
+.tile-grid-xx {
+  .columns {
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+    margin-top: -0.5rem !important;
+  }
+
+  .column {
+    padding: 0.5rem !important;
+  }
+}
+
+.tile-grid-xx-v3 {
+  .tile {
+    &.is-ancestor {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      margin-top: -0.5rem;
+    }
+
+    &.is-parent {
+      padding: 0.5rem;
+    }
+  }
+
+  .tile-grid-xx-item {
+    @include vuero-s-card;
+
+    padding: 10px;
+    border-radius: 16px;
+
+    &.is-medium {
+      max-height: 132px;
+
+      .tile-grid-xx-item-inner {
+        display: flex;
+        height: 100%;
+
+        >img {
+          display: block;
+          border-radius: 12px;
+          width: 100%;
+          max-width: 110px;
+          min-width: 110px;
+          height: 100%;
+          min-height: 110px;
+          max-height: 110px;
+          object-fit: cover;
+        }
+
+        .meta {
+          margin-left: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .tile-title {
+            h3 {
+              font-family: var(--font);
+              font-family: var(--font-alt);
+              font-size: 1rem;
+              font-weight: 600;
+              color: var(--dark-text);
+              line-height: 1.3;
+            }
+          }
+
+          .tile-meta {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            padding: 0 0 5px;
+
+            .v-avatar {
+              max-width: 26px;
+              max-height: 26px;
+              min-width: 26px;
+
+              .avatar {
+                max-width: 26px;
+                max-height: 26px;
+                min-width: 26px;
+              }
+            }
+
+            .meta-inner {
+              margin-left: 8px;
+              line-height: 1.2;
+
+              span {
+                display: block;
+                font-weight: 400;
+
+                &:first-child {
+                  color: var(--dark-text);
+                  font-family: var(--font-alt);
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                }
+
+                &:nth-child(2) {
+                  font-size: 0.8rem;
+                  font-family: var(--font);
+                  color: var(--light-text);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.is-large {
+      .tile-grid-xx-item-inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        >img {
+          display: block;
+          border-radius: 12px;
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+        }
+
+        .meta {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex: 1 1 0;
+          padding: 0 5px;
+
+          .tile-title {
+            padding-top: 10px;
+
+            h3 {
+              font-family: var(--font);
+              font-size: 1.2rem;
+              font-weight: 500;
+              color: var(--dark-text);
+              line-height: 1.1;
+            }
+          }
+
+          .tile-meta {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            padding: 0 0 5px;
+
+            .v-avatar {
+              max-width: 26px;
+              max-height: 26px;
+              min-width: 26px;
+
+              .avatar {
+                max-width: 26px;
+                max-height: 26px;
+                min-width: 26px;
+              }
+            }
+
+            .meta-inner {
+              margin-left: 8px;
+              line-height: 1.2;
+
+              span {
+                display: block;
+                font-weight: 400;
+
+                &:first-child {
+                  color: var(--dark-text);
+                  font-size: 0.9rem;
+                  font-weight: 500;
+                }
+
+                &:nth-child(2) {
+                  font-size: 0.8rem;
+                  color: var(--light-text);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.is-wide {
+      .tile-grid-xx-item-inner {
+        display: flex;
+        height: 100%;
+
+        >img {
+          display: block;
+          border-radius: 12px;
+          width: 100%;
+          max-width: 280px;
+          height: 100%;
+          min-height: 160px;
+          object-fit: cover;
+        }
+
+        .meta {
+          margin-left: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .tile-title {
+            padding-top: 5px;
+
+            h3 {
+              font-family: var(--font);
+              font-size: 1.3rem;
+              font-weight: 500;
+              color: var(--dark-text);
+              line-height: 1.1;
+            }
+
+            p {
+              color: var(--light-text);
+              font-size: 0.95rem;
+              padding-top: 5px;
+            }
+          }
+
+          .tile-meta {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            padding: 0 0 5px;
+
+            .v-avatar {
+              max-width: 26px;
+              max-height: 26px;
+              min-width: 26px;
+
+              .avatar {
+                max-width: 26px;
+                max-height: 26px;
+                min-width: 26px;
+              }
+            }
+
+            .meta-inner {
+              margin-left: 8px;
+              line-height: 1.2;
+
+              span {
+                display: block;
+                font-weight: 400;
+
+                &:first-child {
+                  color: var(--dark-text);
+                  font-size: 0.9rem;
+                  font-weight: 500;
+                }
+
+                &:nth-child(2) {
+                  font-size: 0.8rem;
+                  color: var(--light-text);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.is-tall {
+      .tile-grid-xx-item-inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        >img {
+          display: block;
+          border-radius: 12px;
+          width: 100%;
+
+          // max-width: 110px;
+          height: 220px;
+          object-fit: cover;
+        }
+
+        .meta {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex: 1 1 0;
+          padding: 0 5px;
+
+          .tile-title {
+            padding-top: 10px;
+
+            h3 {
+              font-family: var(--font);
+              font-size: 1.2rem;
+              font-weight: 500;
+              color: var(--dark-text);
+              line-height: 1.1;
+            }
+
+            p {
+              color: var(--light-text);
+              font-size: 0.95rem;
+              padding-top: 5px;
+            }
+          }
+
+          .tile-meta {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            padding: 0 0 5px;
+
+            .v-avatar {
+              max-width: 26px;
+              max-height: 26px;
+              min-width: 26px;
+
+              .avatar {
+                max-width: 26px;
+                max-height: 26px;
+                min-width: 26px;
+              }
+            }
+
+            .meta-inner {
+              margin-left: 8px;
+              line-height: 1.2;
+
+              span {
+                display: block;
+                font-weight: 400;
+
+                &:first-child {
+                  color: var(--dark-text);
+                  font-size: 0.9rem;
+                  font-weight: 500;
+                }
+
+                &:nth-child(2) {
+                  font-size: 0.8rem;
+                  color: var(--light-text);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-dark {
+  .tile-grid-xx {
+    .tile-grid-xx-item {
+      @include vuero-card--dark;
+    }
+  }
+
+  .tile-grid-xx-v3 {
+    .tile-grid-xx-item {
+      @include vuero-card--dark;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-grid-xx-v3 {
+    .tile-grid-xx-item {
+      max-height: 132px !important;
+
+      .tile-grid-xx-item-inner {
+        display: flex !important;
+        flex-direction: row !important;
+        height: 100% !important;
+
+        >img {
+          display: block !important;
+          border-radius: 12px !important;
+          width: 100% !important;
+          max-width: 110px !important;
+          min-width: 110px !important;
+          height: 100% !important;
+          min-height: 110px !important;
+          max-height: 110px !important;
+          object-fit: cover !important;
+        }
+
+        .meta {
+          margin-left: 12px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: space-between !important;
+
+          .tile-title {
+            h3 {
+              font-family: var(--font) !important;
+              font-size: 1.1rem !important;
+              font-weight: 500;
+              color: var(--dark-text) !important;
+              line-height: 1.1 !important;
+            }
+
+            p {
+              display: none !important;
+            }
+          }
+
+          .tile-meta {
+            display: flex !important;
+            align-items: center !important;
+            margin-top: auto !important;
+            padding: 0 0 5px !important;
+
+            .v-avatar {
+              max-width: 26px !important;
+              max-height: 26px !important;
+              min-width: 26px !important;
+
+              .avatar {
+                max-width: 26px !important;
+                max-height: 26px !important;
+                min-width: 26px !important;
+              }
+            }
+
+            .meta-inner {
+              margin-left: 8px !important;
+              line-height: 1.2 !important;
+
+              span {
+                display: block !important;
+                font-weight: 400 !important;
+
+                &:first-child {
+                  color: var(--dark-text) !important;
+                  font-size: 0.9rem !important;
+                  font-weight: 500 !important;
+                }
+
+                &:nth-child(2) {
+                  font-size: 0.8rem !important;
+                  color: var(--light-text) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .tile-grid-xx-v3 {
+    .tile-grid-xx-item {
+      max-height: 132px !important;
+
+      .tile-grid-xx-item-inner {
+        display: flex !important;
+        flex-direction: row !important;
+        height: 100% !important;
+
+        >img {
+          display: block !important;
+          border-radius: 12px !important;
+          width: 100% !important;
+          max-width: 110px !important;
+          min-width: 110px !important;
+          height: 100% !important;
+          min-height: 110px !important;
+          max-height: 110px !important;
+          object-fit: cover !important;
+        }
+
+        .meta {
+          margin-left: 12px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: space-between !important;
+
+          .tile-title {
+            h3 {
+              font-family: var(--font) !important;
+              font-size: 1.1rem !important;
+              font-weight: 500;
+              color: var(--dark-text) !important;
+              line-height: 1.1 !important;
+            }
+
+            p {
+              display: block;
+              max-width: 460px;
+            }
+          }
+
+          .tile-meta {
+            display: flex !important;
+            align-items: center !important;
+            margin-top: auto !important;
+            padding: 0 0 5px !important;
+
+            .v-avatar {
+              max-width: 26px !important;
+              max-height: 26px !important;
+              min-width: 26px !important;
+
+              .avatar {
+                max-width: 26px !important;
+                max-height: 26px !important;
+                min-width: 26px !important;
+              }
+            }
+
+            .meta-inner {
+              margin-left: 8px !important;
+              line-height: 1.2 !important;
+
+              span {
+                display: block !important;
+                font-weight: 400 !important;
+
+                &:first-child {
+                  color: var(--dark-text) !important;
+                  font-size: 0.9rem !important;
+                  font-weight: 500 !important;
+                }
+
+                &:nth-child(2) {
+                  font-size: 0.8rem !important;
+                  color: var(--light-text) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .tile-grid-xx-v3 {
+    .tile-grid-xx-item {
+      &.is-medium {
+        .tile-grid-xx-item-inner {
+          .tile-title {
+            h3 {
+              font-size: 1rem !important;
+            }
+          }
+        }
+      }
+
+      &.is-large {
+        .tile-grid-xx-item-inner {
+          .tile-title {
+            h3 {
+              font-size: 1.1rem !important;
+            }
+          }
+        }
+      }
+
+      &.is-tall {
+        .tile-grid-xx-item-inner {
+          .tile-title {
+            h3 {
+              font-size: 1.2rem !important;
+            }
+          }
+        }
+      }
+
+      &.is-wide {
+        .tile-grid-xx-item-inner {
+          >img {
+            max-width: 180px;
+            min-height: 160px;
+          }
+
+          .tile-title {
+            h3 {
+              font-size: 1.2rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

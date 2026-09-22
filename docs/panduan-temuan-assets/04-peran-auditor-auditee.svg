@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect class="bg" width="1400" height="760"/><text class="h" x="70" y="70">Tampilan otomatis berdasarkan mapping login</text>
+<rect class="panel" x="70" y="105" width="1260" height="250" rx="18"/><circle cx="115" cy="150" r="28" fill="#e8f2f5"/><text class="sh" x="160" y="150">Audit Internal Teknik Kelistrikan Jakarta</text><rect x="1050" y="125" width="220" height="58" rx="10" fill="#18b779"/><text x="1160" y="161" text-anchor="middle" style="font:700 18px Calibri,Arial;fill:#fff">+ Tambah Temuan</text>
+<text class="b" x="105" y="230">TIM AUDIT (ditampilkan lebih dahulu)</text><rect x="105" y="255" width="285" height="42" rx="21" fill="#e7f3f6"/><text class="m" x="247" y="282" text-anchor="middle">Lead Auditor | tetap satu orang</text><rect x="405" y="255" width="355" height="42" rx="21" fill="#e7f3f6"/><text class="m" x="582" y="282" text-anchor="middle">Anggota Auditor | sesuai lingkup</text>
+<rect class="mark" x="90" y="205" width="1200" height="112" rx="14"/><circle class="num" cx="1280" cy="210" r="22"/><text class="numText" x="1280" y="211">1</text>
+<rect class="panel" x="70" y="400" width="1260" height="270" rx="18"/><circle cx="115" cy="448" r="28" fill="#e8f2f5"/><text class="sh" x="160" y="448">Audit Internal Teknik Kelistrikan Gresik</text><rect x="780" y="422" width="235" height="44" rx="22" fill="#f5a623"/><text x="897" y="450" text-anchor="middle" style="font:16px Calibri,Arial;fill:#fff">Mode Auditee | Lihat Saja</text>
+<text class="b" x="105" y="530">AUDITEE (ditampilkan di bawah)</text><rect x="105" y="555" width="350" height="42" rx="21" fill="#e8f6ef"/><text class="m" x="280" y="582" text-anchor="middle">Auditee | sesuai mapping login</text><text class="m" x="105" y="630">Dapat melihat temuan yang ditujukan kepada lingkupnya, tanpa tombol tambah/edit/hapus.</text>
+<rect class="mark" x="90" y="495" width="1200" height="150" rx="14"/><circle class="num" cx="1280" cy="500" r="22"/><text class="numText" x="1280" y="501">2</text>
+</svg>

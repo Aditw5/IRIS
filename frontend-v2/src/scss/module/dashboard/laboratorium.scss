@@ -1,0 +1,266 @@
+.tabs-wrapper.is-slider .tabs,
+.tabs-wrapper-alt.is-slider .tabs {
+    position: relative;
+    background: var(--fade-grey-light-2);
+    border: 1px solid var(--fade-grey);
+    max-width: 400px;
+    height: 35px;
+    border-bottom: none;
+
+}
+
+.user-grid-v2 {
+    .columns {
+        margin-left: -0.5rem !important;
+        margin-right: -0.5rem !important;
+        margin-top: -0.5rem !important;
+    }
+
+    .column {
+        padding: 0.5rem !important;
+    }
+
+    .grid-item {
+        @include vuero-s-card;
+
+        text-align: center;
+
+        >.v-avatar {
+            display: block;
+            margin: 0 auto 4px;
+        }
+
+        h3 {
+            font-family: var(--font-alt);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        p {
+            font-size: 0.85rem;
+        }
+
+        .people {
+            display: flex;
+            justify-content: center;
+            padding: 8px 0 30px;
+
+            .v-avatar {
+                margin: 0 4px;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+
+            .button {
+                width: calc(50% - 4px);
+                color: var(--light-text);
+
+                &:hover,
+                &:focus {
+                    border-color: var(--fade-grey-dark-4);
+                    color: var(--primary);
+                    box-shadow: var(--light-box-shadow);
+                }
+            }
+        }
+    }
+
+    .grid-item-wrap {
+        border: 1px solid var(--fade-grey-dark-3);
+        border-radius: var(--radius-large);
+        transition: all 0.3s; // transition-all test
+
+        .grid-item-head {
+            background: #fafafa;
+            border-radius: var(--radius-large) 6px 0 0;
+            padding: 20px;
+
+            .flex-head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 12px;
+
+                .meta {
+                    span {
+                        display: flex;
+
+                        &:first-child {
+                            font-family: var(--font-alt);
+                            font-weight: 600;
+                            font-size: 0.85rem;
+                            color: white;
+                        }
+
+                        &:nth-child(2) {
+                            font-size: 0.8rem;
+                            color: white;
+                        }
+                    }
+                }
+
+                .status-icon {
+                    height: 28px;
+                    width: 28px;
+                    min-width: 28px;
+                    border-radius: var(--radius-rounded);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &.is-success {
+                        background: var(--success);
+                        border-color: var(--success);
+                        color: var(--white);
+                    }
+
+                    &.is-warning {
+                        background: var(--orange);
+                        border-color: var(--orange);
+                        color: var(--white);
+                    }
+
+                    &.is-danger {
+                        background: var(--danger);
+                        border-color: var(--danger);
+                        color: var(--white);
+                    }
+
+                    i {
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0;
+
+                .button,
+                .v-button {
+                    width: calc(50% - 4px);
+                    color: var(--light-text);
+                    margin-bottom: 0;
+
+                    &:hover,
+                    &:focus {
+                        border-color: var(--fade-grey-dark-4);
+                        color: var(--primary);
+                        box-shadow: var(--light-box-shadow);
+                    }
+                }
+            }
+        }
+
+        .grid-item {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border: none;
+        }
+    }
+}
+
+.is-dark {
+    .user-grid {
+        .grid-item {
+            @include vuero-card--dark;
+        }
+    }
+
+    .user-grid-v2 {
+        .grid-item-wrap {
+            border-color: var(--dark-sidebar-light-12);
+
+            .grid-item-head {
+                background: var(--dark-sidebar-light-4);
+            }
+        }
+    }
+}
+
+.user-grid-v2 .grid-item-wrap .grid-item-head.is-registrasi {
+    background: var(--success) !important
+}
+
+.search-menu-lab {
+    height: 56px !important;
+    white-space: nowrap;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    padding-left: 0.75rem;
+
+    >div:not(:last-of-type) {
+        border-right: 1px solid var(--search-border-color);
+    }
+
+    .search-bar {
+        height: 55px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-right: 1.5rem;
+
+        .field {
+            width: 100%;
+        }
+
+        .multiselect-tags {
+            padding-left: 2.5rem;
+        }
+    }
+
+    .search-location-lab,
+    .search-job,
+    .search-salary {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 25px;
+        height: 100%;
+        font-family: var(--font);
+
+        input {
+            width: 100%;
+            height: 90%;
+            display: block;
+            font-family: var(--font);
+            color: var(--input-color);
+            background-color: transparent;
+            border: none;
+        }
+
+        svg {
+            margin-right: 0.5rem;
+            width: 18px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+    }
+
+    .search-button-lab {
+        background-color: var(--primary);
+        min-width: 100px;
+        height: 56px !important;
+        border: none;
+        font-weight: 500;
+        font-family: var(--font);
+        padding: 0 1rem;
+        border-radius: 0 0.75rem 0.75rem 0;
+        color: white;
+        cursor: pointer;
+        margin-left: auto;
+    }
+}

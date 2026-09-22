@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect class="bg" width="1400" height="760"/><text class="h" x="70" y="70">Cetak Laporan = satu PDF gabungan per tahun</text>
+<rect x="80" y="120" width="240" height="75" rx="12" fill="#f5a623"/><text x="200" y="165" text-anchor="middle" style="font:700 20px Calibri,Arial;fill:#172b4d">Cetak Laporan</text><rect class="mark" x="65" y="105" width="270" height="105" rx="14"/><circle class="num" cx="335" cy="115" r="22"/><text class="numText" x="335" y="116">1</text>
+<path class="arrow" d="M345 158 L520 158"/><rect class="panel" x="540" y="100" width="780" height="560" rx="18"/><text class="sh" x="580" y="145">TEMUAN KETIDAKSESUAIAN 2026</text><text class="m" x="580" y="177">Dokumen bertambah mengikuti lingkup yang sudah memiliki data temuan.</text>
+<rect x="580" y="215" width="700" height="50" rx="8" fill="#e9f5fb"/><text class="b" x="610" y="247">1. Audit Internal Mutu</text>
+<rect x="580" y="275" width="700" height="50" rx="8" fill="#edf8f4"/><text class="b" x="610" y="307">2. Audit Internal Teknik Kelistrikan Jakarta</text>
+<rect x="580" y="335" width="700" height="50" rx="8" fill="#edf8f4"/><text class="b" x="610" y="367">3. Audit Internal Teknik Tekanan Jakarta</text>
+<rect x="580" y="395" width="700" height="50" rx="8" fill="#edf8f4"/><text class="b" x="610" y="427">4. Audit Internal Teknik Suhu &amp; Kelembapan Jakarta</text>
+<text class="m" x="610" y="485">... dilanjutkan menurut urutan lingkup standar, bukan urutan siapa yang mengisi.</text>
+<rect class="dash" x="565" y="200" width="730" height="310" rx="14"/><circle class="num" cx="1295" cy="210" r="22"/><text class="numText" x="1295" y="211">2</text>
+<rect x="580" y="545" width="700" height="75" rx="10" fill="#fff4dd" stroke="#f5a623"/><text class="b" x="610" y="575">Syarat tombol aktif</text><text class="m" x="610" y="602">Minimal satu temuan tersimpan pada tahun yang dipilih.</text>
+</svg>

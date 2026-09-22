@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect class="bg" width="1400" height="760"/><text class="h" x="70" y="75">Alur singkat penggunaan</text>
+<rect class="panel" x="70" y="125" width="230" height="130" rx="18"/><circle class="num" cx="110" cy="165" r="24"/><text class="numText" x="110" y="166">1</text><text class="sh" x="145" y="170">Login</text><text class="m" x="100" y="215">Identitas dikenali sistem</text>
+<path class="arrow" d="M310 190 L385 190"/><rect class="panel" x="400" y="125" width="260" height="130" rx="18"/><circle class="num" cx="440" cy="165" r="24"/><text class="numText" x="440" y="166">2</text><text class="sh" x="475" y="170">Navigation</text><text class="m" x="430" y="215">Program Mutu -&gt; Temuan</text>
+<path class="arrow" d="M670 190 L745 190"/><rect class="panel" x="760" y="125" width="260" height="130" rx="18"/><circle class="num" cx="800" cy="165" r="24"/><text class="numText" x="800" y="166">3</text><text class="sh" x="835" y="170">Mapping</text><text class="m" x="790" y="215">Peran &amp; lingkup otomatis</text>
+<path class="arrow" d="M1030 190 L1105 190"/><rect class="panel" x="1120" y="125" width="220" height="130" rx="18"/><circle class="num" cx="1160" cy="165" r="24"/><text class="numText" x="1160" y="166">4</text><text class="sh" x="1195" y="170">Pakta</text><text class="m" x="1150" y="215">Auditor wajib isi</text>
+<path class="arrow" d="M1230 270 C1230 340,1000 350,1000 405"/><rect class="panel" x="805" y="420" width="395" height="150" rx="18"/><circle class="num" cx="850" cy="465" r="24"/><text class="numText" x="850" y="466">5</text><text class="sh" x="890" y="470">Auditor mengisi temuan</text><text class="m" x="845" y="520">Tanggal dan nama pengisi otomatis</text>
+<path class="arrow" d="M790 495 L690 495"/><rect class="panel" x="335" y="420" width="340" height="150" rx="18"/><circle class="num" cx="380" cy="465" r="24"/><text class="numText" x="380" y="466">6</text><text class="sh" x="420" y="470">Auditee melihat</text><text class="m" x="375" y="520">Mode lihat saja, tanpa edit</text>
+<path class="arrow" d="M320 495 L230 495"/><rect class="panel" x="70" y="420" width="145" height="150" rx="18"/><circle class="num" cx="110" cy="465" r="24"/><text class="numText" x="110" y="466">7</text><text class="b" x="95" y="510">Cetak</text><text class="s" x="95" y="540">Pakta / Laporan</text>
+<rect x="70" y="625" width="1270" height="70" rx="12" fill="#e9f7fb"/><text class="b" x="105" y="668">Prinsip utama: pengguna tidak memilih jenis audit; sistem mengikuti mapping tahun dan akun login.</text>
+</svg>

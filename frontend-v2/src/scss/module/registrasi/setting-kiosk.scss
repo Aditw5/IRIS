@@ -1,0 +1,3282 @@
+// MASTER AGAMA
+.tile-grid {
+    .columns {
+      margin-left: -0.5rem !important;
+      margin-right: -0.5rem !important;
+      margin-top: -0.5rem !important;
+    }
+  
+    .column {
+      padding: 0.5rem !important;
+    }
+  }
+  
+  .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background: #e62964;
+  }
+  .switch-filter{
+    justify-content: end;align-items: center;display: flex;padding: 0px;
+  }
+  .p-inputswitch-checked {
+    .p-inputswitch-slider:hover {
+      background: #e62964 !important;
+    }
+  }
+  
+  .is-dark {
+    .tile-grid {
+      .tile-grid-item {
+        @include vuero-card--dark;
+      }
+    }
+  }
+  
+  .list-view-v3 {
+    .list-view-item {
+      @include vuero-r-card;
+  
+      margin-bottom: 16px;
+      padding: 16px;
+  
+      .list-view-item-inner {
+        display: flex;
+        align-items: center;
+  
+        >img {
+          width: 100%;
+          max-width: 60px;
+          min-width: 60px;
+          max-height: 60px;
+          min-height: 60px;
+          border-radius: var(--radius-rounded);
+          border: 1px solid var(--fade-grey);
+        }
+  
+        .meta-left {
+          margin-left: 16px;
+  
+          h3 {
+            font-family: var(--font-alt);
+            color: var(--dark-text);
+            font-weight: 500;
+            font-size: 1.0rem;
+            line-height: 1;
+          }
+  
+          >span:not(.tag) {
+            font-size: 1rem;
+            color: var(--light-text);
+  
+            svg {
+              position: relative;
+              top: 1px;
+              height: 12px;
+              width: 12px;
+            }
+  
+            .icon-separator {
+              position: relative;
+              top: -3px;
+              font-size: 5px;
+              color: var(--light-text);
+              padding: 0 8px;
+            }
+  
+            .iconify {
+              margin-right: 0.25rem;
+            }
+          }
+        }
+  
+        .meta-right {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+  
+          .buttons {
+            margin-bottom: 0;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  
+  .fs-075 {
+    font-size: 0.9rem;
+  }
+  
+  .is-navbar {
+    .form-layout {
+      margin-top: 30px;
+    }
+  }
+  
+  .form-layout {
+    // max-width: 740px;
+    margin: 0 auto;
+  
+    &.is-separate {
+      // max-width: 1040px;
+  
+      .form-outer {
+        background: none;
+        border: none;
+  
+        .form-body {
+          display: flex;
+  
+          .form-section {
+            flex-grow: 2;
+            padding: 10px;
+            width: 50%;
+  
+            .form-section-inner {
+              @include vuero-s-card;
+  
+              padding: 40px;
+  
+              &.has-padding-bottom {
+                padding-bottom: 60px;
+                height: 100%;
+              }
+  
+              >h3 {
+                font-family: var(--font-alt);
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                margin-bottom: 30px;
+              }
+  
+              .columns {
+                .column {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                }
+              }
+  
+              .radio-boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-left: -8px;
+                margin-right: -8px;
+  
+                .radio-box {
+                  position: relative;
+                  width: calc(50% - 16px);
+                  margin: 8px;
+  
+                  &:focus-within {
+                    border-radius: 3px;
+                    outline-offset: var(--accessibility-focus-outline-offset);
+                    outline-width: var(--accessibility-focus-outline-width);
+                    outline-style: var(--accessibility-focus-outline-style);
+                    outline-color: var(--primary);
+                  }
+  
+                  input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+  
+                    &:checked {
+                      +.radio-box-inner {
+                        background: var(--primary);
+                        border-color: var(--primary);
+                        box-shadow: var(--primary-box-shadow);
+  
+                        .fee,
+                        p {
+                          color: var(--smoke-white);
+                        }
+                      }
+                    }
+                  }
+  
+                  .radio-box-inner {
+                    background: var(--white);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    text-align: center;
+                    border-radius: var(--radius);
+                    font-family: var(--font);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+                      height 0.3s, width 0.3s;
+                    padding: 30px 20px;
+  
+                    .fee {
+                      font-family: var(--font);
+                      font-weight: 700;
+                      color: var(--dark-text);
+                      font-size: 2.4rem;
+                      line-height: 1;
+  
+                      span {
+                        &::after {
+                          content: '$';
+                          position: relative;
+                          top: -10px;
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+  
+                    p {
+                      font-family: var(--font-alt);
+                    }
+                  }
+                }
+              }
+  
+              .control {
+                >p {
+                  padding-top: 12px;
+  
+                  >span {
+                    display: block;
+                    font-size: 0.9rem;
+  
+                    span {
+                      font-weight: 500;
+                      color: var(--dark-text);
+                    }
+                  }
+                }
+              }
+            }
+  
+            .form-section-outer {
+              .checkboxes {
+                padding: 16px 0;
+  
+                .checkbox {
+                  padding: 0;
+                  font-size: 0.9rem;
+                }
+              }
+  
+              .button-wrap {
+                .button {
+                  min-height: 60px;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  font-family: var(--font-alt);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .form-layout {
+      &.is-separate {
+        .form-outer {
+          background: none !important;
+  
+          .form-body {
+            .form-section {
+              .form-section-inner {
+                @include vuero-card--dark;
+  
+                >h3 {
+                  color: var(--dark-dark-text);
+                }
+  
+                .radio-boxes {
+                  .radio-box {
+                    input:checked+.radio-box-inner {
+                      background: var(--primary);
+                      border-color: var(--primary);
+                      box-shadow: var(--primary-box-shadow);
+  
+                      .fee,
+                      p {
+                        color: var(--smoke-white);
+                      }
+                    }
+  
+                    .radio-box-inner {
+                      background: var(--dark-sidebar-light-2);
+                      border-color: var(--dark-sidebar-light-12);
+  
+                      .fee {
+                        color: var(--dark-dark-text);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .form-layout {
+      &.is-separate {
+        .form-outer {
+          .form-body {
+            padding-left: 0;
+            padding-right: 0;
+  
+            // flex-direction: column;
+  
+            .form-section {
+              // width: 100%;
+  
+              .form-section-inner {
+                padding: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .all-projects {
+    .all-projects-header {
+      display: flex;
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--fade-grey-dark-3);
+      border-radius: var(--radius-large);
+      margin-bottom: 1.5rem;
+  
+      .header-item {
+        width: 25%;
+        border-right: 1px solid var(--fade-grey-dark-3);
+  
+        &:last-child {
+          border-right: none;
+        }
+  
+        .item-inner {
+          text-align: center;
+  
+          .lnil,
+          .lnir {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+            color: var(--primary);
+          }
+  
+          span {
+            display: block;
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--dark-text);
+          }
+  
+          p {
+            font-family: var(--font-alt);
+          }
+        }
+      }
+    }
+  
+    .projects-card-grid {
+      .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 220px;
+        padding: 20px;
+        background: var(--white);
+        border: 1px solid var(--fade-grey-dark-3);
+        border-radius: var(--radius-large);
+  
+        .top-section {
+          .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+  
+            h3 {
+              font-size: 1rem;
+              font-family: var(--font-alt);
+              color: var(--dark-text);
+              font-weight: 600;
+            }
+          }
+  
+          .body {
+            p {
+              font-family: var(--font);
+              color: var(--light-text);
+            }
+          }
+        }
+  
+        .bottom-section {
+          display: flex;
+  
+          .foot-block {
+            margin-right: 30px;
+  
+            .heading {
+              font-family: var(--font-alt);
+              font-size: 0.75rem;
+              color: var(--light-text-dark-22);
+            }
+  
+            .developers {
+              display: flex;
+  
+              .v-avatar {
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .heading {
+    font-family: var(--font-alt);
+    font-size: 0.75rem;
+    color: var(--light-text-dark-22);
+  }
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER ASAL ANGGARAN
+  
+  
+  .tile-grid-v1 {
+    .tile-grid-item {
+      @include vuero-s-card;
+  
+      border-radius: 14px;
+      padding: 16px;
+  
+      .tile-grid-item-inner {
+        display: flex;
+        align-items: center;
+  
+        .meta {
+          margin-left: 10px;
+          line-height: 1.2;
+  
+          span {
+            display: block;
+            font-family: var(--font);
+  
+            &:first-child {
+              color: var(--dark-text);
+              font-family: var(--font-alt);
+              font-weight: 600;
+              font-size: 1rem;
+            }
+  
+            &:nth-child(2) {
+              color: var(--light-text);
+              font-size: 0.9rem;
+            }
+          }
+        }
+  
+        .dropdown {
+          position: relative;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  
+  .asuransi {
+    margin-left: 68px;
+    margin-top: -18px;
+    margin-bottom: -17px;
+    filter: opacity(0.9);
+    max-width: 56%;
+  }
+  
+  
+  .form-layout {
+    // max-width: 740px;
+    margin: 0 auto;
+  
+    &.is-separate {
+      // max-width: 1040px;
+  
+      .form-outer {
+        background: none;
+        border: none;
+  
+        .form-body {
+          display: flex;
+  
+          .form-section {
+            flex-grow: 2;
+            padding: 10px;
+            width: 50%;
+  
+            .form-section-inner {
+              @include vuero-s-card;
+  
+              padding: 40px;
+  
+              &.has-padding-bottom {
+                padding-bottom: 60px;
+                height: 100%;
+              }
+  
+              >h3 {
+                font-family: var(--font-alt);
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                margin-bottom: 30px;
+              }
+  
+              .columns {
+                .column {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                }
+              }
+  
+              .radio-boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-left: -8px;
+                margin-right: -8px;
+  
+                .radio-box {
+                  position: relative;
+                  width: calc(50% - 16px);
+                  margin: 8px;
+  
+                  &:focus-within {
+                    border-radius: 3px;
+                    outline-offset: var(--accessibility-focus-outline-offset);
+                    outline-width: var(--accessibility-focus-outline-width);
+                    outline-style: var(--accessibility-focus-outline-style);
+                    outline-color: var(--primary);
+                  }
+  
+                  input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+  
+                    &:checked {
+                      +.radio-box-inner {
+                        background: var(--primary);
+                        border-color: var(--primary);
+                        box-shadow: var(--primary-box-shadow);
+  
+                        .fee,
+                        p {
+                          color: var(--smoke-white);
+                        }
+                      }
+                    }
+                  }
+  
+                  .radio-box-inner {
+                    background: var(--white);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    text-align: center;
+                    border-radius: var(--radius);
+                    font-family: var(--font);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+                      height 0.3s, width 0.3s;
+                    padding: 30px 20px;
+  
+                    .fee {
+                      font-family: var(--font);
+                      font-weight: 700;
+                      color: var(--dark-text);
+                      font-size: 2.4rem;
+                      line-height: 1;
+  
+                      span {
+                        &::after {
+                          content: '$';
+                          position: relative;
+                          top: -10px;
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+  
+                    p {
+                      font-family: var(--font-alt);
+                    }
+                  }
+                }
+              }
+  
+              .control {
+                >p {
+                  padding-top: 12px;
+  
+                  >span {
+                    display: block;
+                    font-size: 0.9rem;
+  
+                    span {
+                      font-weight: 500;
+                      color: var(--dark-text);
+                    }
+                  }
+                }
+              }
+            }
+  
+            .form-section-outer {
+              .checkboxes {
+                padding: 16px 0;
+  
+                .checkbox {
+                  padding: 0;
+                  font-size: 0.9rem;
+                }
+              }
+  
+              .button-wrap {
+                .button {
+                  min-height: 60px;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  font-family: var(--font-alt);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .form-layout {
+      &.is-separate {
+        .form-outer {
+          background: none !important;
+  
+          .form-body {
+            .form-section {
+              .form-section-inner {
+                @include vuero-card--dark;
+  
+                >h3 {
+                  color: var(--dark-dark-text);
+                }
+  
+                .radio-boxes {
+                  .radio-box {
+                    input:checked+.radio-box-inner {
+                      background: var(--primary);
+                      border-color: var(--primary);
+                      box-shadow: var(--primary-box-shadow);
+  
+                      .fee,
+                      p {
+                        color: var(--smoke-white);
+                      }
+                    }
+  
+                    .radio-box-inner {
+                      background: var(--dark-sidebar-light-2);
+                      border-color: var(--dark-sidebar-light-12);
+  
+                      .fee {
+                        color: var(--dark-dark-text);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .all-projects {
+    .all-projects-header {
+      display: flex;
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--fade-grey-dark-3);
+      border-radius: var(--radius-large);
+      margin-bottom: 1.5rem;
+  
+      .header-item {
+        width: 25%;
+        border-right: 1px solid var(--fade-grey-dark-3);
+  
+        &:last-child {
+          border-right: none;
+        }
+  
+        .item-inner {
+          text-align: center;
+  
+          .lnil,
+          .lnir {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+            color: var(--primary);
+          }
+  
+          span {
+            display: block;
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--dark-text);
+          }
+  
+          p {
+            font-family: var(--font-alt);
+          }
+        }
+      }
+    }
+  
+    .projects-card-grid {
+      .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 220px;
+        padding: 20px;
+        background: var(--white);
+        border: 1px solid var(--fade-grey-dark-3);
+        border-radius: var(--radius-large);
+  
+        .top-section {
+          .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+  
+            h3 {
+              font-size: 1rem;
+              font-family: var(--font-alt);
+              color: var(--dark-text);
+              font-weight: 600;
+            }
+          }
+  
+          .body {
+            p {
+              font-family: var(--font);
+              color: var(--light-text);
+            }
+          }
+        }
+  
+        .bottom-section {
+          display: flex;
+  
+          .foot-block {
+            margin-right: 30px;
+  
+  
+            >p {
+              padding-top: 5px;
+            }
+  
+            .developers {
+              display: flex;
+  
+              .v-avatar {
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER ASAL PRODUK
+  
+  
+  // MASTER ASAL RUJUKAN
+  
+  .user-grid-v4 {
+    .columns {
+      margin-left: -0.5rem !important;
+      margin-right: -0.5rem !important;
+      margin-top: -0.5rem !important;
+    }
+  
+    .column {
+      padding: 0.9 rem !important;
+    }
+  
+    .grid-item {
+      position: relative;
+      @include vuero-s-card;
+  
+      text-align: center;
+  
+      &:hover,
+      &:focus {
+        .button-wrap {
+          >div {
+            a {
+              opacity: 1;
+              pointer-events: all;
+            }
+          }
+        }
+      }
+  
+      .dropdown {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-align: left;
+      }
+  
+      >.v-avatar {
+        display: block;
+        margin: 0 auto 4px;
+      }
+  
+      h3 {
+        font-family: var(--font-alt);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--dark-text);
+      }
+  
+      p {
+        font-size: 0.80rem;
+      }
+  
+      .button-wrap {
+        margin: 20px 0 0;
+  
+        .v-button {
+          width: 100%;
+          max-width: 140px;
+          margin: 0 auto;
+        }
+  
+        >div {
+          margin: 6px 0 0;
+  
+          a {
+            opacity: 0;
+            pointer-events: none;
+            color: var(--light-text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: opacity 0.3s, color 0.3s;
+  
+            &:hover,
+            &:focus {
+              color: var(--primary);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .user-grid-v4 {
+      .grid-item {
+        @include vuero-card--dark;
+      }
+    }
+  }
+  
+  
+  .form-layout {
+    // max-width: 740px;
+    margin: 0 auto;
+  
+    &.is-separate {
+      // max-width: 1040px;
+  
+      .form-outer {
+        background: none;
+        border: none;
+  
+        .form-body {
+          display: flex;
+  
+          .form-section {
+            flex-grow: 2;
+            padding: 10px;
+            width: 50%;
+  
+            .form-section-inner {
+              @include vuero-s-card;
+  
+              padding: 40px;
+  
+              &.has-padding-bottom {
+                padding-bottom: 60px;
+                height: 100%;
+              }
+  
+              >h3 {
+                font-family: var(--font-alt);
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                margin-bottom: 30px;
+              }
+  
+              .columns {
+                .column {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                }
+              }
+  
+              .radio-boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-left: -8px;
+                margin-right: -8px;
+  
+                .radio-box {
+                  position: relative;
+                  width: calc(50% - 16px);
+                  margin: 8px;
+  
+                  &:focus-within {
+                    border-radius: 3px;
+                    outline-offset: var(--accessibility-focus-outline-offset);
+                    outline-width: var(--accessibility-focus-outline-width);
+                    outline-style: var(--accessibility-focus-outline-style);
+                    outline-color: var(--primary);
+                  }
+  
+                  input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+  
+                    &:checked {
+                      +.radio-box-inner {
+                        background: var(--primary);
+                        border-color: var(--primary);
+                        box-shadow: var(--primary-box-shadow);
+  
+                        .fee,
+                        p {
+                          color: var(--smoke-white);
+                        }
+                      }
+                    }
+                  }
+  
+                  .radio-box-inner {
+                    background: var(--white);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    text-align: center;
+                    border-radius: var(--radius);
+                    font-family: var(--font);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+                      height 0.3s, width 0.3s;
+                    padding: 30px 20px;
+  
+                    .fee {
+                      font-family: var(--font);
+                      font-weight: 700;
+                      color: var(--dark-text);
+                      font-size: 2.4rem;
+                      line-height: 1;
+  
+                      span {
+                        &::after {
+                          content: '$';
+                          position: relative;
+                          top: -10px;
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+  
+                    p {
+                      font-family: var(--font-alt);
+                    }
+                  }
+                }
+              }
+  
+              .control {
+                >p {
+                  padding-top: 12px;
+  
+                  >span {
+                    display: block;
+                    font-size: 0.9rem;
+  
+                    span {
+                      font-weight: 500;
+                      color: var(--dark-text);
+                    }
+                  }
+                }
+              }
+            }
+  
+            .form-section-outer {
+              .checkboxes {
+                padding: 16px 0;
+  
+                .checkbox {
+                  padding: 0;
+                  font-size: 0.9rem;
+                }
+              }
+  
+              .button-wrap {
+                .button {
+                  min-height: 60px;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  font-family: var(--font-alt);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .form-layout {
+      &.is-separate {
+        .form-outer {
+          background: none !important;
+  
+          .form-body {
+            .form-section {
+              .form-section-inner {
+                @include vuero-card--dark;
+  
+                >h3 {
+                  color: var(--dark-dark-text);
+                }
+  
+                .radio-boxes {
+                  .radio-box {
+                    input:checked+.radio-box-inner {
+                      background: var(--primary);
+                      border-color: var(--primary);
+                      box-shadow: var(--primary-box-shadow);
+  
+                      .fee,
+                      p {
+                        color: var(--smoke-white);
+                      }
+                    }
+  
+                    .radio-box-inner {
+                      background: var(--dark-sidebar-light-2);
+                      border-color: var(--dark-sidebar-light-12);
+  
+                      .fee {
+                        color: var(--dark-dark-text);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .all-projects {
+    .all-projects-header {
+      display: flex;
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--fade-grey-dark-3);
+      border-radius: var(--radius-large);
+      margin-bottom: 1.5rem;
+  
+      .header-item {
+        width: 25%;
+        border-right: 1px solid var(--fade-grey-dark-3);
+  
+        &:last-child {
+          border-right: none;
+        }
+  
+        .item-inner {
+          text-align: center;
+  
+          .lnil,
+          .lnir {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+            color: var(--primary);
+          }
+  
+          span {
+            display: block;
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--dark-text);
+          }
+  
+          p {
+            font-family: var(--font-alt);
+          }
+        }
+      }
+    }
+  
+    .projects-card-grid {
+      .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 220px;
+        padding: 20px;
+        background: var(--white);
+        border: 1px solid var(--fade-grey-dark-3);
+        border-radius: var(--radius-large);
+  
+        .top-section {
+          .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+  
+            h3 {
+              font-size: 1rem;
+              font-family: var(--font-alt);
+              color: var(--dark-text);
+              font-weight: 600;
+            }
+          }
+  
+          .body {
+            p {
+              font-family: var(--font);
+              color: var(--light-text);
+            }
+          }
+        }
+  
+        .bottom-section {
+          display: flex;
+  
+          .foot-block {
+            margin-right: 30px;
+  
+            .heading {
+              font-family: var(--font-alt);
+              font-size: 0.75rem;
+              color: var(--light-text-dark-22);
+            }
+  
+            >p {
+              padding-top: 5px;
+            }
+  
+            .developers {
+              display: flex;
+  
+              .v-avatar {
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER ASAL SUKU CADANG
+  
+  
+  .sukucad {
+    margin-left: 80px;
+    margin-top: -61px;
+    margin-bottom: -28px;
+    filter: opacity(0.9);
+    max-width: 53%;
+  }
+  
+  .c-title {
+    margin-left: -21px;
+    padding-top: 21px;
+    padding-top: 18px;
+    margin-top: -21px;
+    border-top-left-radius: 11px;
+    border-left: solid hsl(19deg 100% 75% / 72%) 3px;
+    padding-bottom: 0px;
+    margin-bottom: 2rem;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .form-layout {
+      &.is-separate {
+        .form-outer {
+          .form-body {
+            padding-left: 0;
+            padding-right: 0;
+            flex-direction: column;
+  
+            .form-section {
+              width: 100%;
+  
+              .form-section-inner {
+                padding: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER ASURANSI PASIEN
+  
+  
+  .mix {
+    margin-bottom: -2rem;
+    max-width: 45%;
+    margin-left: 6rem;
+    opacity: .8;
+    margin-top: -5rem;
+  }
+  
+  
+  #custom {
+    .tabs-inner {
+      margin-left: -21px;
+      padding-left: 20px;
+      padding-top: 18px;
+      margin-top: -21px;
+      border-top-left-radius: 11px;
+      border-left: solid hsl(19deg 100% 75% / 72%) 3px;
+    }
+  }
+  
+  .p-column-header-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .right-panel {
+    display: none;
+  }
+  
+  .form-layout {
+    // max-width: 540px;
+    margin: 0 auto;
+  
+    &.is-separate {
+      // max-width: 1040px;
+  
+      .form-outer {
+        background: none;
+        border: none;
+  
+        .form-body {
+          display: flex;
+  
+          .form-section {
+            flex-grow: 2;
+            padding: 10px;
+            width: 50%;
+  
+            .form-section-inner {
+              @include vuero-s-card;
+  
+              padding: 40px;
+  
+              &.has-padding-bottom {
+                padding-bottom: 60px;
+                height: 100%;
+              }
+  
+              >h3 {
+                font-family: var(--font-alt);
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                margin-bottom: 30px;
+              }
+  
+              .columns {
+                .column {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                }
+              }
+  
+              .radio-boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-left: -8px;
+                margin-right: -8px;
+  
+                .radio-box {
+                  position: relative;
+                  width: calc(50% - 16px);
+                  margin: 8px;
+  
+                  &:focus-within {
+                    border-radius: 3px;
+                    outline-offset: var(--accessibility-focus-outline-offset);
+                    outline-width: var(--accessibility-focus-outline-width);
+                    outline-style: var(--accessibility-focus-outline-style);
+                    outline-color: var(--primary);
+                  }
+  
+                  input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+  
+                    &:checked {
+                      +.radio-box-inner {
+                        background: var(--primary);
+                        border-color: var(--primary);
+                        box-shadow: var(--primary-box-shadow);
+  
+                        .fee,
+                        p {
+                          color: var(--smoke-white);
+                        }
+                      }
+                    }
+                  }
+  
+                  .radio-box-inner {
+                    background: var(--white);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    text-align: center;
+                    border-radius: var(--radius);
+                    font-family: var(--font);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+                      height 0.3s, width 0.3s;
+                    padding: 30px 20px;
+  
+                    .fee {
+                      font-family: var(--font);
+                      font-weight: 700;
+                      color: var(--dark-text);
+                      font-size: 2.4rem;
+                      line-height: 1;
+  
+                      span {
+                        &::after {
+                          content: '$';
+                          position: relative;
+                          top: -10px;
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+  
+                    p {
+                      font-family: var(--font-alt);
+                    }
+                  }
+                }
+              }
+  
+              .control {
+                >p {
+                  padding-top: 12px;
+  
+                  >span {
+                    display: block;
+                    font-size: 0.9rem;
+  
+                    span {
+                      font-weight: 500;
+                      color: var(--dark-text);
+                    }
+                  }
+                }
+              }
+            }
+  
+            .form-section-outer {
+              .checkboxes {
+                padding: 16px 0;
+  
+                .checkbox {
+                  padding: 0;
+                  font-size: 0.9rem;
+                }
+              }
+  
+              .button-wrap {
+                .button {
+                  min-height: 60px;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  font-family: var(--font-alt);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER BAHAN PRODUK
+  
+  
+  .p-column-header-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-layout {
+    // max-width: 540px;
+    margin: 0 auto;
+  
+    &.is-separate {
+      // max-width: 1040px;
+  
+      .form-outer {
+        background: none;
+        border: none;
+  
+        .form-body {
+          display: flex;
+  
+          .form-section {
+            flex-grow: 2;
+            padding: 10px;
+            width: 50%;
+  
+            .form-section-inner {
+              @include vuero-s-card;
+  
+              padding: 40px;
+  
+              &.has-padding-bottom {
+                padding-bottom: 60px;
+                height: 100%;
+              }
+  
+              >h3 {
+                font-family: var(--font-alt);
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                margin-bottom: 30px;
+              }
+  
+              .columns {
+                .column {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                }
+              }
+  
+              .radio-boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-left: -8px;
+                margin-right: -8px;
+  
+                .radio-box {
+                  position: relative;
+                  width: calc(50% - 16px);
+                  margin: 8px;
+  
+                  &:focus-within {
+                    border-radius: 3px;
+                    outline-offset: var(--accessibility-focus-outline-offset);
+                    outline-width: var(--accessibility-focus-outline-width);
+                    outline-style: var(--accessibility-focus-outline-style);
+                    outline-color: var(--primary);
+                  }
+  
+                  input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+  
+                    &:checked {
+                      +.radio-box-inner {
+                        background: var(--primary);
+                        border-color: var(--primary);
+                        box-shadow: var(--primary-box-shadow);
+  
+                        .fee,
+                        p {
+                          color: var(--smoke-white);
+                        }
+                      }
+                    }
+                  }
+  
+                  .radio-box-inner {
+                    background: var(--white);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    text-align: center;
+                    border-radius: var(--radius);
+                    font-family: var(--font);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+                      height 0.3s, width 0.3s;
+                    padding: 30px 20px;
+  
+                    .fee {
+                      font-family: var(--font);
+                      font-weight: 700;
+                      color: var(--dark-text);
+                      font-size: 2.4rem;
+                      line-height: 1;
+  
+                      span {
+                        &::after {
+                          content: '$';
+                          position: relative;
+                          top: -10px;
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+  
+                    p {
+                      font-family: var(--font-alt);
+                    }
+                  }
+                }
+              }
+  
+              .control {
+                >p {
+                  padding-top: 12px;
+  
+                  >span {
+                    display: block;
+                    font-size: 0.9rem;
+  
+                    span {
+                      font-weight: 500;
+                      color: var(--dark-text);
+                    }
+                  }
+                }
+              }
+            }
+  
+            .form-section-outer {
+              .checkboxes {
+                padding: 16px 0;
+  
+                .checkbox {
+                  padding: 0;
+                  font-size: 0.9rem;
+                }
+              }
+  
+              .button-wrap {
+                .button {
+                  min-height: 60px;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  font-family: var(--font-alt);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER BENTUK PRODUK
+  
+  
+  .p-column-header-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .form-layout {
+    // max-width: 540px;
+    margin: 0 auto;
+  
+    &.is-separate {
+      // max-width: 1040px;
+  
+      .form-outer {
+        background: none;
+        border: none;
+  
+        .form-body {
+          display: flex;
+  
+          .form-section {
+            flex-grow: 2;
+            padding: 10px;
+            width: 50%;
+  
+            .form-section-inner {
+              @include vuero-s-card;
+  
+              padding: 40px;
+  
+              &.has-padding-bottom {
+                padding-bottom: 60px;
+                height: 100%;
+              }
+  
+              >h3 {
+                font-family: var(--font-alt);
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                margin-bottom: 30px;
+              }
+  
+              .columns {
+                .column {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                }
+              }
+  
+              .radio-boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-left: -8px;
+                margin-right: -8px;
+  
+                .radio-box {
+                  position: relative;
+                  width: calc(50% - 16px);
+                  margin: 8px;
+  
+                  &:focus-within {
+                    border-radius: 3px;
+                    outline-offset: var(--accessibility-focus-outline-offset);
+                    outline-width: var(--accessibility-focus-outline-width);
+                    outline-style: var(--accessibility-focus-outline-style);
+                    outline-color: var(--primary);
+                  }
+  
+                  input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+  
+                    &:checked {
+                      +.radio-box-inner {
+                        background: var(--primary);
+                        border-color: var(--primary);
+                        box-shadow: var(--primary-box-shadow);
+  
+                        .fee,
+                        p {
+                          color: var(--smoke-white);
+                        }
+                      }
+                    }
+                  }
+  
+                  .radio-box-inner {
+                    background: var(--white);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    text-align: center;
+                    border-radius: var(--radius);
+                    font-family: var(--font);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+                      height 0.3s, width 0.3s;
+                    padding: 30px 20px;
+  
+                    .fee {
+                      font-family: var(--font);
+                      font-weight: 700;
+                      color: var(--dark-text);
+                      font-size: 2.4rem;
+                      line-height: 1;
+  
+                      span {
+                        &::after {
+                          content: '$';
+                          position: relative;
+                          top: -10px;
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+  
+                    p {
+                      font-family: var(--font-alt);
+                    }
+                  }
+                }
+              }
+  
+              .control {
+                >p {
+                  padding-top: 12px;
+  
+                  >span {
+                    display: block;
+                    font-size: 0.9rem;
+  
+                    span {
+                      font-weight: 500;
+                      color: var(--dark-text);
+                    }
+                  }
+                }
+              }
+            }
+  
+            .form-section-outer {
+              .checkboxes {
+                padding: 16px 0;
+  
+                .checkbox {
+                  padding: 0;
+                  font-size: 0.9rem;
+                }
+              }
+  
+              .button-wrap {
+                .button {
+                  min-height: 60px;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  font-family: var(--font-alt);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER DEPARTEMEN
+  
+  
+  .tile-grid-v1 {
+    .tile-grid-item {
+      @include vuero-s-card;
+  
+      border-radius: 14px;
+      padding: 16px;
+  
+      .tile-grid-item-inner {
+        display: flex;
+        align-items: center;
+  
+        .meta {
+          margin-left: 10px;
+          line-height: 1.7;
+  
+          span {
+            display: block;
+            font-family: var(--font);
+  
+            &:first-child {
+              color: var(--dark-text);
+              font-family: var(--font-alt);
+              font-weight: 600;
+              font-size: 1rem;
+            }
+  
+            &:nth-child(2) {
+              color: var(--light-text);
+              font-size: 0.9rem;
+            }
+          }
+        }
+  
+        .dropdown {
+          position: relative;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER DETAIL JENIS PRODUK
+  
+  
+  .tile-grid-v1 {
+    .tile-grid-item {
+      @include vuero-s-card;
+  
+      border-radius: 14px;
+      padding: 18px;
+  
+      .tile-grid-item-inner {
+        display: flex;
+        align-items: center;
+  
+        .meta {
+          margin-left: 10px;
+          line-height: 1.2;
+  
+          span {
+            display: block;
+            font-family: var(--font);
+  
+            &:first-child {
+              color: var(--dark-text);
+              font-family: var(--font-alt);
+              font-weight: 600;
+              font-size: 0.9rem;
+            }
+  
+            &:nth-child(2) {
+              color: var(--light-text);
+              font-size: 0.5 rem;
+            }
+          }
+        }
+  
+        .dropdown {
+          position: relative;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  
+  
+  .form-layout {
+    // max-width: 740px;
+    margin: 0 auto;
+  
+    &.is-separate {
+      // max-width: 1040px;
+  
+      .form-outer {
+        background: none;
+        border: none;
+  
+        .form-body {
+          display: flex;
+  
+          .form-section {
+            flex-grow: 2;
+            padding: 10px;
+            width: 50%;
+  
+            .form-section-inner {
+              @include vuero-s-card;
+  
+              padding: 40px;
+  
+              &.has-padding-bottom {
+                padding-bottom: 60px;
+                height: 100%;
+              }
+  
+              >h3 {
+                font-family: var(--font-alt);
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--dark-text);
+                margin-bottom: 30px;
+              }
+  
+              .columns {
+                .column {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                }
+              }
+  
+              .radio-boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-left: -8px;
+                margin-right: -8px;
+  
+                .radio-box {
+                  position: relative;
+                  width: calc(50% - 16px);
+                  margin: 8px;
+  
+                  &:focus-within {
+                    border-radius: 3px;
+                    outline-offset: var(--accessibility-focus-outline-offset);
+                    outline-width: var(--accessibility-focus-outline-width);
+                    outline-style: var(--accessibility-focus-outline-style);
+                    outline-color: var(--primary);
+                  }
+  
+                  input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+  
+                    &:checked {
+                      +.radio-box-inner {
+                        background: var(--primary);
+                        border-color: var(--primary);
+                        box-shadow: var(--primary-box-shadow);
+  
+                        .fee,
+                        p {
+                          color: var(--smoke-white);
+                        }
+                      }
+                    }
+                  }
+  
+                  .radio-box-inner {
+                    background: var(--white);
+                    border: 1px solid var(--fade-grey-dark-3);
+                    text-align: center;
+                    border-radius: var(--radius);
+                    font-family: var(--font);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+                      height 0.3s, width 0.3s;
+                    padding: 30px 20px;
+  
+                    .fee {
+                      font-family: var(--font);
+                      font-weight: 700;
+                      color: var(--dark-text);
+                      font-size: 2.4rem;
+                      line-height: 1;
+  
+                      span {
+                        &::after {
+                          content: '$';
+                          position: relative;
+                          top: -10px;
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+  
+                    p {
+                      font-family: var(--font-alt);
+                    }
+                  }
+                }
+              }
+  
+              .control {
+                >p {
+                  padding-top: 12px;
+  
+                  >span {
+                    display: block;
+                    font-size: 0.9rem;
+  
+                    span {
+                      font-weight: 500;
+                      color: var(--dark-text);
+                    }
+                  }
+                }
+              }
+            }
+  
+            .form-section-outer {
+              .checkboxes {
+                padding: 16px 0;
+  
+                .checkbox {
+                  padding: 0;
+                  font-size: 0.9rem;
+                }
+              }
+  
+              .button-wrap {
+                .button {
+                  min-height: 60px;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  font-family: var(--font-alt);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .form-layout {
+      &.is-separate {
+        .form-outer {
+          background: none !important;
+  
+          .form-body {
+            .form-section {
+              .form-section-inner {
+                @include vuero-card--dark;
+  
+                >h3 {
+                  color: var(--dark-dark-text);
+                }
+  
+                .radio-boxes {
+                  .radio-box {
+                    input:checked+.radio-box-inner {
+                      background: var(--primary);
+                      border-color: var(--primary);
+                      box-shadow: var(--primary-box-shadow);
+  
+                      .fee,
+                      p {
+                        color: var(--smoke-white);
+                      }
+                    }
+  
+                    .radio-box-inner {
+                      background: var(--dark-sidebar-light-2);
+                      border-color: var(--dark-sidebar-light-12);
+  
+                      .fee {
+                        color: var(--dark-dark-text);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .all-projects {
+    .all-projects-header {
+      display: flex;
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--fade-grey-dark-3);
+      border-radius: var(--radius-large);
+      margin-bottom: 1.5rem;
+  
+      .header-item {
+        width: 25%;
+        border-right: 1px solid var(--fade-grey-dark-3);
+  
+        &:last-child {
+          border-right: none;
+        }
+  
+        .item-inner {
+          text-align: center;
+  
+          .lnil,
+          .lnir {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+            color: var(--primary);
+          }
+  
+          span {
+            display: block;
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--dark-text);
+          }
+  
+          p {
+            font-family: var(--font-alt);
+          }
+        }
+      }
+    }
+  
+    .projects-card-grid {
+      .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 220px;
+        padding: 20px;
+        background: var(--white);
+        border: 1px solid var(--fade-grey-dark-3);
+        border-radius: var(--radius-large);
+  
+        .top-section {
+          .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+  
+            h3 {
+              font-size: 1rem;
+              font-family: var(--font-alt);
+              color: var(--dark-text);
+              font-weight: 600;
+            }
+          }
+  
+          .body {
+            p {
+              font-family: var(--font);
+              color: var(--light-text);
+            }
+          }
+        }
+  
+        .bottom-section {
+          display: flex;
+  
+          .foot-block {
+            margin-right: 30px;
+  
+            .heading {
+              font-family: var(--font-alt);
+              font-size: 0.75rem;
+              color: var(--light-text-dark-22);
+            }
+  
+            >p {
+              padding-top: 5px;
+            }
+  
+            .developers {
+              display: flex;
+  
+              .v-avatar {
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER DETAIL KATEGORI PEGAWAI
+  
+  .tile-grid-v2 {
+    .tile-grid-item {
+      @include vuero-s-card;
+  
+      border-radius: 14px;
+      padding: 16px;
+      cursor: pointer;
+  
+      &:hover,
+      &:focus {
+        border-color: var(--primary);
+        box-shadow: var(--light-box-shadow);
+      }
+  
+      .tile-grid-item-inner {
+        display: flex;
+        align-items: center;
+  
+        >img {
+          display: block;
+          width: 50px;
+          height: 50px;
+          min-width: 50px;
+        }
+  
+        .meta {
+          margin-left: 10px;
+          line-height: 1.4;
+  
+          span {
+            display: block;
+            font-family: var(--font);
+  
+            &:first-child {
+              color: var(--dark-text);
+              font-family: var(--font-alt);
+              font-weight: 600;
+              font-size: 1rem;
+            }
+  
+            &:nth-child(2) {
+              display: flex;
+              align-items: center;
+  
+              span {
+                display: inline-block;
+                color: var(--light-text);
+                font-size: 0.8rem;
+                font-weight: 400;
+              }
+  
+              .icon-separator {
+                position: relative;
+                font-size: 4px;
+                color: var(--light-text);
+                padding: 0 6px;
+              }
+            }
+          }
+        }
+  
+        .dropdown {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  
+  
+  .is-dark {
+    .all-projects {
+      .all-projects-header {
+        background: var(--dark-sidebar-light-6);
+        border-color: var(--dark-sidebar-light-12);
+  
+        .header-item {
+          border-color: var(--dark-sidebar-light-18);
+  
+          span {
+            color: var(--dark-dark-text);
+          }
+  
+          i {
+            color: var(--primary) !important;
+          }
+        }
+      }
+  
+      .projects-card-grid {
+        .grid-item {
+          background: var(--dark-sidebar-light-6);
+          border-color: var(--dark-sidebar-light-12);
+  
+          .top-section {
+            .head {
+              h3 {
+                color: var(--dark-dark-text);
+              }
+            }
+          }
+  
+          .bottom-section {
+            .foot-block {
+              .heading {
+                color: var(--light-text-dark-12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER DIAGNOSA TINDAKAN
+  
+  
+  .mix-tindakan {
+    margin-bottom: -1.3rem;
+    max-width: 61%;
+    margin-left: 5rem;
+    opacity: .8;
+    margin-top: -1.5rem;
+  }
+  
+  // MASTER DIAGNOSA
+  
+  .diagnosa {
+    margin-bottom: -2rem;
+    max-width: 45%;
+    margin-left: 6rem;
+    opacity: .8;
+    margin-top: -5rem;
+  }
+  
+  // MASTER GENERIK
+  
+  .generic {
+    margin-bottom: -14px;
+    max-width: 75%;
+    margin-left: 3rem;
+    margin-top: -68px;
+    opacity: 0.8;
+  }
+  
+  
+  .tabs-wrapper.is-triple-slider.is-squared {
+    display: none;
+  }
+  
+  // MASTER DIAGNOSA TINDAKAN
+  
+  .mix-tindakan {
+    margin-bottom: -1.3rem;
+    max-width: 61%;
+    margin-left: 5rem;
+    opacity: .8;
+    margin-top: -1.5rem;
+  }
+  
+  // MASTER DIAGNOSA
+  
+  .diagnos {
+    margin-bottom: -2rem;
+    max-width: 45%;
+    margin-left: 6rem;
+    opacity: .8;
+    margin-top: -5rem;
+  }
+  
+  // MASTER HUBUNGAN KELUARGA
+  
+  .mix-2 {
+    margin-bottom: -15px;
+    max-width: 63%;
+    margin-left: 4.4rem;
+    opacity: 0.9;
+    margin-top: -48px;
+  }
+  
+  // MASTER JABATAN
+  
+  .user-grid-v4 {
+    .columns {
+      margin-left: -0.5rem !important;
+      margin-right: -0.5rem !important;
+      margin-top: -0.5rem !important;
+    }
+  
+    .column {
+      padding: 0.9 rem !important;
+    }
+  
+    .grid-item {
+      position: relative;
+      @include vuero-s-card;
+  
+      text-align: center;
+  
+      &:hover,
+      &:focus {
+        .button-wrap {
+          >div {
+            a {
+              opacity: 1;
+              pointer-events: all;
+            }
+          }
+        }
+      }
+  
+      .dropdown {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-align: left;
+      }
+  
+      >.v-avatar {
+        display: block;
+        margin: 0 auto 4px;
+      }
+  
+      h3 {
+        font-family: var(--font-alt);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--dark-text);
+      }
+  
+      p {
+        font-size: 0.80rem;
+      }
+  
+      .button-wrap {
+        margin: 20px 0 0;
+  
+        .v-button {
+          width: 100%;
+          max-width: 140px;
+          margin: 0 auto;
+        }
+  
+        >div {
+          margin: 6px 0 0;
+  
+          a {
+            opacity: 0;
+            pointer-events: none;
+            color: var(--light-text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: opacity 0.3s, color 0.3s;
+  
+            &:hover,
+            &:focus {
+              color: var(--primary);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .is-dark {
+    .user-grid-v4 {
+      .grid-item {
+        @include vuero-card--dark;
+      }
+    }
+  }
+  
+  // MASTER TEMPAT TIDUR
+  
+  .tt {
+    margin-bottom: -5px;
+    max-width: 54%;
+    margin-left: 6rem;
+    opacity: 0.8;
+    margin-top: -112px;
+  }
+  
+  // MASTER STATUS BED
+  
+  
+  .mix-kategori {
+    margin-bottom: -1.1rem;
+    max-width: 63%;
+    margin-left: 5rem;
+    opacity: .8;
+    margin-top: -2.1rem;
+  }
+  
+  // MASTER STATUS KELUAR
+  
+  .s-keluar {
+    margin-left: 12px;
+    margin-top: -81px;
+    margin-bottom: -34px;
+    filter: opacity(0.8);
+    max-width: 91%;
+  }
+  
+  // MASTER STATUS APOTIK
+  
+  .mix-Jtarif {
+    max-width: 68%;
+    margin-left: 5rem;
+    opacity: 0.8;
+    margin-top: -29px;
+    margin-bottom: -5px;
+  }
+  
+  // MASTER SHIFT KERJA
+  
+  .button.v-button {
+    padding: 0px 9px;
+  }
+  
+  .shift {
+    opacity: 0.5;
+    margin-top: -4.7rem;
+    margin-left: 2rem;
+    max-width: 25%;
+  }
+  
+  .custom-text-filter {
+    opacity: 0.5 !important;
+    border-color: #99ada6 !important;
+  }
+  
+  // MASTER KELOMPOK SHIFT
+  
+  .ks {
+    margin-bottom: -17px;
+    max-width: 66%;
+    margin-left: 4.4rem;
+    opacity: .8;
+    margin-top: -3.2rem
+  }
+  
+  // MASTER SATUAN KECIL
+  
+  .kecil {
+    margin-bottom: -7px;
+    max-width: 50%;
+    margin-left: 5.5rem;
+    margin-top: -8px;
+    opacity: 0.8;
+  }
+  
+  // MASTER SATUAN BESAR
+  
+  .besar {
+    margin-bottom: -13px;
+    max-width: 62%;
+    margin-left: 4.4rem;
+    opacity: 0.8;
+    margin-top: -40px;
+  }
+  
+  // MASTER STATUS PEGAWAI
+  
+  .statuspeg {
+    margin-left: 25px;
+    margin-top: -63px;
+    margin-bottom: -37px;
+    filter: opacity(0.6);
+    max-width: 56%;
+  }
+  
+  // MASTER RUANGAN
+  
+  .select-label-icon {
+    margin: 0 6px 0 0;
+    height: 26px;
+    min-width: 26px;
+    border-radius: 0.15rem;
+  }
+  
+  // MASTER RHESUS
+  
+  .rhesus {
+    max-width: 68%;
+    margin-left: 5rem;
+    opacity: 0.8;
+    margin-top: -29px;
+    margin-bottom: -5px;
+  }
+  
+  // MASTER PERSEDIAAN
+  
+  .persediaan {
+    max-width: 68%;
+    margin-left: 5rem;
+    opacity: 0.8;
+    margin-top: -29px;
+    margin-bottom: -5px;
+  }
+  
+  // OBJEK MODUL
+  .user-grid-v2 {
+    .columns {
+      margin-left: -0.5rem !important;
+      margin-right: -0.5rem !important;
+      margin-top: -0.5rem !important;
+    }
+  
+    .column {
+      padding: 0.5rem !important;
+    }
+  
+    .grid-item {
+      @include vuero-s-card;
+  
+      text-align: center;
+  
+      >.v-avatar {
+        display: block;
+        margin: 0 auto 4px;
+      }
+  
+      h3 {
+        font-family: var(--font-alt);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--dark-text);
+      }
+  
+      p {
+        font-size: 0.85rem;
+      }
+  
+      .people {
+        display: flex;
+        justify-content: center;
+        padding: 8px 0 30px;
+  
+        .v-avatar {
+          margin: 0 4px;
+        }
+      }
+  
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+  
+        .button {
+          width: calc(50% - 4px);
+          color: var(--light-text);
+  
+          &:hover,
+          &:focus {
+            border-color: var(--fade-grey-dark-4);
+            color: var(--primary);
+            box-shadow: var(--light-box-shadow);
+          }
+        }
+      }
+    }
+  
+    .grid-item-wrap {
+      border: 1px solid var(--fade-grey-dark-3);
+      border-radius: var(--radius-large);
+      transition: all 0.3s; // transition-all test
+  
+      .grid-item-head {
+        background: #fafafa;
+        border-radius: var(--radius-large) 6px 0 0;
+        padding: 20px;
+  
+        .flex-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 12px;
+  
+          .meta {
+            span {
+              display: flex;
+  
+              &:first-child {
+                font-family: var(--font-alt);
+                font-weight: 600;
+                font-size: 0.95rem;
+                color: var(--dark-text);
+              }
+  
+              &:nth-child(2) {
+                font-size: 0.9rem;
+                color: var(--light-text);
+              }
+            }
+          }
+  
+          .status-icon {
+            height: 28px;
+            width: 28px;
+            min-width: 28px;
+            border-radius: var(--radius-rounded);
+            border: 1px solid var(--fade-grey-dark-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            &.is-success {
+              background: var(--success);
+              border-color: var(--success);
+              color: var(--white);
+            }
+  
+            &.is-warning {
+              background: var(--orange);
+              border-color: var(--orange);
+              color: var(--white);
+            }
+  
+            &.is-danger {
+              background: var(--danger);
+              border-color: var(--danger);
+              color: var(--white);
+            }
+  
+            i {
+              font-size: 8px;
+            }
+          }
+        }
+  
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0;
+  
+          .button,
+          .v-button {
+            width: calc(50% - 4px);
+            color: var(--light-text);
+            margin-bottom: 0;
+  
+            &:hover,
+            &:focus {
+              border-color: var(--fade-grey-dark-4);
+              color: var(--primary);
+              box-shadow: var(--light-box-shadow);
+            }
+          }
+        }
+      }
+  
+      .grid-item {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border: none;
+      }
+    }
+  }
+  
+  // MASTER MERK PRODUK
+  
+  .merk {
+    margin-left: 4.5rem;
+    margin-top: -4px;
+    margin-bottom: -7px;
+    filter: opacity(0.9);
+    max-width: 63%;
+  }
+  
+  
+  .list-view-v3 {
+    .list-view-item {
+      @include vuero-r-card;
+  
+      margin-bottom: 16px;
+      padding: 16px;
+  
+      .list-view-item-inner {
+        display: flex;
+        align-items: center;
+  
+        >img {
+          width: 100%;
+          max-width: 60px;
+          min-width: 60px;
+          max-height: 60px;
+          min-height: 60px;
+          border-radius: var(--radius-rounded);
+          border: 1px solid var(--fade-grey);
+        }
+  
+        .meta-left {
+          margin-left: 16px;
+  
+          h3 {
+            font-family: var(--font-alt);
+            color: var(--dark-text);
+            font-weight: 500;
+            font-size: 1.0rem;
+            line-height: 1;
+          }
+  
+          >span:not(.tag) {
+            font-size: 1rem;
+            color: var(--light-text);
+  
+            svg {
+              position: relative;
+              top: 1px;
+              height: 12px;
+              width: 12px;
+            }
+  
+            .icon-separator {
+              position: relative;
+              top: -3px;
+              font-size: 5px;
+              color: var(--light-text);
+              padding: 0 8px;
+            }
+  
+            .iconify {
+              margin-right: 0.25rem;
+            }
+          }
+        }
+  
+        .meta-right {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+  
+          .buttons {
+            margin-bottom: 0;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  
+  // MASTER KEDUDUKAN PEGAWAI
+  
+  .duduk {
+    margin-bottom: -6px;
+    max-width: 61%;
+    margin-left: 4.4rem;
+    margin-top: -50px;
+    opacity: 0.9;
+  }
+  
+  .kamar {
+    opacity: 0.5;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    max-width: 51%;
+  }

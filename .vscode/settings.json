@@ -1,0 +1,12 @@
+{
+    "intelephense.environment.phpVersion": "8.4.0",
+    "php.validate.enable": false,
+    "php.suggest.basic": false,
+    "files.associations": {
+        "*.blade.php": "blade"
+    },
+    "search.exclude": {
+        "**/backend-laravel13/vendor": true,
+        "**/backend-laravel13/storage/framework": true
+    }
+}

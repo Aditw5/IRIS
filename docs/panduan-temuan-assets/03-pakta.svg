@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect width="1400" height="760" fill="#47505c"/><rect class="panel" x="155" y="35" width="1090" height="690" rx="24"/>
+<text class="h" x="195" y="90">FMMO-163-14.4.3.b-88.8 Pakta Integritas Auditor</text>
+<rect x="195" y="120" width="1010" height="74" rx="12" fill="#e9f7fb" stroke="#9ad7e7"/><text class="b" x="225" y="150">Pakta integritas wajib diisi sebelum mengelola temuan.</text><text class="m" x="225" y="176">Nama, NID, dan jabatan Tim Audit Internal diambil otomatis.</text>
+<rect x="195" y="220" width="1010" height="90" rx="12" fill="#fbfcfd" stroke="#d8dee6"/><text class="s" x="220" y="250">Nama / NID / Jabatan Tim Audit Internal</text><text class="b" x="220" y="282">otomatis dari login dan mapping tahun</text>
+<rect class="mark" x="185" y="210" width="1030" height="110" rx="14"/><circle class="num" cx="1185" cy="225" r="22"/><text class="numText" x="1185" y="226">1</text>
+<rect class="btn" x="195" y="345" width="430" height="62" rx="8"/><text class="m" x="220" y="370">Tanggal Pernyataan</text><text class="b" x="220" y="396">01 September 2026</text>
+<rect class="btn" x="650" y="345" width="250" height="62" rx="8"/><text class="m" x="675" y="370">Lokasi</text><text class="b" x="675" y="396">Jakarta / Gresik</text>
+<rect class="mark" x="185" y="335" width="725" height="82" rx="12"/><circle class="num" cx="930" cy="376" r="22"/><text class="numText" x="930" y="377">2</text>
+<rect x="195" y="455" width="1010" height="145" rx="12" fill="#fff" stroke="#8ab1c1" stroke-width="3" stroke-dasharray="10 6"/><text class="m" x="700" y="525" text-anchor="middle">Tanda tangan di area ini dengan mouse, stylus, atau sentuhan</text>
+<rect class="mark" x="185" y="445" width="1030" height="165" rx="14"/><circle class="num" cx="1185" cy="465" r="22"/><text class="numText" x="1185" y="466">3</text>
+<rect x="930" y="635" width="275" height="56" rx="10" fill="#18b779"/><text x="1067" y="670" text-anchor="middle" style="font:700 18px Calibri,Arial;fill:#fff">Simpan Pakta Integritas</text>
+<circle class="num" cx="905" cy="663" r="22"/><text class="numText" x="905" y="664">4</text>
+</svg>

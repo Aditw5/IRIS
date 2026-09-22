@@ -1,0 +1,39 @@
+/frontend
+
+# Local environment and secrets
+**/.env
+**/.env.local
+**/.env.*.local
+**/key.pem
+*.p12
+*.pfx
+
+# Dependencies
+**/node_modules/
+**/vendor/
+**/venv/
+**/.venv/
+
+# Generated files and caches
+/.scannerwork/
+**/.scannerwork/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+/tmp/
+/services/go-api/tmp/
+/services/go-api/server.exe
+/services/chatbot-python/data/manuals/_cache/
+/frontend-v2/tmp/
+
+# Runtime uploads and generated customer documents
+/backend/public/berkas-*/
+/backend/public/sertifikat/
+/backend/public/laporan-repair/
+/backend/public/produk/
+/backend/public/gambar-suhu/
+/backend/public/kyc-satset/satusehat.ini
+/backend/public/kyc-satset/.rnd
+
+# Local tool state
+/.claude/

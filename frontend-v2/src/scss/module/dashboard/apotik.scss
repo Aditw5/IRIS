@@ -1,0 +1,279 @@
+.view-wrapper {
+    .has-top-nav {
+      padding-bottom: 0px;
+    }
+  }
+
+  .labelin{
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .no{
+    .label{
+      margin-left: 10px;
+    }
+  }
+  .is-navbar {
+    .personal-dashboard {
+      margin-top: 30px;
+    }
+  }
+  
+  .dropdown-menu {
+    margin-right: 33px !important;
+    margin-top: -29px !important;
+  }
+  
+  .has-top-nav {
+  
+    .flex-list-wrapper,
+    .list-flex-toolbar {
+      max-width: 880px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  
+    .border-custom {
+      margin-left: -21px;
+      padding-left: 20px;
+      padding-top: 12px;
+      margin-top: -21px;
+      border-top-left-radius: 18px;
+      border-left: solid hsl(19deg 100% 75% / 72%) 3px;
+    }
+  
+    .personal-dashboard-v3 {
+      .columns {
+        &.is-flex-tablet-p {
+          .column {
+            &.is-6 {
+              min-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  
+    .dashboard-card {
+      @include vuero-l-card;
+  
+      font-family: var(--font);
+  
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+  
+      &.is-welcome {
+        background: var(--widget-grey);
+        border: none;
+        padding: 40px;
+  
+        .welcome-title {
+          h3 {
+            font-family: var(--font-alt);
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--dark-text);
+          }
+        }
+  
+        .welcome-progress {
+          display: flex;
+          align-items: center;
+          padding: 10px 0;
+  
+          .meta {
+            margin-left: 16px;
+  
+            span {
+              display: block;
+  
+              &:first-child {
+                color: var(--light-text);
+                font-size: 0.95rem;
+              }
+  
+              &:nth-child(2) {
+                font-family: var(--font-alt);
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: var(--dark-text);
+              }
+            }
+          }
+        }
+  
+        .button-wrap {
+          .v-button {
+            height: 44px;
+            border-radius: 10px;
+          }
+        }
+      }
+  
+      &.is-interview {
+        &:not(:last-child) {
+          margin-bottom: 0.75rem;
+        }
+  
+        .flex-end {
+          svg {
+            height: 18px;
+            width: 18px;
+            color: var(--light-text);
+          }
+        }
+      }
+    }
+  
+    .picker-widget {
+      padding: 40px;
+      height: 317px;
+    }
+  
+    .stats-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 280px;
+  
+      .people {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 6px;
+  
+        .left {
+          span {
+            display: block;
+            font-family: var(--font);
+  
+            &:first-child {
+              font-family: var(--font-alt);
+              font-weight: 600;
+              color: var(--dark-text);
+            }
+  
+            &:nth-child(2) {
+              font-size: 0.9rem;
+              color: var(--light-text);
+  
+              a {
+                font-weight: 500;
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Cart widget
+  
+  .cart-widget {
+    @include vuero-l-card;
+  
+    &.is-straight {
+      @include vuero-s-card;
+    }
+  
+    .cart-items {
+      .cart-item {
+        display: flex;
+        margin: 8px 0;
+  
+        .meta {
+          margin-left: 12px;
+          display: flex;
+          flex-direction: column;
+  
+          span {
+            display: block;
+            font-family: var(--font);
+  
+            &:first-child {
+              font-size: 0.9rem;
+              color: var(--light-text);
+            }
+  
+            &:nth-child(2) {
+              color: var(--dark-text);
+              margin-top: auto;
+              font-weight: 600;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  
+    .cart-button {
+      padding-top: 16px;
+  
+      .button {
+        min-height: 50px;
+        border-radius: 10px;
+      }
+    }
+  }
+  
+  .is-dark {
+    .cart-widget {
+      @include vuero-card--dark;
+  
+      .cart-items {
+        .cart-item {
+          .meta {
+            span {
+              &:nth-child(2) {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .fs-075 {
+    font-size: 0.9rem;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .form-layout {
+      &.is-separate {
+        .form-outer {
+          .form-body {
+            padding-left: 0;
+            padding-right: 0;
+  
+            // flex-direction: column;
+  
+            .form-section {
+              // width: 100%;
+  
+              .form-section-inner {
+                padding: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .heading {
+    font-family: var(--font-alt);
+    font-size: 0.75rem;
+    color: var(--light-text-dark-22);
+  }
+  .label-nama{
+    font-weight: 500;color:#283252;font-size: 16px;display: block;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }

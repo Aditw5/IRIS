@@ -1,0 +1,746 @@
+[
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Digital Multimeter",
+    "merktipe": "Fluke 15B"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Process Meter",
+    "merktipe": "Fluke 789"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Micro Ohm Meter",
+    "merktipe": "Lutron MO-2014"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "MilliOhm Meter",
+    "merktipe": "Constam MO200"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Digit Precision Multimeter",
+    "merktipe": "Fluke 8845A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 289"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 87V"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 287"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 179"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 325 (Clamp)"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 28 II EX"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 376 (Clamp)"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "True RMS Multimeter",
+    "merktipe": "Fluke 117"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Automatic Relay Test",
+    "merktipe": "ISA DRTS6"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Automatic Relay Test",
+    "merktipe": "Omicron 365"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Earth Ground Clamp Tester",
+    "merktipe": "Fluke 1630"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Earth Ground Clamp Tester",
+    "merktipe": "Kyoritsu 4200"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Earth Ground Tester",
+    "merktipe": "KYORITSU/4102A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Earth Ground Tester",
+    "merktipe": "KYORITSU/KEW 4105A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Earth Ground Tester",
+    "merktipe": "Megger DET14C"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Milliamp Clamp Meter",
+    "merktipe": "Fluke 773"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Milliamp Clamp Meter",
+    "merktipe": "KEW 2500"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Clamp Meter",
+    "merktipe": "Fluke 376"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Clamp Meter",
+    "merktipe": "Fluke 337"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Clamp Meter",
+    "merktipe": "Fluke 335"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "Lutron DT-1236L"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "Shimpo PH-200L"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "Monarch PLS"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "Lutorn VT-8204"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "Monarch PLT200"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "Victor DM6234P+"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Loop Calibrator",
+    "merktipe": "FLUKE / 715"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Loop Calibrator",
+    "merktipe": "Fluke 705"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Multifunction Calibrator",
+    "merktipe": "Yokogawa CA71"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Multifunction Calibrator",
+    "merktipe": "Fluke 725"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Multifunction Calibrator",
+    "merktipe": "Transmille 1000A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Multi Product Calibrator",
+    "merktipe": "Fluke 754"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Battery Quality Tester",
+    "merktipe": "IBEX-PRO/P641E"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "SHIMPO/PH-200L"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "MONARCH/PLS"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Tacho Meter",
+    "merktipe": "LUTRON / DT-1236L"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Current Tester",
+    "merktipe": "KYORITSU/KEW 2300R"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Regulated DC Power Supply",
+    "merktipe": "PROTEK / PL3005T"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Regulated DC Power Supply",
+    "merktipe": "EXTECH / 382270"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Speed Simulator",
+    "merktipe": "WARTSILA / PAAE120306"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Power Quality & Energy Analyzer",
+    "merktipe": "Fluke 435"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Function Generator",
+    "merktipe": "YOKOGAWA / FG420"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Reference Multimeter",
+    "merktipe": "KEYSIGHT / 34470A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "Flir T440"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "Flir T530"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "Flir E54"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "Flir T640"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "Flir TG267"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "Avio R500 ExPro"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "NEC TH9100WL"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Thermal Imager",
+    "merktipe": "Fllir 17"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "IR Thermometer",
+    "merktipe": "Fluke 62"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "IR Thermometer",
+    "merktipe": "Sanfix IT-380N"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "IR Thermometer",
+    "merktipe": "Extech 42512"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "IR Thermometer",
+    "merktipe": "Fluke 568 IR"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Drywell/Thermocouple Calibrator",
+    "merktipe": "Amatek RTC 187"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Drywell/Thermocouple Calibrator",
+    "merktipe": "Thermacal 34A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Drywell/Thermocouple Calibrator",
+    "merktipe": "Fluke 9141"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Drywell/Thermocouple Calibrator",
+    "merktipe": "Ametek ITC-650 A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Drywell/Thermocouple Calibrator",
+    "merktipe": "Additel 875"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Drywell/Thermocouple Calibrator",
+    "merktipe": "Ametek CTC-1205"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Suhu & Kelembapan",
+    "namalayanan": "Drywell/Thermocouple Calibrator",
+    "merktipe": "Ametek ITC-650A"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Module",
+    "merktipe": "Druck PM620"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Module",
+    "merktipe": "Fluke 750P27EX"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Module",
+    "merktipe": "Fluke 750P30"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Gauge",
+    "merktipe": "Additel 681"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Gauge",
+    "merktipe": "Crystal XP21"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Gauge",
+    "merktipe": "Fluke 700G"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Gauge",
+    "merktipe": "Ransburg EN 837-1"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Calibrator",
+    "merktipe": "Yokogawa YPC4010"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Calibrator",
+    "merktipe": "Yokogawa CA310"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Calibrator",
+    "merktipe": "Fluke 718 300G"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Calibrator",
+    "merktipe": "Scandura MEP-DC"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Calibrator",
+    "merktipe": "Ametek HPC40"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Tekanan",
+    "namalayanan": "Pressure Controller",
+    "merktipe": "Mensor CPC6050"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Calibrator",
+    "merktipe": "IMI 699A07"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Calibrator",
+    "merktipe": "The Modal Shop"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Meter",
+    "merktipe": "Fluke 805"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Analyzer",
+    "merktipe": "Emerson CSI 2140"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Analyzer",
+    "merktipe": "OneProd Falcon"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Analyzer",
+    "merktipe": "Emerson CSI 2130"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Accelerometer",
+    "merktipe": "IMI 603C01"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Accelerometer",
+    "merktipe": "CSI A0760GP"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Accelerometer",
+    "merktipe": "IMI 602D01"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Accelerometer",
+    "merktipe": "ACOEM ASH205-B-EX"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Vernier Caliper",
+    "merktipe": "Tricle Brand 0-300 mm"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Digital Caliper",
+    "merktipe": "Mitutoyo CD-30AX"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Dial Caliper",
+    "merktipe": "Mitutoyo 505-731"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Dial Gauge",
+    "merktipe": "MITUTOYO/543-700B"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Thickness Gauge",
+    "merktipe": "MITUTOYO/547-315"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Ultrasonic Thickness Gauge",
+    "merktipe": "Checkline TI-45N"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Bore Gauge",
+    "merktipe": "Mitutoyo 511-701"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Outside Micrometer",
+    "merktipe": "Mitutoyo 293-234-30"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Proximity System Text",
+    "merktipe": "Bentley Nevada TK-3E"
+  },
+  {
+    "kategori": "KAN",
+    "lingkup": "Gaya",
+    "namalayanan": "Torque Wrench",
+    "merktipe": "STAHLWILLE 100NM / MANOSKOP 730"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Insulation Resistance Tester",
+    "merktipe": "KYORITSU/3005A"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Decade Resistance",
+    "merktipe": "Yokogawa 2793"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "LCR Meter",
+    "merktipe": "EXTECH/LCR200"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Kelistrikan",
+    "namalayanan": "Signal Conditioner",
+    "merktipe": "NATIONAL INSTRUMENT / 9171"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Vernier Caliper",
+    "merktipe": "Tricle Brand 0-300 mm"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Digital Caliper",
+    "merktipe": "Mitutoyo CD-30AX"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Dial Caliper",
+    "merktipe": "Mitutoyo 505-731"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Dial Gauge",
+    "merktipe": "MITUTOYO/543-700B"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Thickness Gauge",
+    "merktipe": "MITUTOYO/547-315"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Ultrasonic Thickness Gauge",
+    "merktipe": "Checkline TI-45N"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Bore Gauge",
+    "merktipe": "Mitutoyo 511-701"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Outside Micrometer",
+    "merktipe": "Mitutoyo 293-234-30"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Dimensi",
+    "namalayanan": "Proximity System Text",
+    "merktipe": "Bentley Nevada TK-3E"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Gaya",
+    "namalayanan": "Torque Wrench",
+    "merktipe": "STAHLWILLE 100NM / MANOSKOP 730"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Suhu & Kelembaban",
+    "namalayanan": "Thermohygro Meter",
+    "merktipe": "Fluke 971"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Suhu & Kelembaban",
+    "namalayanan": "Thermohygro Meter",
+    "merktipe": "Lutron MHB-382SB"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Calibrator",
+    "merktipe": "Lutron Vb-8202"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Calibrator",
+    "merktipe": "Lutron VB-8204"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Vibrasi",
+    "namalayanan": "Vibration Meter",
+    "merktipe": "The Modal Shop 9100D"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Verifikasi",
+    "namalayanan": "Hart Communicator",
+    "merktipe": "Emmerson 475"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Verifikasi",
+    "namalayanan": "Electircal Motor Analizer",
+    "merktipe": "MCE Max / M5552"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Verifikasi",
+    "namalayanan": "RTD Calibrator",
+    "merktipe": "Fluke 712"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Verifikasi",
+    "namalayanan": "Low Pressure Test Pump",
+    "merktipe": "Fluke 700LTP-1"
+  },
+  {
+    "kategori": "Non KAN",
+    "lingkup": "Verifikasi",
+    "namalayanan": "Portable Online Vibration Analyzer / Machinery Health Monitor Multi Chanel(24 Channel).",
+    "merktipe": "Emerson CSI 2600"
+  }
+]

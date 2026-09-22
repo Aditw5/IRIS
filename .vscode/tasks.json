@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Laravel 13: lint PHP (Docker)",
+            "type": "shell",
+            "command": "docker compose exec -T app sh -lc \"find app bootstrap config database routes tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l\"",
+            "options": {
+                "cwd": "${workspaceFolder}/backend-laravel13"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel 13: Pint (Docker)",
+            "type": "shell",
+            "command": "docker compose exec -T app ./vendor/bin/pint",
+            "options": {
+                "cwd": "${workspaceFolder}/backend-laravel13"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel 13: test (Docker)",
+            "type": "shell",
+            "command": "docker compose exec -T app php artisan test",
+            "options": {
+                "cwd": "${workspaceFolder}/backend-laravel13"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

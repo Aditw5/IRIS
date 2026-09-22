@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<defs>
+  <style>
+    .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#d8dee6;stroke-width:2}.navy{fill:#0b2545}
+    .muted{fill:#667085}.green{fill:#18b779}.orange{fill:#f5a623}.blue{fill:#168bd2}.red{fill:#e74c3c}
+    .t{font-family:Calibri,Arial,sans-serif;fill:#172b4d}.h{font:700 28px Calibri,Arial,sans-serif;fill:#172b4d}
+    .sh{font:700 22px Calibri,Arial,sans-serif;fill:#172b4d}.b{font:700 18px Calibri,Arial,sans-serif;fill:#172b4d}
+    .m{font:16px Calibri,Arial,sans-serif;fill:#667085}.s{font:14px Calibri,Arial,sans-serif;fill:#667085}
+    .btn{fill:#fff;stroke:#b9c2cf;stroke-width:2}.btnGreen{fill:#18b779}.btnOrange{fill:#f5a623}.btnBlue{fill:#168bd2}
+    .mark{fill:none;stroke:#e23d3d;stroke-width:6;stroke-linejoin:round}.dash{fill:none;stroke:#e23d3d;stroke-width:4;stroke-dasharray:12 8}
+    .num{fill:#e23d3d}.numText{font:700 20px Calibri,Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+    .line{stroke:#cfd6df;stroke-width:2}.arrow{stroke:#e23d3d;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e23d3d"/></marker>
+</defs>
+<rect class="bg" width="1400" height="760"/><rect class="panel" x="55" y="50" width="1290" height="660" rx="20"/>
+<rect x="760" y="72" width="310" height="86" rx="14" fill="#fff" stroke="#18b779" stroke-width="3"/><text x="915" y="112" text-anchor="middle" class="b">[MENU] NAVIGATION</text><text x="915" y="140" text-anchor="middle" class="s">klik setelah login</text>
+<rect class="mark" x="745" y="58" width="340" height="115" rx="18"/><circle class="num" cx="1120" cy="78" r="22"/><text class="numText" x="1120" y="79">1</text>
+<rect x="100" y="205" width="1200" height="430" rx="16" fill="#fbfcfd" stroke="#e2e6ec" stroke-width="2"/>
+<text class="m" x="150" y="250">Cari menu...</text><line class="line" x1="470" y1="285" x2="470" y2="590"/><line class="line" x1="850" y1="285" x2="850" y2="590"/>
+<text class="sh" x="515" y="330">PROGRAM MUTU</text>
+<rect x="500" y="360" width="320" height="64" rx="10" fill="#edf8f4"/><text class="b" x="540" y="400">Mapping Auditor Internal</text>
+<rect x="500" y="450" width="320" height="82" rx="10" fill="#e9f5fb"/><text class="b" x="540" y="486">Temuan</text><text class="b" x="540" y="515">Ketidaksesuaian</text>
+<rect class="mark" x="490" y="440" width="340" height="102" rx="14"/><circle class="num" cx="860" cy="492" r="22"/><text class="numText" x="860" y="493">2</text>
+<path class="arrow" d="M1120 102 C1240 180,1040 320,850 476"/>
+<text class="m" x="920" y="620">Pilih menu Temuan Ketidaksesuaian.</text>
+</svg>

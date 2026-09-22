@@ -1,0 +1,8 @@
+services:
+  libretranslate:
+    image: libretranslate/libretranslate@sha256:bc959dad2dd690eca6d22bcfb3f0f9f07892aa5af11dbb3007cd412c8cc6a4c0
+    container_name: ulab-libretranslate
+    restart: unless-stopped
+    command: ["--load-only", "en,id"]
+    ports:
+      - "127.0.0.1:5000:5000"

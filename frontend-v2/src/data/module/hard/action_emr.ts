@@ -1,0 +1,75 @@
+export const listActionEMR = [
+    {
+        name: 'Asesmen Awal',
+        desc: 'Asesmen Awal Pasien',
+        color: 'red',
+        icon: 'lnir lnir-skipping-rope',
+        form: 'module-emr-asesmen-awal',
+        url_form :'asesmen-awal',
+    },
+    {
+        name: 'Vital Sign',
+        desc: 'Pengkajian tanda-tanda vital pasien',
+        color: 'success',
+        icon: 'lnir lnir-medical-protection',
+        form: 'module-emr-vital-sign',
+        url_form :'vital-sign',
+    },
+    {
+        name: 'Diagnosis',
+        desc: 'Data ICD 10 & ICD 9',
+        color: 'info',
+        icon: 'lnir lnir-diagnosis',
+        // form: 'module-emr-input-diagnosis'
+        form: 'input-diagnosis',
+        url_form :'input-diagnosis',
+    },
+    {
+        name: 'Tindakan',
+        desc: 'Pencatatan tindakan yang dilakukan',
+        color: 'warning',
+        icon: 'fas fa-file-medical-alt',
+        form: 'module-emr-tindakan',
+        url_form :'tindakan',
+    },
+    {
+        name: 'Laboratorium',
+        desc: 'Order data Laboratorium',
+        color: 'danger',
+        icon: 'lnir lnir-flask-alt',
+        form: 'module-emr-order-laboratorium',
+        url_form :'order-laboratorium',
+    },
+    {
+        name: 'Radiologi',
+        desc: 'Order data Radiologi',
+        color: 'yellow',
+        icon: 'lnir lnir-microscope',
+        form: 'module-emr-order-radiologi',
+        url_form :'order-radiologi',
+    },
+    {
+        name: 'Bedah',
+        desc: 'Order Jadwal Operasi',
+        color: 'success',
+        icon: 'lnir lnir-hospital-bed-alt',
+        form: 'module-emr-order-bedah',
+        url_form :'order-bedah',
+    },
+    {
+        name: 'Resep Elektronik',
+        desc: 'Order Resep ke Farmasi',
+        color: 'purple',
+        icon: 'lnir lnir-medicine-alt',
+        form: 'module-emr-order-resep',
+        url_form :'order-resep',
+    },
+    {
+        name: 'EMR',
+        desc: 'Elektronik Medical Record Pasien',
+        color: 'red',
+        icon: 'lnir lnir-heartrate-monitor',
+        form: 'module-emr-elektronik-medical-record'
+    },
+  ]
+  
