@@ -4,6 +4,13 @@ FROM php:7.4-fpm-bullseye
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN printf '%s\n' \
+    'deb [check-valid-until=no] https://archive.debian.org/debian bullseye main' \
+    'deb [check-valid-until=no] https://snapshot.debian.org/archive/debian-security/20260903T220410Z/ bullseye-security main' \
+    > /etc/apt/sources.list \
+    && rm -f /etc/apt/sources.list.d/*.list \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         git \
