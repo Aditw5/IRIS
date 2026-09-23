@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { ref, reactive, computed, onMounted, nextTick } from 'vue'
+import { ref, reactive, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useHead } from '@vueuse/head'
 import { useRouter } from 'vue-router'
 import axios from 'axios'
 import { useDarkmode } from '/@src/stores/darkmode'
 import { useNotyf } from '/@src/composable/useNotyf'
 import Password from 'primevue/password'
+import AuthIrisStage from '/@src/components/partials/auth/AuthIrisStage.vue'
+import IrisBrand from '/@src/components/partials/landing/IrisBrand.vue'
 
 const router = useRouter()
 const darkmode = useDarkmode()
@@ -39,7 +41,7 @@ const resendCooldown = ref(0)
 let cooldownTimer: any = null
 
 /* ===================== Meta ===================== */
-useHead({ title: 'Become a ULABers' })
+useHead({ title: 'Daftar Customer IRIS — Intelligent Real-time Insight System' })
 
 /* ===================== Helpers ===================== */
 const isNowaValid = computed(() => /^8\d{8,12}$/.test(waSubscriber.value))
@@ -223,10 +225,14 @@ const resendOtp = async () => {
 onMounted(() => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 })
+
+onBeforeUnmount(() => {
+  if (cooldownTimer) clearInterval(cooldownTimer)
+})
 </script>
 
 <template>
-  <div class="auth-wrapper-inner columns is-gapless">
+  <div class="auth-wrapper-inner iris-signup columns is-gapless">
     <div class="column is-5">
       <div class="hero is-fullheight is-white">
         <div class="hero-heading">
@@ -237,7 +243,7 @@ onMounted(() => {
           </label>
           <div class="auth-logo">
             <RouterLink :to="{ name: 'index' }">
-              <AnimatedLogoULAB class="top-logo" width="36px" height="36px" />
+              <IrisBrand />
             </RouterLink>
           </div>
         </div>
@@ -247,9 +253,10 @@ onMounted(() => {
             <div class="columns">
               <div class="column is-12">
                 <div class="auth-content">
-                  <h2>Become a ULABers</h2>
+                  <span class="auth-eyebrow">CUSTOMER SELF-SERVICE</span>
+                  <h2>Buat akun IRIS</h2>
                   <p>Sudah punya akun?
-                    <RouterLink :to="{ name: 'auth-login' }">Sign in</RouterLink>
+                    <RouterLink :to="{ name: 'auth-login' }">Masuk di sini</RouterLink>
                   </p>
                 </div>
 
@@ -341,7 +348,7 @@ onMounted(() => {
                       <div class="login mt-4">
                         <VButton type="submit" color="info" bold fullwidth raised :loading="isLoading"
                           :disabled="!canSubmitSignup || isLoading">
-                          Signup
+                          Buat akun customer
                         </VButton>
                       </div>
                     </div>
@@ -387,19 +394,8 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="column login-column is-7 is-hidden-mobile hero-banner-custom">
-      <div class="hero login-hero is-fullheight">
-        <div class="hero-body">
-          <div class="columns">
-            <div class="column is-10 is-offset-1 has-text-centered">
-              <img class="light-image has-light-shadow register-img" src="/@src/assets/illustrations/login/register.png"
-                alt="Illustration" />
-              <img class="dark-image has-light-shadow register-img" src="/@src/assets/illustrations/login/register.png"
-                alt="Illustration dark" />
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="column login-column is-7 is-hidden-mobile iris-signup-stage">
+      <AuthIrisStage mode="signup" />
     </div>
   </div>
 </template>
@@ -665,6 +661,230 @@ onMounted(() => {
 
   .glass-card {
     padding: 18px;
+  }
+}
+
+/* IRIS customer registration shell */
+.iris-signup {
+  min-height: 100vh;
+  align-items: stretch;
+  color: #102b4e;
+  background: #f7fafc;
+  font-family: 'DM Sans', Arial, sans-serif;
+
+  > .column.is-5 {
+    width: 43%;
+    flex: none;
+    background: #fff;
+    border-right: 1px solid #e4edf3;
+  }
+
+  > .column.is-7 {
+    width: 57%;
+    flex: none;
+  }
+
+  .hero.is-white {
+    min-height: 100vh;
+    background: #fff;
+  }
+
+  .hero-heading {
+    max-width: 520px;
+    padding: 27px 28px 0;
+    margin-inline: auto;
+    justify-content: flex-start;
+  }
+
+  .hero-heading .auth-logo {
+    justify-content: flex-start;
+  }
+
+  .hero-heading .auth-logo a {
+    color: #102b4e;
+  }
+
+  .hero-heading .auth-logo :is(.iris-brand) {
+    display: inline-flex;
+  }
+
+  .hero-heading .auth-logo .iris-brand-mark {
+    width: 31px;
+    height: 31px;
+  }
+
+  .hero-heading .auth-logo .iris-brand-mark img {
+    width: 48px;
+    left: -8px;
+  }
+
+  .hero-heading .auth-logo .iris-brand-name {
+    font-size: 27px;
+  }
+
+  .hero-heading .dark-mode {
+    top: 24px;
+    right: 28px;
+  }
+
+  .hero-body {
+    align-items: flex-start;
+    padding: 35px 28px 50px;
+  }
+
+  .hero-body > .container {
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .auth-content,
+  .auth-form-wrapper {
+    max-width: 430px;
+  }
+
+  .auth-content {
+    margin: 0 auto 20px;
+    text-align: left;
+  }
+
+  .auth-eyebrow {
+    display: block;
+    margin-bottom: 13px;
+    color: #198caf;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
+
+  .auth-content h2 {
+    margin: 0 0 8px;
+    color: #102b4e;
+    font-family: Manrope, Arial, sans-serif;
+    font-size: clamp(31px, 2.3vw, 40px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -1.4px;
+  }
+
+  .auth-content p {
+    color: #718695;
+    font-size: 13px;
+  }
+
+  .auth-content a {
+    color: #078cc0;
+    font-weight: 700;
+  }
+
+  .glass-card {
+    padding: 25px;
+    border: 1px solid #e1ebf1;
+    border-radius: 13px;
+    background: #fbfdfe;
+    box-shadow: 0 18px 50px #1538580c;
+    backdrop-filter: none;
+  }
+
+  .login-form .field:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .is-lg-input,
+  .login-form .control .input,
+  .p-inputtext {
+    height: 54px !important;
+    border-color: #d7e3eb !important;
+    border-radius: 10px !important;
+    color: #102b4e;
+    background: #fff;
+    box-shadow: none !important;
+  }
+
+  .is-lg-input:focus,
+  .login-form .control .input:focus,
+  .p-inputtext:focus {
+    border-color: #34b9d8 !important;
+    box-shadow: 0 0 0 3px #35bad814 !important;
+  }
+
+  .help.is-info {
+    color: #43839c !important;
+    font-size: 10px;
+  }
+
+  .otp-chip {
+    min-height: 54px;
+    border-radius: 10px;
+  }
+
+  .login .button {
+    min-height: 50px;
+    border-radius: 9px;
+    background: #102f52;
+  }
+
+  .iris-signup-stage {
+    position: relative;
+    min-height: 100vh;
+    background: #f4f9fc;
+  }
+}
+
+.is-dark .iris-signup {
+  background: #071827;
+
+  > .column.is-5,
+  .hero.is-white {
+    background: #091e31;
+    border-color: #183850;
+  }
+
+  .hero-heading .auth-logo a,
+  .auth-content h2 {
+    color: #eaf6fb;
+  }
+
+  .glass-card {
+    background: #0d263a;
+    border-color: #1b4059;
+  }
+}
+
+@media (max-width: 1023px) {
+  .iris-signup {
+    > .column.is-5 {
+      width: 52%;
+    }
+
+    > .column.is-7 {
+      width: 48%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .iris-signup {
+    > .column.is-5 {
+      width: 100%;
+      border-right: 0;
+    }
+
+    .hero-heading {
+      padding: 22px 18px 0;
+    }
+
+    .hero-body {
+      padding: 30px 17px 35px;
+    }
+
+    .auth-content {
+      margin: 0 auto 20px !important;
+      text-align: left !important;
+    }
+
+    .glass-card {
+      padding: 18px;
+    }
   }
 }
 </style>

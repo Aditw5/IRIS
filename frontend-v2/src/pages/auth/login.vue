@@ -12,6 +12,8 @@ import { useStorage } from '@vueuse/core'
 import Password from 'primevue/password'
 import Dialog from 'primevue/dialog'
 import * as faceapi from 'face-api.js'
+import AuthIrisStage from '/@src/components/partials/auth/AuthIrisStage.vue'
+import IrisBrand from '/@src/components/partials/landing/IrisBrand.vue'
 
 export type UserData = Record<string, any> | null
 type StepId = 'login' | 'forgot-password'
@@ -89,7 +91,7 @@ const faceModelsLoaded = ref(false)
 const faceModelsLoading = ref(false)
 
 useHead({
-  title: 'Auth Login - ' + import.meta.env.VITE_PROJECT,
+  title: 'Login IRIS — Intelligent Real-time Insight System',
   link: [
     {
       rel: 'preconnect',
@@ -723,27 +725,15 @@ const submitNewPassword = async () => {
 </script>
 
 <template>
-  <div class="modern-login">
-    <div class="underlay h-hidden-mobile h-hidden-tablet-p"></div>
-
+  <div class="modern-login auth-iris-login">
     <div class="columns is-gapless is-vcentered">
       <div class="column is-relative is-8 h-hidden-mobile h-hidden-tablet-p">
-        <div class="hero is-fullheight is-image">
-          <div class="hero-body">
-            <div class="container">
-              <div class="columns">
-                <div class="column">
-                  <img class="hero-image" src="/@src/assets/illustrations/login/loginview.webp" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AuthIrisStage mode="login" />
       </div>
 
       <div class="column is-4 is-relative">
         <RouterLink :to="{ name: 'index' }" class="top-logo">
-          <LogoRS />
+          <IrisBrand />
         </RouterLink>
 
         <label
@@ -758,8 +748,9 @@ const submitNewPassword = async () => {
         <div class="is-form">
           <div class="hero-body">
             <div class="form-text" style="text-align: center" :class="[step !== 'login' && 'is-hidden']">
-              <h2>U-LAB</h2>
-              <p>Login to your Account</p>
+              <span class="form-eyebrow">WELCOME BACK</span>
+              <h2>Masuk ke IRIS</h2>
+              <p>Akses seluruh proses dalam satu ruang kerja.</p>
             </div>
 
             <form :class="[step !== 'login' && 'is-hidden']" class="login-wrapper" @submit.prevent="handleLogin">
@@ -845,11 +836,7 @@ const submitNewPassword = async () => {
                 >
                   Login
                 </VButton>
-                <span>
-                  Or
-                  <RouterLink :to="{ name: 'auth-signup-1' }">Create</RouterLink>
-                  an account.
-                </span>
+                <span>Belum punya akun? <RouterLink :to="{ name: 'auth-signup-1' }">Daftar customer</RouterLink></span>
               </div>
             </form>
 
@@ -1814,6 +1801,227 @@ button {
       > span {
         background: var(--dark-sidebar-light-12);
       }
+    }
+  }
+}
+
+/* IRIS authentication shell */
+.auth-iris-login {
+  min-height: 100vh;
+  color: #102b4e;
+  background: #f7fafc;
+  font-family: 'DM Sans', Arial, sans-serif;
+
+  > .columns {
+    min-height: 100vh;
+    align-items: stretch !important;
+  }
+
+  > .columns > .column.is-8 {
+    width: 64%;
+    flex: none;
+  }
+
+  > .columns > .column.is-4 {
+    width: 36%;
+    flex: none;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-left: 1px solid #e4edf3;
+  }
+
+  .top-logo {
+    top: 34px !important;
+    left: 42px;
+    right: auto;
+    margin: 0;
+    color: #102b4e;
+    justify-content: flex-start;
+
+    :deep(.iris-brand-mark) {
+      width: 31px;
+      height: 31px;
+    }
+
+    :deep(.iris-brand-mark img) {
+      width: 48px !important;
+      max-width: none !important;
+      left: -8px;
+      margin: 0 !important;
+    }
+
+    :deep(.iris-brand-name) {
+      font-size: 27px;
+    }
+  }
+
+  .dark-mode {
+    top: 33px;
+    right: 34px;
+  }
+
+  .is-form {
+    width: min(100%, 460px);
+    max-width: none;
+    padding: 112px 42px 35px;
+  }
+
+  .is-form .hero-body {
+    display: block;
+    padding: 0;
+  }
+
+  .is-form .form-text {
+    padding: 0 20px;
+    text-align: left !important;
+
+    .form-eyebrow {
+      display: block;
+      margin-bottom: 13px;
+      color: #198caf;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+    }
+
+    h2 {
+      color: #102b4e;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: clamp(31px, 2.4vw, 41px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -1.4px;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #718695;
+      font-size: 13px;
+    }
+  }
+
+  .is-form .login-wrapper {
+    padding: 20px;
+  }
+
+  .is-form .login-wrapper .control {
+    margin-top: 13px;
+  }
+
+  .is-form .login-wrapper .control .input,
+  :deep(.is-login-pass .p-password-input) {
+    height: 58px;
+    border: 1px solid #d7e3eb;
+    border-radius: 11px;
+    color: #102b4e;
+    background: #fbfdfe;
+    box-shadow: none;
+  }
+
+  .is-form .login-wrapper .control .input:focus,
+  :deep(.is-login-pass .p-password-input:focus) {
+    border-color: #34b9d8;
+    background: #fff;
+    box-shadow: 0 0 0 3px #35bad814;
+  }
+
+  .captcha-box {
+    max-width: none;
+  }
+
+  .forgot-wrap .forgot-link {
+    color: #0785b5 !important;
+    font-size: 12px !important;
+  }
+
+  .is-form .login-wrapper .button-wrap {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0 0;
+
+    .button {
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      border-radius: 9px !important;
+      background: #102f52;
+    }
+
+    > span {
+      margin: 0;
+      text-align: center;
+      color: #6c8293;
+      font-size: 12px;
+    }
+
+    a {
+      color: #078cc0 !important;
+      font-weight: 700 !important;
+    }
+  }
+}
+
+.is-dark .auth-iris-login {
+  color: #eaf6fb;
+  background: #071827;
+
+  > .columns > .column.is-4 {
+    background: #091e31;
+    border-color: #183850;
+  }
+
+  .top-logo,
+  .is-form .form-text h2 {
+    color: #eaf6fb;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .auth-iris-login > .columns > .column.is-4 {
+    width: 100%;
+  }
+
+  .auth-iris-login .is-form {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .auth-iris-login {
+    > .columns {
+      display: block !important;
+      height: auto !important;
+      min-height: 100vh;
+    }
+
+    > .columns > .column.is-4 {
+      display: block !important;
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .top-logo {
+      position: fixed;
+      top: 25px !important;
+      left: 22px;
+      z-index: 20;
+    }
+
+    .dark-mode {
+      top: 24px;
+      right: 20px;
+    }
+
+    .is-form {
+      width: 100%;
+      padding: 104px 8px 25px;
+    }
+
+    .is-form .form-text {
+      padding-inline: 20px;
     }
   }
 }
