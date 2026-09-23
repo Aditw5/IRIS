@@ -134,7 +134,7 @@ const remoteDiagnostic = (sourceRole: SourceRole) => {
 }
 
 const sourceLinks = computed<Record<SourceRole, string>>(() => {
-  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://ulabumro.id'
+  const origin = typeof window !== 'undefined' ? window.location.origin : ''
   const createSourceLink = (sourceRole: SourceRole) => {
     const params = new URLSearchParams({
       room: roomId.value,
@@ -186,7 +186,7 @@ function joinCameraRoom() {
     (error: Error | null, response: any) => {
       if (error) {
         roomState.value = 'unsupported'
-        roomMessage.value = 'Server socket belum menjalankan fitur room kamera. Deploy dan restart ulab-socket terbaru.'
+        roomMessage.value = 'Server socket belum menjalankan fitur room kamera. Deploy dan restart iris-socket terbaru.'
         return
       }
 
@@ -527,7 +527,7 @@ onBeforeUnmount(() => {
         <div class="brand-line">
           <span class="brand-mark"><i class="iconify" data-icon="feather:camera"></i></span>
           <div>
-            <p class="eyebrow">U-LAB CAMERA ASCI</p>
+            <p class="eyebrow">IRIS CAMERA ASCI</p>
             <h1>{{ isAsci ? 'Ruang Monitoring ASCI' : sourceLabel }}</h1>
           </div>
         </div>

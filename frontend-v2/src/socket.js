@@ -5,19 +5,15 @@ export const state = reactive({
   connected: false,
 })
 
-const env = import.meta.env.VITE_SOCKET
-const enabled = import.meta.env.VITE_SOCKET_ON
-
-const PRODUCTION_URL = 'https://socket.ulabumro.id'
-const isLocalSocketUrl = !env || /localhost|127\.0\.0\.1/i.test(env)
-const URL = import.meta.env.PROD && isLocalSocketUrl
-  ? PRODUCTION_URL
-  : env || 'http://127.0.0.1:3001'
+const socketUrl = String(import.meta.env.VITE_SOCKET_URL || '').trim()
+const enabled = String(import.meta.env.VITE_SOCKET_ON || 'false').toLowerCase() === 'true'
 
 let mySocket = null
 
-if (enabled === 'true') {
-  mySocket = io(URL, {
+if (enabled) {
+  // Empty URL intentionally uses the current origin. In production Nginx
+  // proxies the default Socket.IO path (/socket.io/) to iris-socket.
+  mySocket = io(socketUrl || undefined, {
     transports: ['websocket', 'polling'],
     withCredentials: true,
     autoConnect: true,

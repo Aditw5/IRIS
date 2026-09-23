@@ -1,7 +1,7 @@
 {
-  "name": "ulab-socket-server",
+  "name": "iris-socket-server",
   "version": "1.0.0",
-  "description": "Socket server untuk notif realtime U-LAB",
+  "description": "Socket.IO server untuk layanan realtime IRIS",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

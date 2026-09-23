@@ -90,7 +90,7 @@ const leaveCameraRoom = socket => {
 app.get('/', (req, res) => {
   res.json({
     status: 'ok',
-    message: 'U-LAB Socket Server running',
+    message: 'IRIS Socket Server running',
     version: SOCKET_SERVER_VERSION,
     features: {
       notifications: true,

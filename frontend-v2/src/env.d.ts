@@ -9,7 +9,8 @@ interface ImportMetaEnv extends Readonly<Record<string, string>> {
   readonly VITE_NAVIGASI: string
   readonly VITE_PROJECT: string
   readonly VITE_NODE_ENV: string
-  readonly VITE_SOCKET_ON: boolean
+  readonly VITE_SOCKET_URL?: string
+  readonly VITE_SOCKET_ON: string
 }
 
 interface ImportMeta {

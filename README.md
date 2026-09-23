@@ -14,7 +14,7 @@ Monorepo ULAB Kalibrasi berisi aplikasi web, backend utama, server realtime, apl
 | --- | --- | --- |
 | `backend/` | Laravel 8, PHP, Composer | Backend utama web/API, service legacy, laporan, dokumen, auth, integrasi socket, PDF, dan fitur operasional ULAB. |
 | `frontend-v2/` | Vue 3, Vite, Pinia, Bulma/Vuero | Dashboard web ULAB untuk admin, customer, manager, pelaksana, penyelia, dan modul kalibrasi. |
-| `ulab-socket/` | Node.js, Express, Socket.IO | Server realtime untuk notifikasi, chat pegawai, presence pegawai, room kamera, dan WebRTC signaling. |
+| `iris-socket/` | Node.js, Express, Socket.IO | Server realtime IRIS untuk notifikasi, chat pegawai, presence pegawai, room kamera, dan WebRTC signaling. |
 | `mobile/flutter_app/` | Flutter | Aplikasi mobile customer untuk login, OTP, profil, master alat, keranjang, checkout, history order, scan QR, laporan, dan push notification. |
 | `services/go-api/` | Go, Gin, GORM, PostgreSQL | API mobile/customer baru untuk auth, OTP, profil, alat, mitra, keranjang, checkout, history, dan report. |
 | `services/chatbot-python/` | Python, FastAPI | Chatbot ULAB berbasis manual DOCX dan data customer dari backend. |
@@ -59,8 +59,8 @@ File: `frontend-v2/.env`
 
 Kunci penting:
 
-- `VITE_API_BASE_URL` untuk base URL Laravel, contoh local: `http://127.0.0.1:8000/service/`
-- `VITE_SOCKET` untuk URL Socket.IO
+- `VITE_API_BASE_URL` untuk base URL Laravel, contoh local: `http://localhost:8001/service/`
+- `VITE_SOCKET_URL` untuk URL Socket.IO. Kosongkan pada production jika memakai reverse proxy `/socket.io/` pada origin yang sama.
 - `VITE_SOCKET_ON` untuk menyalakan/mematikan socket
 - `VITE_CHATBOT_URL` untuk endpoint chatbot Python
 - `VITE_PROJECT`, `VITE_NAVIGASI`, `VITE_FOOTER`, `VITE_FOOTER_BY`
@@ -68,7 +68,7 @@ Kunci penting:
 
 ### Socket Server
 
-File: `ulab-socket/.env`
+File: `iris-socket/.env`
 
 Kunci penting:
 
@@ -126,7 +126,7 @@ composer install
 npm install
 php artisan key:generate
 php artisan migrate
-php artisan serve --host=127.0.0.1 --port=8000
+php artisan serve --host=127.0.0.1 --port=8001
 ```
 
 Catatan:
@@ -146,7 +146,7 @@ npm run dev
 Default Vite berjalan di:
 
 ```text
-http://127.0.0.1:5173
+http://localhost:5174
 ```
 
 Build production:
@@ -164,7 +164,7 @@ npm run preview
 ### Socket Server
 
 ```bash
-cd ulab-socket
+cd iris-socket
 npm install
 npm start
 ```
@@ -183,6 +183,29 @@ Endpoint dan event utama:
 - `POST /emit-chat-delete` dengan header `x-socket-secret`
 - Event client: `join-pegawai`, `get-online-pegawai`, `notification`, `chat-message`, `chat-message-deleted`
 - Event kamera: `join-camera-room`, `camera-signal`, `camera-participants`, `camera-role-replaced`, `leave-camera-room`
+
+Konfigurasi development lokal:
+
+```dotenv
+# frontend-v2/.env
+VITE_SOCKET_ON=true
+VITE_SOCKET_URL=http://localhost:3001
+
+# backend/.env
+SOCKET_SERVER_URL=http://localhost:3001
+
+# iris-socket/.env
+PORT=3001
+CORS_ORIGIN=http://localhost:5174
+```
+
+Untuk Docker, backend dapat memakai `SOCKET_SERVER_URL=http://iris-socket:3001`. Frontend production dapat mengosongkan `VITE_SOCKET_URL` agar koneksi menggunakan origin yang sama dan diteruskan Nginx melalui `/socket.io/`. `SOCKET_SERVER_SECRET` wajib diberikan ke backend dan socket melalui secret CI/CD dengan nilai yang sama.
+
+Build image socket:
+
+```bash
+docker build -t iris-socket ./iris-socket
+```
 
 ### Go API
 
@@ -298,7 +321,7 @@ flutter test
 Socket server:
 
 ```bash
-cd ulab-socket
+cd iris-socket
 npm start
 ```
 
@@ -316,9 +339,8 @@ Lalu cek `GET /manual/check`.
 ## Troubleshooting
 
 - Jika frontend tidak bisa memanggil backend, cek `frontend-v2/.env` bagian `VITE_API_BASE_URL` dan CORS backend.
-- Jika realtime tidak jalan, cek `VITE_SOCKET`, `VITE_SOCKET_ON`, `ulab-socket/.env`, dan pastikan `CORS_ORIGIN` mengizinkan origin frontend.
-- Jika backend tidak bisa emit notifikasi/chat, pastikan `SOCKET_SERVER_SECRET` di backend sama dengan `ulab-socket/.env`.
+- Jika realtime tidak jalan, cek `VITE_SOCKET_URL`, `VITE_SOCKET_ON`, `iris-socket/.env`, dan pastikan `CORS_ORIGIN` mengizinkan origin frontend.
+- Jika backend tidak bisa emit notifikasi/chat, pastikan `SOCKET_SERVER_URL` mengarah ke service `iris-socket` dan `SOCKET_SERVER_SECRET` di backend sama dengan `iris-socket/.env`.
 - Jika mobile emulator tidak bisa akses API local, ganti host `localhost` menjadi `10.0.2.2`.
 - Jika chatbot tidak bisa mengambil data customer, cek `BACKEND_BASE_URL` dan pastikan request membawa token/login yang valid.
 - Jika fitur PDF/dokumen gagal di backend, cek path binary `WKHTML_PDF_BINARY`, `LIBREOFFICE_PATH`, dan `GS_PATH`.
-
