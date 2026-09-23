@@ -1,0 +1,62 @@
+name: iris
+
+services:
+  backend:
+    image: iris-backend:${IMAGE_TAG:-latest}
+    build:
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
+    restart: unless-stopped
+    environment:
+      APP_NAME: IRIS
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: ${APP_KEY:?APP_KEY must be set}
+      APP_URL: ${APP_URL:?APP_URL must be set}
+      LOG_CHANNEL: stderr
+      DB_CONNECTION: pgsql
+      DB_HOST: /var/run/postgresql
+      DB_PORT: ${DB_PORT:-5432}
+      DB_DATABASE: irisdb
+      DB_USERNAME: iris_app
+      DB_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD must be set}
+      SOCKET_SERVER_URL: http://socket:3001
+      SOCKET_SERVER_SECRET: ${SOCKET_SERVER_SECRET:?SOCKET_SERVER_SECRET must be set}
+    volumes:
+      - type: bind
+        source: /var/run/postgresql
+        target: /var/run/postgresql
+        read_only: true
+    expose:
+      - "9000"
+
+  web:
+    image: iris-frontend:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/service}
+        VITE_SOCKET_URL: ${VITE_SOCKET_URL:-}
+        VITE_SOCKET_ON: ${VITE_SOCKET_ON:-true}
+    restart: unless-stopped
+    depends_on:
+      - backend
+      - socket
+    ports:
+      - "127.0.0.1:18081:80"
+
+  socket:
+    image: iris-socket:${IMAGE_TAG:-latest}
+    build:
+      context: ./iris-socket
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3001"
+      CORS_ORIGIN: ${CORS_ORIGIN:?CORS_ORIGIN must be set}
+      SOCKET_SERVER_SECRET: ${SOCKET_SERVER_SECRET:?SOCKET_SERVER_SECRET must be set}
+    expose:
+      - "3001"
+

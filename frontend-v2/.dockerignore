@@ -1,4 +1,13 @@
-public/uploads
+.env
+.env.*
+!.env.example
+
 node_modules
 dist
 cypress
+public/uploads
+
+.git
+.gitignore
+.idea
+.vscode

@@ -1,0 +1,23 @@
+.git
+.github
+.idea
+.vscode
+
+**/.env
+**/.env.*
+!**/.env.example
+
+**/node_modules
+**/vendor
+**/dist
+**/coverage
+frontend-v2/cypress
+frontend-v2/public/uploads
+frontend-v2/tmp
+
+# The root context is only used by the frontend image. Other services have
+# their own narrow build contexts and service-specific .dockerignore files.
+backend
+iris-socket
+services
+tmp
