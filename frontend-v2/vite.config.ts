@@ -15,7 +15,6 @@ import VueroDocumentation from './vite-plugin-vuero-doc/index'
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 // PWA dimatikan agar browser tidak menahan cache lama setelah deploy
 // import { VitePWA } from 'vite-plugin-pwa'
-import purgecss from 'rollup-plugin-purgecss'
 
 gracefulFs.gracefulify(fs)
 
@@ -320,33 +319,6 @@ export default defineConfig({
     //     globPatterns: ['**/*.{js,css,html,ico,png,svg,xml}'],
     //   },
     // }),
-
-    /**
-     * rollup-plugin-purgecss plugin is responsible of purging css rules
-     * that are not used in the bundle
-     *
-     * @see https://github.com/FullHuman/purgecss/tree/main/packages/rollup-plugin-purgecss
-     */
-    Object.assign(
-      purgecss({
-        content: [`./src/**/*.vue`],
-        variables: false,
-        safelist: {
-          standard: [
-            /(autv|lnil|lnir|fas?)/,
-            /-(leave|enter|appear)(|-(to|from|active))$/,
-            /^(?!(|.*?:)cursor-move).+-move$/,
-            /^router-link(|-exact)-active$/,
-            /data-v-.*/,
-          ],
-        },
-        defaultExtractor(content) {
-          const contentWithoutStyleBlocks = content.replace(/<style[^]+?<\/style>/gi, '')
-          return contentWithoutStyleBlocks.match(/[A-Za-z0-9-_/:]*[A-Za-z0-9-_/]+/g) || []
-        },
-      }),
-      { apply: 'build' as const }
-    ),
 
     /**
      * vite-imagetools plugin allow to perform transformation (blur, resize, crop, etc)
