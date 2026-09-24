@@ -26,7 +26,6 @@ RUN apt-get update \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j"$(nproc)" \
         bcmath \
-        dom \
         exif \
         gd \
         intl \
@@ -37,8 +36,6 @@ RUN apt-get update \
         simplexml \
         soap \
         xml \
-        xmlreader \
-        xmlwriter \
         zip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
