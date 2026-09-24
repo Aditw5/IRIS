@@ -691,3 +691,4 @@ useHead({
 </template>
 
 <style scoped lang="scss" src="./iris-landing.scss"></style>
+<style scoped lang="scss" src="./iris-hero.scss"></style>
