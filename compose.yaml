@@ -13,13 +13,36 @@ services:
       APP_DEBUG: "false"
       APP_KEY: ${APP_KEY:?APP_KEY must be set}
       APP_URL: ${APP_URL:?APP_URL must be set}
+      FRONTEND_URL: ${FRONTEND_URL:-https://iris.ulabumro.id}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-https://iris.ulabumro.id}
       LOG_CHANNEL: stderr
+      LOG_LEVEL: ${LOG_LEVEL:-warning}
+      BROADCAST_DRIVER: ${BROADCAST_DRIVER:-log}
+      CACHE_DRIVER: ${CACHE_DRIVER:-file}
+      QUEUE_CONNECTION: ${QUEUE_CONNECTION:-sync}
+      SESSION_COOKIE: ${SESSION_COOKIE:-iris_session}
+      SESSION_DRIVER: ${SESSION_DRIVER:-file}
+      SESSION_LIFETIME: ${SESSION_LIFETIME:-120}
       DB_CONNECTION: pgsql
       DB_HOST: /var/run/postgresql
       DB_PORT: ${DB_PORT:-5432}
       DB_DATABASE: irisdb
       DB_USERNAME: iris_app
       DB_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD must be set}
+      JWT_ALG: ${JWT_ALG:-HS512}
+      JWT_KEY: ${JWT_KEY:?JWT_KEY must be set}
+      JWT_EXPIRED_MINUTE: ${JWT_EXPIRED_MINUTE:-1440}
+      TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:?TURNSTILE_SITE_KEY must be set}
+      TURNSTILE_SECRET_KEY: ${TURNSTILE_SECRET_KEY:?TURNSTILE_SECRET_KEY must be set}
+      MAIL_MAILER: ${MAIL_MAILER:-smtp}
+      MAIL_HOST: ${MAIL_HOST:-smtp.gmail.com}
+      MAIL_PORT: ${MAIL_PORT:-587}
+      MAIL_USERNAME: ${MAIL_USERNAME:-}
+      MAIL_PASSWORD: ${MAIL_PASSWORD:-}
+      MAIL_ENCRYPTION: ${MAIL_ENCRYPTION:-tls}
+      MAIL_FROM_ADDRESS: ${MAIL_FROM_ADDRESS:-}
+      MAIL_FROM_NAME: ${MAIL_FROM_NAME:-IRIS}
+      PBJ_VALIDATE_FRONTEND_URL: ${PBJ_VALIDATE_FRONTEND_URL:-https://iris.ulabumro.id}
       SOCKET_SERVER_URL: http://socket:3001
       SOCKET_SERVER_SECRET: ${SOCKET_SERVER_SECRET:?SOCKET_SERVER_SECRET must be set}
     volumes:
