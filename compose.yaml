@@ -37,8 +37,15 @@ services:
       dockerfile: docker/frontend/Dockerfile
       args:
         VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/service}
-        VITE_SOCKET_URL: ${VITE_SOCKET_URL:-}
+        VITE_CHATBOT_URL: ${VITE_CHATBOT_URL:-}
+        VITE_FOOTER: ${VITE_FOOTER:-}
+        VITE_FOOTER_BY: ${VITE_FOOTER_BY:-}
+        VITE_MAPBOX_ACCESS_TOKEN: ${VITE_MAPBOX_ACCESS_TOKEN:-}
+        VITE_NAVIGASI: ${VITE_NAVIGASI:-}
+        VITE_PROJECT: ${VITE_PROJECT:-}
         VITE_SOCKET_ON: ${VITE_SOCKET_ON:-true}
+        VITE_SOCKET_URL: ${VITE_SOCKET_URL:-}
+        VITE_TURNSTILE_SITE_KEY: ${VITE_TURNSTILE_SITE_KEY:-}
     restart: unless-stopped
     depends_on:
       - backend
@@ -59,4 +66,3 @@ services:
       SOCKET_SERVER_SECRET: ${SOCKET_SERVER_SECRET:?SOCKET_SERVER_SECRET must be set}
     expose:
       - "3001"
-
