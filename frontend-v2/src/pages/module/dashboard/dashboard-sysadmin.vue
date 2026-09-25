@@ -7,7 +7,7 @@
           <div class="columns is-multiline">
             <!--Header-->
             <div class="column is-12">
-              <div class="block-header">
+              <div class="block-header iris-dashboard-hero">
 
                 <!--left-->
                 <div class="left">

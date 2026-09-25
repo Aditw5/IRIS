@@ -1,7 +1,7 @@
 <template>
   <div class="food-delivery-dashboard customer-dashboard-floating">
     <div class="left">
-      <section v-if="activeSection === 'cart'" class="dashboard-home-hero">
+      <section v-if="activeSection === 'cart'" class="dashboard-home-hero iris-dashboard-hero">
         <div class="dashboard-home-visual" aria-hidden="true">
           <img
             src="/@src/assets/illustrations/dashboards/lifestyle/customer-dashboard-instruments.png"

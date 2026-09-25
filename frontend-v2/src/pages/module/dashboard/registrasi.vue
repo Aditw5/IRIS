@@ -3,7 +3,7 @@
     <div class="column is-12">
       <div class="columns is-multiline">
         <div class="column is-12">
-          <div class="illustration-header-2 large-screen">
+          <div class="illustration-header-2 large-screen iris-dashboard-hero">
             <div class="header-image">
               <img src="/@src/assets/illustrations/dashboards/lifestyle/Picture1.png" alt=""
                 style="max-width:84%; margin-left: 2rem; margin-bottom: 1rem;" />

@@ -1,0 +1,208 @@
+/* Shared IRIS dashboard header theme. The extra class keeps these rules scoped
+   to role dashboard headers without changing cards that reuse the old classes. */
+.iris-dashboard-hero {
+  --iris-dashboard-navy: #123965;
+  --iris-dashboard-cyan: #51c8e9;
+  --iris-dashboard-cyan-soft: #dff8ff;
+  --iris-dashboard-copy: #265478;
+}
+
+.iris-dashboard-hero.illustration-header-2,
+.iris-dashboard-hero.dashboard-home-hero,
+.personal-dashboard-v1 .iris-dashboard-hero.dashboard-header,
+.hr-dashboard .iris-dashboard-hero.block-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(53, 180, 221, 0.24);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(255, 255, 255, 0.72), transparent 24%),
+    linear-gradient(118deg, var(--iris-dashboard-cyan-soft) 0%, #a7e7f6 48%, var(--iris-dashboard-cyan) 100%);
+  box-shadow: 0 16px 38px rgba(24, 139, 184, 0.18);
+}
+
+.iris-dashboard-hero.illustration-header-2::before,
+.iris-dashboard-hero.dashboard-home-hero::before,
+.personal-dashboard-v1 .iris-dashboard-hero.dashboard-header::before,
+.hr-dashboard .iris-dashboard-hero.block-header::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 270px;
+  height: 270px;
+  right: -76px;
+  bottom: -190px;
+  border: 1px solid rgba(18, 57, 101, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.iris-dashboard-hero.illustration-header-2 > *,
+.iris-dashboard-hero.dashboard-home-hero > *,
+.personal-dashboard-v1 .iris-dashboard-hero.dashboard-header > *,
+.hr-dashboard .iris-dashboard-hero.block-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.iris-dashboard-hero.illustration-header-2 .header-meta h3,
+.iris-dashboard-hero.illustration-header-2 .header-meta p,
+.iris-dashboard-hero.dashboard-home-hero .dashboard-home-copy h1,
+.iris-dashboard-hero.dashboard-home-hero .dashboard-home-copy p,
+.iris-dashboard-hero.dashboard-home-hero .dashboard-home-eyebrow,
+.personal-dashboard-v1 .iris-dashboard-hero.dashboard-header .start h3,
+.personal-dashboard-v1 .iris-dashboard-hero.dashboard-header .start p,
+.hr-dashboard .iris-dashboard-hero.block-header .block-heading,
+.hr-dashboard .iris-dashboard-hero.block-header .block-text {
+  color: var(--iris-dashboard-navy) !important;
+  text-shadow: none;
+}
+
+.iris-dashboard-hero.illustration-header-2 .header-meta p,
+.iris-dashboard-hero.dashboard-home-hero .dashboard-home-copy p,
+.personal-dashboard-v1 .iris-dashboard-hero.dashboard-header .start p,
+.hr-dashboard .iris-dashboard-hero.block-header .block-text {
+  color: var(--iris-dashboard-copy) !important;
+}
+
+.iris-dashboard-hero.dashboard-home-hero .dashboard-home-icon {
+  color: var(--iris-dashboard-navy);
+  border-color: rgba(18, 57, 101, 0.12);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.iris-dashboard-hero.dashboard-home-hero .dashboard-home-icon .iconify {
+  color: var(--iris-dashboard-navy) !important;
+}
+
+.personal-dashboard-v1 .iris-dashboard-hero.dashboard-header {
+  margin-bottom: 30px;
+  padding: 20px 24px;
+  border-radius: 18px;
+}
+
+.hr-dashboard .iris-dashboard-hero.block-header .center {
+  border-color: rgba(18, 57, 101, 0.14);
+}
+
+.iris-dashboard-hero.dashboard-welcome-bar .welcome-inner {
+  border: 1px solid rgba(53, 180, 221, 0.28);
+  background:
+    radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.7), transparent 28%),
+    linear-gradient(118deg, var(--iris-dashboard-cyan-soft) 0%, #9fe3f4 52%, var(--iris-dashboard-cyan) 100%);
+  box-shadow: 0 16px 38px rgba(24, 139, 184, 0.2);
+  color: var(--iris-dashboard-copy);
+  text-shadow: none;
+}
+
+.iris-dashboard-hero.dashboard-welcome-bar .welcome-inner h3,
+.iris-dashboard-hero.dashboard-welcome-bar .welcome-inner b {
+  color: var(--iris-dashboard-navy);
+  text-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .iris-dashboard-hero.illustration-header-2 {
+    min-height: 154px;
+    padding: 14px;
+  }
+
+  .iris-dashboard-hero.illustration-header-2 .header-image {
+    width: 42%;
+    min-width: 122px;
+    height: 132px;
+  }
+
+  .iris-dashboard-hero.illustration-header-2 .header-image img {
+    top: 0 !important;
+    left: -14px !important;
+    max-width: 118% !important;
+    margin: 0 !important;
+  }
+
+  .iris-dashboard-hero.illustration-header-2 .header-meta {
+    min-width: 0;
+    padding-right: 4px;
+  }
+
+  .iris-dashboard-hero.illustration-header-2 .header-meta h3 {
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  .iris-dashboard-hero.illustration-header-2 .header-meta p {
+    margin-bottom: 0;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .iris-dashboard-hero.dashboard-home-hero {
+    min-height: 164px;
+    padding: 16px;
+  }
+
+  .iris-dashboard-hero.dashboard-home-hero .dashboard-home-copy {
+    max-width: 78%;
+    gap: 10px;
+  }
+
+  .iris-dashboard-hero.dashboard-home-hero .dashboard-home-icon {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    font-size: 22px;
+  }
+
+  .personal-dashboard-v1 .iris-dashboard-hero.dashboard-header {
+    padding: 20px 16px;
+  }
+
+  .personal-dashboard-v1 .iris-dashboard-hero.dashboard-header .end {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .personal-dashboard-v1 .iris-dashboard-hero.dashboard-header .end .button {
+    flex: 1 1 130px;
+    margin: 0;
+  }
+
+  .hr-dashboard .iris-dashboard-hero.block-header {
+    padding: 24px 20px;
+  }
+
+  body .iris-dashboard-hero.dashboard-welcome-bar {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: flex !important;
+    width: 100%;
+    padding: 10px 12px 0;
+  }
+
+  .iris-dashboard-hero.dashboard-welcome-bar .welcome-inner {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 13px 16px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .iris-dashboard-hero.dashboard-welcome-bar .welcome-inner h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .iris-dashboard-hero.illustration-header-2 .header-image {
+    min-width: 104px;
+    width: 36%;
+  }
+
+  .iris-dashboard-hero.dashboard-home-hero .dashboard-home-copy {
+    max-width: 88%;
+  }
+}

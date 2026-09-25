@@ -3,7 +3,7 @@
   <div class="personal-dashboard personal-dashboard-v1">
     <!--Personal Dashboard V1-->
     <!--Header-->
-    <div class="dashboard-header">
+    <div class="dashboard-header iris-dashboard-hero">
       <VAvatar picture="/images/avatars/svg/vuero-1.svg" size="large" />
       <div class="start">
         <h3>Welcome back, {{userLogin.pegawai.namaLengkap}}</h3>

@@ -6,7 +6,7 @@
         <div class="columns is-multiline">
           <!--Header-->
           <div class="column is-12">
-            <div class="illustration-header-2">
+            <div class="illustration-header-2 iris-dashboard-hero">
               <div class="header-image">
                 <img src="/@src/assets/illustrations/dashboards/lifestyle/Picture5.png" alt=""
                   style="max-width:75%; margin-left: 2rem; margin-bottom: 1rem;" />

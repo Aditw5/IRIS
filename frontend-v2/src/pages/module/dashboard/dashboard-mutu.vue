@@ -3,7 +3,7 @@
   <div class="dashboard-background-layer"></div>
 
   <!-- WELCOME BAR PALING ATAS, centered -->
-  <div class="dashboard-welcome-bar">
+  <div class="dashboard-welcome-bar iris-dashboard-hero">
     <div class="welcome-inner">
       <h3>
         <i class="fas fa-home"></i>

@@ -248,13 +248,9 @@ if (user.kelompokUser.kelompokUser != 'customer') {
     <!-- Mobile navigation -->
     <MobileNavbar :is-open="isMobileSidebarOpen" @toggle="isMobileSidebarOpen = !isMobileSidebarOpen">
       <template #brand>
-        <div class="navbar-item is-brand">
-          <AnimatedLogoULAB width="40" height="20" />
+        <div class="navbar-item iris-navbar-brand iris-navbar-brand--mobile" @click="toggleDashboard">
+          <IrisBrand />
         </div>
-        <div class="separator"></div>
-        <LogoKAN width="40" height="40" />
-        <div class="separator"></div>
-        <LogoRS width="40" height="40" />
 
         <div class="brand-end">
           <NotificationsMobileDropdown />
@@ -322,13 +318,9 @@ if (user.kelompokUser.kelompokUser != 'customer') {
     <!-- Desktop navigation -->
     <Navbar :theme="props.theme">
       <template #title>
-        <div class="brand" @click="toggleDashboard">
-          <AnimatedLogoULAB width="38" height="38" />
+        <div class="iris-navbar-brand iris-navbar-brand--desktop" @click="toggleDashboard">
+          <IrisBrand />
         </div>
-        <div class="separator"></div>
-        <LogoKAN width="60" height="60" class="mr-1" />
-        <div class="separator"></div>
-        <LogoRS width="70" height="70" class="mr-1" />
         <!-- <div>
           <h1 style="font-weight: bold;" class="title is-4 mt-0 ml-1 mb-0 responsive-title">
             {{ namaProfile }}
@@ -427,6 +419,24 @@ if (user.kelompokUser.kelompokUser != 'customer') {
 </template>
 
 <style lang="scss">
+.iris-navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  color: #123965;
+  cursor: pointer;
+  user-select: none;
+}
+
+.iris-navbar-brand--desktop {
+  min-width: 132px;
+}
+
+.iris-navbar-brand--mobile {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: 0 0.45rem;
+}
+
 .responsive-title {
   white-space: nowrap;
   overflow: hidden;
@@ -437,6 +447,27 @@ if (user.kelompokUser.kelompokUser != 'customer') {
    FIX RUANG KOSONG MOBILE
    ================================ */
 @media (max-width: 767px) {
+  .iris-navbar-brand--mobile {
+    .iris-brand {
+      gap: 6px;
+    }
+
+    .iris-brand-mark {
+      width: 31px;
+      height: 31px;
+    }
+
+    .iris-brand-mark img {
+      width: 48px;
+      left: -8px;
+    }
+
+    .iris-brand-name {
+      font-size: 25px;
+      letter-spacing: -1.3px;
+    }
+  }
+
   .navbar-layout {
     .view-wrapper {
       padding-top: 1px !important;
