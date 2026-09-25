@@ -38,11 +38,12 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 
 const props = defineProps<{ item: Record<string, any> }>()
 
 const imageUrl = computed(() => props.item?.fotoproduk
-  ? `/produk/${props.item.fotoproduk}`
+  ? publicFileUrl('produk', props.item.fotoproduk)
   : '/images/other/no_image.jpg')
 
 const onImageError = (event: Event) => {

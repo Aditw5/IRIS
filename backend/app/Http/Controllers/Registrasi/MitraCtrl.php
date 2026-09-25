@@ -2447,7 +2447,7 @@ class MitraCtrl extends Controller
         }
 
         $filename = basename($data->filecustomerams);
-        $filepath = asset('berkas-customer/' . $filename);
+        $filepath = $this->publicFileUrl('berkas-customer', $filename);
 
         return view('report.customer.view-pdf', compact('filepath', 'data'));
     }
@@ -3176,7 +3176,7 @@ class MitraCtrl extends Controller
         }
 
         $filename = basename($data->fileSertiVendor);
-        $filepath = asset('berkas-vendor/' . $filename);
+        $filepath = $this->publicFileUrl('berkas-vendor', $filename);
 
         return view('report.customer.sertifikat-vendor', compact('filepath', 'data'));
     }
@@ -3200,8 +3200,7 @@ class MitraCtrl extends Controller
 
         $filename = basename($data->file_path);
 
-        // Jangan gunakan asset() untuk file shared ULAB -> IRIS
-        $filepath = '/sertifikat/' . rawurlencode($filename);
+        $filepath = $this->publicFileUrl('sertifikat', $filename);
 
         return view(
             'report.customer.sertifikat-customer',
@@ -3227,7 +3226,7 @@ class MitraCtrl extends Controller
         }
 
         $filename = basename($data->file_path);
-        $filepath = asset('laporan-repair/' . $filename);
+        $filepath = $this->publicFileUrl('laporan-repair', $filename);
 
         return view('report.customer.laporan-repair-customer', compact('filepath', 'data'));
     }
@@ -4378,21 +4377,21 @@ class MitraCtrl extends Controller
         }
 
         if (strpos($cleanPath, 'produk/') === 0) {
-            return asset($cleanPath);
+            return $this->publicFileUrl('produk', substr($cleanPath, strlen('produk/')));
         }
 
         if (strpos($cleanPath, 'surat-jalan/') === 0) {
-            return asset($cleanPath);
+            return $this->publicFileUrl('surat-jalan', substr($cleanPath, strlen('surat-jalan/')));
         }
 
         if (strpos($cleanPath, 'berkas-mitra/') === 0) {
-            return asset($cleanPath);
+            return $this->publicFileUrl('berkas-mitra', substr($cleanPath, strlen('berkas-mitra/')));
         }
 
         if (strpos($cleanPath, 'berkas-customer/') === 0) {
-            return asset($cleanPath);
+            return $this->publicFileUrl('berkas-customer', substr($cleanPath, strlen('berkas-customer/')));
         }
 
-        return asset('produk/' . $cleanPath);
+        return $this->publicFileUrl('produk', $cleanPath);
     }
 }

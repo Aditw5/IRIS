@@ -378,14 +378,14 @@
                                 $remaining = count($fotoFiles) - count($shownFiles);
                             @endphp
                             @if (!empty($alat->fotoalatditerima))
-                                <img src="{{ public_path('berkas-customer/' . $alat->fotoalatditerima) }}"
+                                <img src="{{ public_path('berkas-customer/' . basename(str_replace('\\', '/', (string) $alat->fotoalatditerima))) }}"
                                     style="width:120px; max-width:100%; height:auto; border:1px solid #ddd; border-radius:6px; margin:2px 0;" />
                             @elseif (!empty($shownFiles))
                                 <table style="width:100%; border-collapse:collapse;">
                                     @foreach ($shownFiles as $f)
                                         <tr>
                                             <td style="padding:3px 0; text-align:center;">
-                                                <img src="{{ public_path('berkas-customer/' . $f) }}"
+                                                <img src="{{ public_path('berkas-customer/' . basename(str_replace('\\', '/', (string) $f))) }}"
                                                     style="width:120px; max-width:100%; height:auto; border:1px solid #ddd; border-radius:6px;" />
                                             </td>
                                         </tr>

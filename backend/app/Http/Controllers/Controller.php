@@ -259,4 +259,37 @@ class Controller extends BaseController
     {
         return response()->json($data, $status, $header);
     }
+
+    /**
+     * Build a browser-facing URL for a file exposed by the same-origin web server.
+     *
+     * Runtime files live in shared public folders and are served by the frontend
+     * Nginx container, so Laravel must not turn these paths into APP_URL-based
+     * absolute URLs. Normalising separators before basename() also keeps Windows
+     * paths stored by legacy data from escaping the configured public folder.
+     */
+    protected function publicFileUrl($folder, $file)
+    {
+        $folder = trim(str_replace('\\', '/', (string) $folder), '/');
+        $segments = array_values(array_filter(explode('/', $folder), function ($segment) {
+            return $segment !== '';
+        }));
+
+        if (empty($segments)) {
+            throw new \InvalidArgumentException('Folder file publik tidak valid.');
+        }
+
+        foreach ($segments as $segment) {
+            if ($segment === '.' || $segment === '..' || !preg_match('/^[A-Za-z0-9_-]+$/', $segment)) {
+                throw new \InvalidArgumentException('Folder file publik tidak valid.');
+            }
+        }
+
+        $filename = basename(str_replace('\\', '/', trim((string) $file)));
+        if ($filename === '' || $filename === '.' || $filename === '..') {
+            throw new \InvalidArgumentException('Nama file publik tidak valid.');
+        }
+
+        return '/' . implode('/', array_map('rawurlencode', $segments)) . '/' . rawurlencode($filename);
+    }
 }

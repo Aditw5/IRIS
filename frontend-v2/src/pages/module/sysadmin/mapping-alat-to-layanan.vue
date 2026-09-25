@@ -312,6 +312,7 @@ import { useApi } from '/@src/composable/useApi'
 import { useViewWrapper } from '/@src/stores/viewWrapper'
 import { onceImageErrored } from '/@src/utils/via-placeholder'
 import * as H from '/@src/utils/appHelper'
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 
 const viewWrapper = useViewWrapper()
 viewWrapper.setPageTitle('Mapping Alat ke Layanan')
@@ -416,7 +417,7 @@ function editService(service: any) {
   }
   selectedFile.value = null
   previewImage.value = service.gambar
-    ? '/mapping-layanan/' + service.gambar
+    ? publicFileUrl('mapping-layanan', service.gambar)
     : ''
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }

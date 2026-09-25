@@ -515,6 +515,7 @@ import { useToaster } from '/@src/composable/toaster'
 import Dialog from 'primevue/dialog'
 import { useUserSession } from '/@src/stores/userSession'
 import * as faceapi from 'face-api.js'
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 
 useHead({
   title: 'Detail Pegawai - ' + import.meta.env.VITE_PROJECT,
@@ -571,12 +572,12 @@ const isStuck = computed(() => {
 const profilePhotoUrl = computed(() => {
   if (isCustomer.value) {
     return item.value?.filenameFoto
-      ? `/berkas-user/${item.value.filenameFoto}`
+      ? publicFileUrl('berkas-user', item.value.filenameFoto)
       : ''
   }
 
   return item.value?.fotopegawai
-    ? `/berkas-mutu/${item.value.fotopegawai}`
+    ? publicFileUrl('berkas-mutu', item.value.fotopegawai)
     : ''
 })
 

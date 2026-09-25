@@ -818,7 +818,7 @@ class PengajuanPbjCtrl extends Controller
         }
 
         $filename = basename($data->namafileiht);
-        $filepath = asset('berkas-pbj/' . $filename);
+        $filepath = $this->publicFileUrl('berkas-pbj', $filename);
 
         return view('report.customer.view-pdf', compact('filepath', 'data'));
     }

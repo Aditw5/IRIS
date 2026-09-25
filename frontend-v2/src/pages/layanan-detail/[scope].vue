@@ -3,6 +3,7 @@ import { useHead } from '@vueuse/head'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useApi } from '/@src/composable/useApi'
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 import { onceImageErrored } from '/@src/utils/via-placeholder'
 
 useHead({ title: 'ULAB - Rincian Layanan' })
@@ -26,8 +27,6 @@ type MappingSummary = {
 }
 
 const route = useRoute()
-const mappingImageBase = '/mapping-layanan/'
-
 const serviceScopes = [
   {
     id: 'kelistrikan',
@@ -129,7 +128,8 @@ const visibleServices = computed(() => {
 })
 
 function buildImageSrc(item: MappingService) {
-  if (item.gambar) return mappingImageBase + item.gambar
+  if (item.gambar_url) return item.gambar_url
+  if (item.gambar) return publicFileUrl('mapping-layanan', item.gambar)
   return currentScope.value.image
 }
 

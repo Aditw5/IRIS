@@ -240,6 +240,7 @@ import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 import { onceImageErrored } from '/@src/utils/via-placeholder'
 import AutoComplete from 'primevue/autocomplete';
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 
 useHead({
   title: 'Alat Unit - ' + import.meta.env.VITE_PROJECT,
@@ -336,11 +337,11 @@ watch(
 )
 
 const toolMainImageUrl = (tool: any) => tool?.fotoproduk
-  ? '/produk/' + tool.fotoproduk
+  ? publicFileUrl('produk', tool.fotoproduk)
   : '/images/other/no_image.jpg'
 
 const toolThumbnailUrl = (tool: any) => tool?.fotoproduk_thumbnail
-  ? '/produk/' + tool.fotoproduk_thumbnail
+  ? publicFileUrl('produk', tool.fotoproduk_thumbnail)
   : toolMainImageUrl(tool)
 
 const toolImageErrored = (event: Event, size: string) => {

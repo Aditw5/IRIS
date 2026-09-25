@@ -573,9 +573,9 @@ class MasterDokumenCtrl extends Controller
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
         if (in_array($extension, ['doc', 'docx'])) {
-            $filepath = asset('berkas-mutu/' . $filename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         } else {
-            $filepath = asset('berkas-mutu/' . $filename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         }
 
         return view('report.mutu.view-pdf', compact('filepath', 'data', 'extension'));
@@ -788,7 +788,6 @@ class MasterDokumenCtrl extends Controller
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
         $basePath = public_path('berkas-mutu');
-        $baseUrl  = rtrim(asset('berkas-mutu'), '/');
 
         if (!is_dir($basePath)) {
             @mkdir($basePath, 0755, true);
@@ -804,7 +803,7 @@ class MasterDokumenCtrl extends Controller
                 ]);
 
                 // fallback ke file asli (kalau memang masih mau ditampilkan)
-                return [$baseUrl . '/' . $filename, $extension];
+                return [$this->publicFileUrl('berkas-mutu', $filename), $extension];
             }
 
             $watermarkName = pathinfo($filename, PATHINFO_FILENAME) . '_salinan.pdf';
@@ -819,14 +818,14 @@ class MasterDokumenCtrl extends Controller
                     ]);
 
                     // kalau gagal, jangan bikin error di user – pakai file asli
-                    return [$baseUrl . '/' . $filename, $extension];
+                    return [$this->publicFileUrl('berkas-mutu', $filename), $extension];
                 }
             }
 
-            $filepath = $baseUrl . '/' . $watermarkName;
+            $filepath = $this->publicFileUrl('berkas-mutu', $watermarkName);
         } else {
             // selain pdf, langsung file asli
-            $filepath = $baseUrl . '/' . $filename;
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         }
 
         Log::info('buildFilePath resolved', [

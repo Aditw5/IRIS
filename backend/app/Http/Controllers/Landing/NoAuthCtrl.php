@@ -216,7 +216,7 @@ class NoAuthCtrl extends Controller
                         'namalayanan' => $row->namalayanan,
                         'merktipe' => $row->merktipe,
                         'gambar' => $row->gambar,
-                        'gambar_url' => $row->gambar ? url('mapping-layanan/' . $row->gambar) : null,
+                        'gambar_url' => $row->gambar ? $this->publicFileUrl('mapping-layanan', $row->gambar) : null,
                         'lingkup' => $row->lingkup,
                     ];
                 })

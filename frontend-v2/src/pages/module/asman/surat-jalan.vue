@@ -302,6 +302,7 @@ import { useUserSession } from '/@src/stores/userSession'
 import * as H from '/@src/utils/appHelper'
 import ConfirmDialog from 'primevue/confirmdialog'
 import { useConfirm } from 'primevue/useconfirm'
+import { resolvePublicFileUrl } from '/@src/utils/publicFileUrl'
 
 useHead({ title: 'Persetujuan Surat Jalan - ' + import.meta.env.VITE_PROJECT })
 useViewWrapper().setFullWidth(true)
@@ -364,14 +365,7 @@ const statusText = (status: any) => {
 
 const getImageUrl = (path: any) => {
   if (!path) return '/images/other/no_image.jpg'
-
-  const value = String(path)
-
-  if (value.startsWith('http') || value.startsWith('blob:') || value.startsWith('/')) {
-    return value
-  }
-
-  return `/produk/${value}`
+  return resolvePublicFileUrl(path, 'produk')
 }
 
 const previewImage = (url: string) => {

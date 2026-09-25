@@ -626,7 +626,7 @@ class ChatCtrl extends Controller
 
         return [
             'tipe' => $isImage ? 'image' : 'file',
-            'attachment_url' => '/' . $directory . '/' . $filename,
+            'attachment_url' => $this->publicFileUrl($directory, $filename),
             'attachment_name' => $originalName,
             'attachment_mime' => $mime,
             'attachment_size' => $size,

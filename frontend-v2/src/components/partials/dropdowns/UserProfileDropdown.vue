@@ -72,6 +72,7 @@ import { useUserSession } from '/@src/stores/userSession'
 import { ref, computed, watch, reactive, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStorage } from '@vueuse/core'
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 
 const user = useUserSession().getUser()
 const router = useRouter()
@@ -91,7 +92,7 @@ const defaultAvatar =
 
 // Cek jika ada foto pegawai, gunakan URL berkas-mutu, jika tidak gunakan defaultAvatar
 const icon = user.pegawai.fotopegawai
-  ? '/berkas-mutu/' + user.pegawai.fotopegawai
+  ? publicFileUrl('berkas-mutu', user.pegawai.fotopegawai)
   : defaultAvatar
 // =========================================
 

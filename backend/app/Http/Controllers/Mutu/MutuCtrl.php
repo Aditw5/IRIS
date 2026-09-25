@@ -548,9 +548,9 @@ class MutuCtrl extends Controller
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
         if (in_array($extension, ['doc', 'docx'])) {
-            $filepath = asset('berkas-mutu/' . $filename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         } else {
-            $filepath = asset('berkas-mutu/' . $filename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         }
         return view('report.mutu.view-pdf', compact('filepath', 'data', 'extension'));
     }
@@ -2091,7 +2091,7 @@ class MutuCtrl extends Controller
             ]);
         }
 
-        $filepath = asset('berkas-mutu/audit-internal/' . rawurlencode($filename));
+        $filepath = $this->publicFileUrl('berkas-mutu/audit-internal', $filename);
         $extension = 'docx';
         $data = (object) [
             'id' => 0,

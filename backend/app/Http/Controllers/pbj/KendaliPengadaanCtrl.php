@@ -613,7 +613,7 @@ class KendaliPengadaanCtrl extends Controller
         [$file] = $this->resolvePpFile($request);
         $filename = basename((string) $file->namafile);
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-        $filepath = asset('berkas-pbj/pp/' . rawurlencode($filename));
+        $filepath = $this->publicFileUrl('berkas-pbj/pp', $filename);
 
         return view('report.pbj.view-pp-file', compact('file', 'filepath', 'extension'));
     }

@@ -12,6 +12,7 @@ import { useToaster } from '/@src/composable/toaster'
 import { joinNotifPegawai, socket, state as socketState } from '/@src/socket.js'
 import { useUserSession } from '/@src/stores/userSession'
 import { useViewWrapper } from '/@src/stores/viewWrapper'
+import { publicFileUrl, resolvePublicFileUrl } from '/@src/utils/publicFileUrl'
 
 type Contact = {
   id: number
@@ -75,18 +76,6 @@ const previousFullWidth = Boolean(viewWrapper.isFullWidth)
 viewWrapper.setFullWidth(true)
 
 const maxAttachmentBytes = 20 * 1024 * 1024
-const backendPublicUrl = (() => {
-  const configuredUrl = String(import.meta.env.VITE_API_BASE_URL || '')
-  try {
-    const url = new URL(configuredUrl, window.location.origin)
-    if (url.hostname === 'ulabumro.id' && !url.port) url.port = '8000'
-    return url.origin
-  } catch {
-    return configuredUrl.replace(/service\/?$/, '').replace(/\/+$/, '')
-  }
-})()
-const employeePhotoBaseUrl = '/berkas-mutu/'
-
 const currentUser = computed(() => {
   try {
     return useUserSession().getUser()
@@ -115,27 +104,13 @@ function initials(name: string) {
 
 function publicFile(path?: string | null, folder?: string) {
   if (!path) return ''
-
-  if (/^https?:\/\//i.test(path)) {
-    try {
-      const url = new URL(path)
-      if (url.pathname.startsWith('/chat-attachments/')) {
-        return `${backendPublicUrl}${url.pathname}${url.search}${url.hash}`
-      }
-    } catch {
-      return path
-    }
-    return path
-  }
-
-  const normalized = path.startsWith('/') ? path.slice(1) : path
-  return `${backendPublicUrl}/${folder ? `${folder}/` : ''}${normalized}`
+  return resolvePublicFileUrl(path, folder || 'chat-attachments')
 }
 
 function avatarUrl(filename?: string | null) {
   if (!filename) return ''
   if (/^https?:\/\//i.test(filename)) return filename
-  return employeePhotoBaseUrl + filename.replace(/^\/+/, '')
+  return publicFileUrl('berkas-mutu', filename)
 }
 
 function messageAttachmentUrl(message: ChatMessage) {

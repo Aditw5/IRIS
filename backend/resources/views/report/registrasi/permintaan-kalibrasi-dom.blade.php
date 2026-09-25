@@ -762,7 +762,7 @@
                             <td width="15%"> <span style="font-size: 9pt;" class="text-biasa">1 Set </span></td>
                             <td width="25%" style="text-align: center">
                                 @if (!empty($alat->namafile))
-                                    <img src="{{ 'berkas-mitra/' . $alat->namafile }}" width="170px"
+                                    <img src="{{ public_path('berkas-mitra/' . basename(str_replace('\\', '/', (string) $alat->namafile))) }}" width="170px"
                                         style="margin:2px 0;">
                                 @elseif (!empty($alat->alasanpenolakanregis))
                                     <div style="color: red; font-size: 12px; margin-top: 10px;">

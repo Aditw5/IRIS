@@ -837,9 +837,9 @@ class UdrCtrl extends Controller
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
         if (in_array($extension, ['doc', 'docx'])) {
-            $filepath = asset('berkas-mutu/' . $filename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         } else {
-            $filepath = asset('berkas-mutu/' . $filename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         }
 
         return view('report.mutu.view-pdf', compact('filepath', 'data', 'extension'));
@@ -2022,13 +2022,10 @@ class UdrCtrl extends Controller
         $filename = basename($data->isidokumen);
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
-        // Supaya nama file yang ada spasi/karakter khusus tetap bisa dibuka
-        $safeFilename = rawurlencode($filename);
-
         if (in_array($extension, ['doc', 'docx'])) {
-            $filepath = asset('berkas-mutu/' . $safeFilename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         } else {
-            $filepath = asset('berkas-mutu/' . $safeFilename);
+            $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         }
 
         return view('report.mutu.view-pdf', compact('filepath', 'data', 'extension'));
@@ -4719,7 +4716,7 @@ class UdrCtrl extends Controller
 
         $filename = basename($item->isidokumen);
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-        $filepath = asset('berkas-mutu/' . rawurlencode($filename));
+        $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         $data = $item;
 
         return view('report.mutu.view-pdf', compact('filepath', 'data', 'extension'));
@@ -4787,7 +4784,7 @@ class UdrCtrl extends Controller
 
         $filename = basename((string) $revision->isidokumen);
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-        $filepath = asset('berkas-mutu/' . rawurlencode($filename));
+        $filepath = $this->publicFileUrl('berkas-mutu', $filename);
         $data = $revision;
 
         return view('report.mutu.view-pdf', compact('filepath', 'data', 'extension'));

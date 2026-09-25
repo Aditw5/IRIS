@@ -2680,7 +2680,7 @@
                                         <tr>
                                             <td align="right" style="font-size: 7pt; color:#000000;">
                                                 @if (!empty($res['alat']->gambarsuhu))
-                                                    <img src="{{ public_path('gambar-suhu/' . $res['alat']->gambarsuhu) }}"
+                                                    <img src="{{ public_path('gambar-suhu/' . basename(str_replace('\\', '/', (string) $res['alat']->gambarsuhu))) }}"
                                                         alt="Gambar Suhu" style="height:10%; width:50%">
                                                 @else
                                                     {{-- kosongkan atau tampilkan placeholder --}}
@@ -4632,7 +4632,7 @@
                 <tr>
                     <td align="center" style="font-size:7pt;color:#000">
                         @if (!empty($res['alat']->gambarsuhu))
-                            <img src="{{ public_path('gambar-suhu/' . $res['alat']->gambarsuhu) }}" alt="Gambar"
+                            <img src="{{ public_path('gambar-suhu/' . basename(str_replace('\\', '/', (string) $res['alat']->gambarsuhu))) }}" alt="Gambar"
                                 style="height:20%; width:100%">
                         @else
                             <span style="font-size:6pt;color:#888"></span>

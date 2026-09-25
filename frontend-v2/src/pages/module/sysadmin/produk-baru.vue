@@ -148,6 +148,7 @@ import { useViewWrapper } from '/@src/stores/viewWrapper'
 import AutoComplete from 'primevue/autocomplete';
 import { useToaster } from '/@src/composable/toaster'
 import FileUpload from 'primevue/fileupload';
+import { resolvePublicFileUrl } from '/@src/utils/publicFileUrl'
 
 useHead({
     title: 'Master Alat - ' + import.meta.env.VITE_PROJECT,
@@ -181,9 +182,7 @@ const isFile = (obj: any): obj is File => {
 const existingPhotoUrl = computed(() => {
     const photo = String(item.value?.gambaralat || '').trim()
     if (!photo) return ''
-    if (/^(https?:)?\/\//i.test(photo) || /^(data|blob):/i.test(photo)) return photo
-    if (photo.startsWith('/')) return photo
-    return `/produk/${photo}`
+    return resolvePublicFileUrl(photo, 'produk')
 })
 
 const photoPreviewUrl = computed(() => {

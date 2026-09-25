@@ -384,6 +384,7 @@ import * as H from '/@src/utils/appHelper'
 import { useApi } from '/@src/composable/useApi'
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
+import { publicFileUrl, resolvePublicFileUrl } from '/@src/utils/publicFileUrl'
 
 useHead({
   title: 'Laporan Repair - ' + import.meta.env.VITE_PROJECT,
@@ -396,8 +397,6 @@ const MARKINGSITE: any = ref('')
 const MARKING_CANDIDATES = ref<string[]>([])
 const markingCandidateIndex = ref(0)
 const NOREC_DETAIL = useRoute().query.norec_detail as string
-const WEB_BASE_URL = ''
-
 const isLoading = ref(false)
 const isLoadingSave = ref(false)
 const loadSearch: any = ref(false)
@@ -502,10 +501,10 @@ const buildMitraFileCandidates = (files: any) => {
       if (!filename) return
 
       candidates.push(
-        `${WEB_BASE_URL}/berkas-mitra/${filename}`,
-        `${WEB_BASE_URL}/storage/berkas-mitra/${filename}`,
-        `${WEB_BASE_URL}/storage/${filename}`,
-        `${WEB_BASE_URL}/berkas-laporan-repair/${filename}`
+        publicFileUrl('berkas-mitra', filename),
+        publicFileUrl('storage/berkas-mitra', filename),
+        publicFileUrl('storage', filename),
+        publicFileUrl('berkas-laporan-repair', filename)
       )
     })
 
@@ -541,21 +540,7 @@ const hasPrintableData = computed(() => {
 })
 
 const getFotoUrl = (filename: string) => {
-  if (!filename) {
-    return ''
-  }
-
-  const file = String(filename)
-
-  if (file.startsWith('http://') || file.startsWith('https://')) {
-    return file
-  }
-
-  if (file.startsWith('/')) {
-    return WEB_BASE_URL + file
-  }
-
-  return WEB_BASE_URL + '/berkas-laporan-repair/' + file
+  return resolvePublicFileUrl(filename, 'berkas-laporan-repair')
 }
 
 const onImageError = (event: Event) => {

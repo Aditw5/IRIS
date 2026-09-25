@@ -656,6 +656,7 @@ import { useViewWrapper } from '/@src/stores/viewWrapper'
 import { useApi } from '/@src/composable/useApi'
 import { useUserSession } from '/@src/stores/userSession'
 import * as H from '/@src/utils/appHelper'
+import { resolvePublicFileUrl } from '/@src/utils/publicFileUrl'
 
 useHead({ title: 'Kendali Surat Jalan - ' + import.meta.env.VITE_PROJECT })
 useViewWrapper().setFullWidth(true)
@@ -730,14 +731,7 @@ const makeId = () => `${Date.now()}_${Math.random().toString(16).slice(2)}`
 
 const getImageUrl = (path: any) => {
   if (!path) return '/images/other/no_image.jpg'
-
-  const value = String(path)
-
-  if (value.startsWith('http') || value.startsWith('blob:') || value.startsWith('/')) {
-    return value
-  }
-
-  return `/produk/${value}`
+  return resolvePublicFileUrl(path, 'produk')
 }
 
 const previewImage = (url: string) => {

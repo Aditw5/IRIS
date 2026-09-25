@@ -367,7 +367,7 @@
                 return $filename;
             }
 
-            $filename = basename($filename);
+            $filename = basename(str_replace('\\', '/', $filename));
 
             $candidatePaths = [
                 public_path('berkas-laporan-repair/' . $filename),

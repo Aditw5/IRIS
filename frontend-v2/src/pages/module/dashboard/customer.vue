@@ -1352,6 +1352,7 @@ import { useViewWrapper } from '/@src/stores/viewWrapper'
 import { useApi } from '/@src/composable/useApi'
 import AutoComplete from 'primevue/autocomplete'
 import * as H from '/@src/utils/appHelper'
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 import Dialog from 'primevue/dialog';
 import FileUpload from 'primevue/fileupload';
 import DataTable from 'primevue/datatable'
@@ -1627,11 +1628,11 @@ const closeCheckoutModal = () => {
 
 const getProductImage = (items: any) => {
   if (items?.fotoproduk) {
-    return '/produk/' + items.fotoproduk
+    return publicFileUrl('produk', items.fotoproduk)
   }
 
   if (items?.gambaralat) {
-    return '/produk/' + items.gambaralat
+    return publicFileUrl('produk', items.gambaralat)
   }
 
   return '/images/other/no_image.jpg'
@@ -1684,11 +1685,11 @@ async function cancelScanner() {
 }
 
 const toolMainImageUrl = (tool: any) => tool?.fotoproduk
-  ? '/produk/' + tool.fotoproduk
+  ? publicFileUrl('produk', tool.fotoproduk)
   : '/images/other/no_image.jpg'
 
 const toolThumbnailUrl = (tool: any) => tool?.fotoproduk_thumbnail
-  ? '/produk/' + tool.fotoproduk_thumbnail
+  ? publicFileUrl('produk', tool.fotoproduk_thumbnail)
   : toolMainImageUrl(tool)
 
 const toolImageErrored = (event: Event, size: string) => {

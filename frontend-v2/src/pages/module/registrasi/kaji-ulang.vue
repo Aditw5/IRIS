@@ -706,6 +706,7 @@ import AutoComplete from 'primevue/autocomplete'
 import jsPDF from 'jspdf'
 import AddRegistrationToolsModal from '/@src/components/partials/registrasi/AddRegistrationToolsModal.vue'
 import RegistrationReviewHeader from '/@src/components/partials/registrasi/RegistrationReviewHeader.vue'
+import { publicFileUrl } from '/@src/utils/publicFileUrl'
 
 useHead({
   title: 'Kajian Ulang - ' + import.meta.env.VITE_PROJECT,
@@ -854,8 +855,6 @@ const existingMitraFiles = ref<string[]>([])
 const hasFiles = computed(() => filePreviews.value.length > 0)
 
 const makeId = () => `${Date.now()}_${Math.random().toString(16).slice(2)}`
-const WEB_BASE_URL = String(import.meta.env.VITE_API_BASE_URL || '').replace(/\/service\/?$/, '').replace(/\/$/, '')
-
 const buildExistingFileCandidates = (file: string) => {
   const value = String(file || '').trim()
   if (!value) return []
@@ -868,9 +867,9 @@ const buildExistingFileCandidates = (file: string) => {
   if (!filename) return []
 
   return [
-    `${WEB_BASE_URL}/berkas-mitra/${filename}`,
-    `${WEB_BASE_URL}/storage/berkas-mitra/${filename}`,
-    `${WEB_BASE_URL}/storage/${filename}`,
+    publicFileUrl('berkas-mitra', filename),
+    publicFileUrl('storage/berkas-mitra', filename),
+    publicFileUrl('storage', filename),
   ]
 }
 

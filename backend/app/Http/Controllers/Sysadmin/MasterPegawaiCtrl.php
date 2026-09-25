@@ -755,7 +755,7 @@ class MasterPegawaiCtrl extends Controller
                 'status' => 200,
                 'message' => 'Registrasi wajah berhasil disimpan',
                 'result' => [
-                    'image_path' => asset('storage/' . $path),
+                    'image_path' => $this->publicFileUrl('storage/' . dirname(str_replace('\\', '/', $path)), $path),
                 ],
             ];
         } catch (Exception $e) {

@@ -308,7 +308,7 @@ class MasterInstruksiKerjaCtrl extends Controller
         $filename = basename($version->namafile);
         $this->ensureFileIsPublished($filename);
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-        $filepath = asset(self::FILE_DIRECTORY . '/' . rawurlencode($filename));
+        $filepath = $this->publicFileUrl(self::FILE_DIRECTORY, $filename);
         $data = $version;
 
         return view('report.mutu.view-pdf', compact('filepath', 'data', 'extension'));
