@@ -2190,9 +2190,11 @@ class MitraCtrl extends Controller
             $lokasi = $registrasiNomor->{$kolomLokasi};
             $lokasiRequest = $r_NewMitra[$kolomLokasi] ?? null;
 
-            if ($lokasiRequest !== null
+            if (
+                $lokasiRequest !== null
                 && $lokasiRequest !== ''
-                && (int) $lokasiRequest !== (int) $lokasi) {
+                && (int) $lokasiRequest !== (int) $lokasi
+            ) {
                 throw new \Exception('Lokasi verifikasi tidak sesuai dengan lokasi registrasi.');
             }
 
@@ -2241,11 +2243,11 @@ class MitraCtrl extends Controller
                 ->get();
             $alatRows = $alatList->isNotEmpty()
                 ? DB::table('mapunittoalat_m')
-                    ->whereIn('id', $alatList->pluck('namaalatfk')->filter(function ($id) {
-                        return $id !== null && $id !== '';
-                    })->unique()->values())
-                    ->get()
-                    ->keyBy('id')
+                ->whereIn('id', $alatList->pluck('namaalatfk')->filter(function ($id) {
+                    return $id !== null && $id !== '';
+                })->unique()->values())
+                ->get()
+                ->keyBy('id')
                 : collect();
 
             $pesanAlat = "";
@@ -3197,9 +3199,14 @@ class MitraCtrl extends Controller
         }
 
         $filename = basename($data->file_path);
-        $filepath = asset('sertifikat/' . $filename);
 
-        return view('report.customer.sertifikat-customer', compact('filepath', 'data'));
+        // Jangan gunakan asset() untuk file shared ULAB -> IRIS
+        $filepath = '/sertifikat/' . rawurlencode($filename);
+
+        return view(
+            'report.customer.sertifikat-customer',
+            compact('filepath', 'data')
+        );
     }
 
     public function cetakLaporanRepairPdf(Request $request)
@@ -3863,11 +3870,11 @@ class MitraCtrl extends Controller
 
         $fotos = $detail->isNotEmpty()
             ? DB::table('suratjalanfoto_t')
-                ->where('statusenabled', true)
-                ->whereIn('suratjalandetailfk', $detail->pluck('norec'))
-                ->orderBy('created_at')
-                ->get()
-                ->groupBy('suratjalandetailfk')
+            ->where('statusenabled', true)
+            ->whereIn('suratjalandetailfk', $detail->pluck('norec'))
+            ->orderBy('created_at')
+            ->get()
+            ->groupBy('suratjalandetailfk')
             : collect();
 
         foreach ($detail as $d) {
@@ -4249,12 +4256,12 @@ class MitraCtrl extends Controller
 
         $fotos = $res['alat']->isNotEmpty()
             ? DB::table('suratjalanfoto_t')
-                ->where('statusenabled', true)
-                ->where('suratjalanfk', $norec)
-                ->whereIn('suratjalandetailfk', $res['alat']->pluck('norec'))
-                ->orderBy('created_at')
-                ->get()
-                ->groupBy('suratjalandetailfk')
+            ->where('statusenabled', true)
+            ->where('suratjalanfk', $norec)
+            ->whereIn('suratjalandetailfk', $res['alat']->pluck('norec'))
+            ->orderBy('created_at')
+            ->get()
+            ->groupBy('suratjalandetailfk')
             : collect();
 
         foreach ($res['alat'] as $item) {
