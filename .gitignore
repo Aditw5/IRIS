@@ -38,3 +38,6 @@
 
 # Local tool state
 /.claude/
+
+# Local/VPS configuration backups
+*.backup-*

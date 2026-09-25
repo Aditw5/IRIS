@@ -1,0 +1,40 @@
+services:
+  backend:
+    volumes:
+      - /var/www/ulab-kalibrasi/backend/public/berkas-customer:/var/www/html/public/berkas-customer:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-instruksi-kerja:/var/www/html/public/berkas-instruksi-kerja:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-laporan-repair:/var/www/html/public/berkas-laporan-repair:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-mitra:/var/www/html/public/berkas-mitra:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-mitra-excel:/var/www/html/public/berkas-mitra-excel:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-mutu:/var/www/html/public/berkas-mutu:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-pbj:/var/www/html/public/berkas-pbj:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-user:/var/www/html/public/berkas-user:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-vendor:/var/www/html/public/berkas-vendor:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-verifikasi:/var/www/html/public/berkas-verifikasi:ro
+      - /var/www/ulab-kalibrasi/backend/public/gambar-suhu:/var/www/html/public/gambar-suhu:ro
+      - /var/www/ulab-kalibrasi/backend/public/laporan-repair:/var/www/html/public/laporan-repair:ro
+      - /var/www/ulab-kalibrasi/backend/public/mapping-layanan:/var/www/html/public/mapping-layanan:ro
+      - /var/www/ulab-kalibrasi/backend/public/produk:/var/www/html/public/produk:ro
+      - /var/www/ulab-kalibrasi/backend/public/sertifikat:/var/www/html/public/sertifikat:ro
+      - /var/www/ulab-kalibrasi/backend/public/sertifikat-standar:/var/www/html/public/sertifikat-standar:ro
+      - /var/www/ulab-kalibrasi/backend/public/surat-jalan:/var/www/html/public/surat-jalan:ro
+
+  web:
+    volumes:
+      - /var/www/ulab-kalibrasi/backend/public/berkas-customer:/usr/share/nginx/html/berkas-customer:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-instruksi-kerja:/usr/share/nginx/html/berkas-instruksi-kerja:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-laporan-repair:/usr/share/nginx/html/berkas-laporan-repair:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-mitra:/usr/share/nginx/html/berkas-mitra:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-mitra-excel:/usr/share/nginx/html/berkas-mitra-excel:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-mutu:/usr/share/nginx/html/berkas-mutu:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-pbj:/usr/share/nginx/html/berkas-pbj:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-user:/usr/share/nginx/html/berkas-user:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-vendor:/usr/share/nginx/html/berkas-vendor:ro
+      - /var/www/ulab-kalibrasi/backend/public/berkas-verifikasi:/usr/share/nginx/html/berkas-verifikasi:ro
+      - /var/www/ulab-kalibrasi/backend/public/gambar-suhu:/usr/share/nginx/html/gambar-suhu:ro
+      - /var/www/ulab-kalibrasi/backend/public/laporan-repair:/usr/share/nginx/html/laporan-repair:ro
+      - /var/www/ulab-kalibrasi/backend/public/mapping-layanan:/usr/share/nginx/html/mapping-layanan:ro
+      - /var/www/ulab-kalibrasi/backend/public/produk:/usr/share/nginx/html/produk:ro
+      - /var/www/ulab-kalibrasi/backend/public/sertifikat:/usr/share/nginx/html/sertifikat:ro
+      - /var/www/ulab-kalibrasi/backend/public/sertifikat-standar:/usr/share/nginx/html/sertifikat-standar:ro
+      - /var/www/ulab-kalibrasi/backend/public/surat-jalan:/usr/share/nginx/html/surat-jalan:ro

@@ -1,0 +1,71 @@
+name: Deploy IRIS Production
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: iris-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy IRIS
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          command_timeout: 30m
+          script: |
+            set -e
+
+            cd /var/www/iris
+
+            echo "=== Pull latest source ==="
+            git fetch origin main
+            git reset --hard origin/main
+
+            echo "=== Validate production compose ==="
+            docker compose \
+              -f compose.yaml \
+              -f compose.prod.yaml \
+              -p iris \
+              config --quiet
+
+            echo "=== Build IRIS images ==="
+            docker compose \
+              -f compose.yaml \
+              -f compose.prod.yaml \
+              -p iris \
+              build backend web socket
+
+            echo "=== Start containers ==="
+            docker compose \
+              -f compose.yaml \
+              -f compose.prod.yaml \
+              -p iris \
+              up -d
+
+            echo "=== Container status ==="
+            docker compose \
+              -f compose.yaml \
+              -f compose.prod.yaml \
+              -p iris \
+              ps
+
+            echo "=== Backend health check ==="
+            test "$(docker compose \
+              -f compose.yaml \
+              -f compose.prod.yaml \
+              -p iris \
+              exec -T --user www-data backend php -r \
+              'echo is_readable("/var/www/html/public/index.php") ? "OK" : "FAIL";')" = "OK"
+
+            echo "=== Deployment completed ==="
